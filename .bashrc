@@ -30,7 +30,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Aliases
-alias ip='hostname -i'
+# ip is a valid linux
+alias myip='hostname -i'
 alias fileserver='python3 -m http.server'
 
 # Extract everything with extract
@@ -61,3 +62,19 @@ powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+# run {times} {command}
+# 
+function run() {
+        number=$1
+        shift
+        for n in $(seq $number); do
+                $@
+                sleep 1
+        done
+}
+
+#run forever
+forever() {
+        while true; do $@; sleep 1; done
+}
+
