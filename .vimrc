@@ -38,11 +38,7 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-"""""""""""""""""""""""" POWER-LINE 
 " Always show statusline
 set laststatus=2
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+" Use 256 colours 
 set t_Co=256
-" Arch Only
-let g:powerline_pycmd = 'py3'
-
