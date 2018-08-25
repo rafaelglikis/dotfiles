@@ -5,9 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
-# >>> Added by cnchi installer
-BROWSER=/usr/bin/chromium
+export PS1='\[\e]0;\w\a\]\[\e[34m\]\u@\h:[$?] \[\e[33m\]\w\[\e[0m\]\$ '
+
 export EDITOR='/usr/bin/vim'
 export PAGER=/usr/bin/less
 
@@ -56,14 +55,7 @@ extract () {
    fi
  }
 
-
-# Powerline
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
 # run {times} {command}
-# 
 function run() {
         number=$1
         shift
@@ -78,3 +70,10 @@ forever() {
         while true; do $@; sleep 1; done
 }
 
+# Powerline
+if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
+  powerline-daemon -q
+  POWERLINE_BASH_CONTINUATION=1
+  POWERLINE_BASH_SELECT=1
+  source /usr/share/powerline/bindings/bash/powerline.sh
+fi
