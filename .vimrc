@@ -1,3 +1,35 @@
+""""""""""""""""""""""""" VUNDLE
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'w0rp/ale'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'airblade/vim-gitgutter'
+
+call vundle#end()
+filetype plugin indent on
+" :PluginInstall
+
+""""""""""""""""""""""""" NerdTree
+" open when no file specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"open when directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+" Ctrl+n toggle nerdtree
+map <C-n> :NERDTreeToggle<CR>
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+""""""""""""""""""""""""" ALE
+let g:ale_completion_enabled = 1
+let g:airline#extensions#ale#enabled = 1
+
 """""""""""""""""""""""" GENERAL 
 set number
 set paste
@@ -18,9 +50,9 @@ set expandtab
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 " Don't wrap lines
-set nowrap       
+set nowrap
 " Wrap lines at convenient points
-set linebreak    
+set linebreak
 
 """""""""""""""""""""""" SEARCH
 set incsearch       " Find the next match as we type the search
@@ -38,7 +70,16 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+" Autoclose Brackets 
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " Always show statusline
 set laststatus=2
-" Use 256 colours 
+" Use 256 colours
 set t_Co=256
