@@ -31,6 +31,7 @@ fi
 # Aliases
 # ip is a valid linux
 alias myip='hostname -i'
+alias exip='curl ipinfo.io/ip'
 alias fileserver='python3 -m http.server'
 
 # Extract everything with extract
