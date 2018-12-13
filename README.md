@@ -1,4 +1,4 @@
 # dotfiles
 ## Setup
 
-    sudo wget -O - https://raw.githubusercontent.com/rafaelglikis/dotfiles/master/setup.sh | bash
+    wget -O - https://raw.githubusercontent.com/rafaelglikis/dotfiles/master/setup.sh | sudo bash
