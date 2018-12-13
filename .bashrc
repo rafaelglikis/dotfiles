@@ -13,7 +13,7 @@ export PAGER=/usr/bin/less
 # Bind commands
 bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
-bind '"\e[A": history-search-backward' 
+bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 # Commands
@@ -21,7 +21,7 @@ if [ -x /usr/bin/dircolors ]; then
     test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     alias l='ls -lh --color=auto'
-    alias l='ls -lh --color=auto'
+    alias ll='ls -lh --color=auto'
     alias la='ls -lah --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
