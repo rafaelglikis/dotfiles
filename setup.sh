@@ -17,5 +17,17 @@ curl https://raw.githubusercontent.com/rafaelglikis/dotfiles/master/.bashrc > ~/
 curl https://raw.githubusercontent.com/rafaelglikis/dotfiles/master/.tmux.conf > ~/.tmux.conf
 curl https://raw.githubusercontent.com/rafaelglikis/dotfiles/master/.vimrc > ~/.vimrc
 
+ mkdir -p ~/.config/powerline
+ cat <<-'EOF' > ~/.config/powerline/config.json
+{
+     "ext": {
+         "shell": {
+             "theme": "default_leftonly"
+         }
+     }
+}
+EOF
+
+
 # Install vim plugins
 vim +PluginInstall +qall
