@@ -9,6 +9,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'w0rp/ale'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
@@ -79,7 +81,6 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
-" Always show statusline
-set laststatus=2
-" Use 256 colours
+let g:airline_powerline_fonts = 1
 set t_Co=256
+
