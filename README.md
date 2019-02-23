@@ -18,3 +18,4 @@
     cd ~
     git clone https://github.com/chris-marsh/pureline.git
     curl https://raw.githubusercontent.com/rafaelglikis/dotfiles/master/.pureline.conf > ~/.pureline.conf
+
