@@ -1,0 +1,66 @@
+[user]
+	name = rafaelglikis
+	email = rafaelglikis@gmail.com
+[core]
+	autocrlf = input
+[alias]
+	fpush = push --force
+	sclone = clone --depth=1
+	undocommit = reset HEAD~
+	hreset = reset --hard
+	cdiff = diff --color --color-words --abbrev
+	clog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  last = log -1 HEAD
+
+	# Show the diff between the latest commit and the current state
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+	reup = rebase-update # depot_tools specific
+	git = !exec git
+
+
+[color]
+  branch = always
+  diff = always
+  grep = always
+  interactive = always
+  pager = true
+  showbranch = auto
+  status = auto
+  ui = always
+
+# git mergetool
+[merge]
+  tool = meld
+	renameLimit = 0
+
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+
+# correct typos
+[help]
+	autocorrect = 1
+
+# push easily. http://stackoverflow.com/a/23918418/89484
+[push]
+	default = current
+	followTags = true
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+
+[diff]
+    tool = meld
+
+[difftool]
+	prompt = false
+
+[fetch]
+	prune = true
+
+[stash]
+	showPatch = true
+[log]
+    date = relative
