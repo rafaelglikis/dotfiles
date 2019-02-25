@@ -6,9 +6,13 @@
 [[ $- != *i* ]] && return
 
 export PS1='\[\e]0;\w\a\]\[\e[34m\]\u@\h:[$?] \[\e[33m\]\w\[\e[0m\]\$ '
+# Pureline
+if [ "$TERM" != "linux" ]; then
+    source ~/pureline/pureline ~/.pureline.conf
+fi
 
 export EDITOR='/usr/bin/vim'
-export PAGER=/usr/bin/less
+export PAGER='/usr/bin/less'
 
 # Bind commands
 bind 'set completion-ignore-case on'
@@ -16,7 +20,10 @@ bind 'set show-all-if-ambiguous on'
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-# Commands
+# Aliases
+alias myip='hostname -i'
+alias exip='curl ipinfo.io/ip'
+
 if [ -x /usr/bin/dircolors ]; then
     test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -29,33 +36,63 @@ if [ -x /usr/bin/dircolors ]; then
     alias psgrep='ps aux |grep -v grep |grep -i'
 fi
 
-# Aliases
-# ip is a valid linux
-alias myip='hostname -i'
-alias exip='curl ipinfo.io/ip'
-alias fileserver='python3 -m http.server'
+# Copy w/ progress
+cp () {
+  rsync -ah --progress $1 $2
+}
 
 # Extract everything with extract
-extract () {
-   if [ -f $1 ] ; then
-       case $1 in
-           *.tar.bz2)   tar xvjf $1    ;;
-           *.tar.gz)    tar xvzf $1    ;;
-           *.bz2)       bunzip2 $1     ;;
-           *.rar)       unrar x $1     ;;
-           *.gz)        gunzip $1      ;;
-           *.tar)       tar xvf $1     ;;
-           *.tbz2)      tar xvjf $1    ;;
-           *.tgz)       tar xvzf $1    ;;
-           *.zip)       unzip $1       ;;
-           *.Z)         uncompress $1  ;;
-           *.7z)        7z x $1        ;;
-           *)           echo "don't know how to extract '$1'..." ;;
-       esac
-   else
-       echo "'$1' is not a valid file!"
-   fi
- }
+function extract {
+	if [ -z "$1" ]; then
+    	# display usage if no parameters given
+    	echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+    	echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
+    	return 1
+ 	else
+    	for n in $@
+    	do
+      		if [ -f "$n" ] ; then
+          		case "${n%,}" in
+            		*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar) tar xvf "$n" ;;
+            		*.lzma)
+						unlzma ./"$n"
+						;;
+            		*.bz2)
+						bunzip2 ./"$n"
+						;;
+            		*.rar)
+						unrar x -ad ./"$n"
+						;;
+            		*.gz)
+						gunzip ./"$n"
+						;;
+            		*.zip)
+						unzip ./"$n"
+						;;
+	            	*.z)
+						uncompress ./"$n"
+						;;
+            		*.7z|*.arj|*.cab|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.rpm|*.udf|*.wim|*.xar)
+                		7z x ./"$n"
+						;;
+	            	*.xz)
+						unxz ./"$n"
+						;;
+            		*.exe)
+						cabextract ./"$n"
+						;;
+            		*)
+                		echo "extract: '$n' - unknown archive method"
+                		return 1
+                		;;
+          		esac
+      		else
+          		echo "'$n' - file does not exist"
+          		return 1
+      		fi
+    	done
+	fi
+}
 
 # run {times} {command}
 function run() {
@@ -72,14 +109,17 @@ forever() {
         while true; do $@; sleep 1; done
 }
 
-# Powerline
-#if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
-#  powerline-daemon -q
-#  POWERLINE_BASH_CONTINUATION=1
-#  POWERLINE_BASH_SELECT=1
-#  source /usr/share/powerline/bindings/bash/powerline.sh
-#fi
+phpserver() {
+    local ip=localhost
+    local port="${1:-8000}"
+    php -S "${ip}:${port}"
+}
 
-if [ "$TERM" != "linux" ]; then
-    source ~/pureline/pureline ~/.pureline.conf
-fi
+pythonserver() {
+	local port="${1:-8000}"
+    python3 -m http.server $port
+}
+
+weather() {
+    curl -s "https://wttr.in/${1:-Ponorogo}?m2" | sed -n "1,27p"
+}
