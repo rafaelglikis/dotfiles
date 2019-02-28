@@ -18,8 +18,7 @@
     vim +PluginInstall +qall
 
 ### Pureline
-    cd ~
     apt install fonts-powerline
-    git clone https://github.com/chris-marsh/pureline.git
+    git clone https://github.com/chris-marsh/pureline.git  ~/pureline
     curl https://raw.githubusercontent.com/rafaelglikis/dotfiles/master/.pureline.conf > ~/.pureline.conf
 
