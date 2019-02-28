@@ -3,6 +3,9 @@
 
 ### Bash
     curl https://raw.githubusercontent.com/rafaelglikis/dotfiles/master/.bashrc > ~/.bashrc
+
+### Git 
+    curl https://raw.githubusercontent.com/rafaelglikis/dotfiles/master/.gitconfig >~/.gitconfig
     
 ### Tmux
     apt install tmux
@@ -16,6 +19,7 @@
 
 ### Pureline
     cd ~
+    apt install fonts-powerline
     git clone https://github.com/chris-marsh/pureline.git
     curl https://raw.githubusercontent.com/rafaelglikis/dotfiles/master/.pureline.conf > ~/.pureline.conf
 
