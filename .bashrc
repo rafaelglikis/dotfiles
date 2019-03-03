@@ -7,7 +7,7 @@
 
 export PS1='\[\e]0;\w\a\]\[\e[34m\]\u@\h:[$?] \[\e[33m\]\w\[\e[0m\]\$ '
 # Pureline
-if [ "$TERM" != "linux" ]; then
+if [[ -d "$HOME/pureline" && -f "$HOME/.pureline.conf" && "$TERM" != "linux" ]]; then
     source ~/pureline/pureline ~/.pureline.conf
 fi
 
