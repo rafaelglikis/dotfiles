@@ -5,11 +5,49 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export PS1='\[\e]0;\w\a\]\[\e[34m\]\u@\h:[$?] \[\e[33m\]\w\[\e[0m\]\$ '
-# Pureline
-if [[ -d "$HOME/pureline" && -f "$HOME/.pureline.conf" && "$TERM" != "linux" ]]; then
-    source ~/pureline/pureline ~/.pureline.conf
+if [ -f /etc/bash_completion.d/git-prompt ]; then
+	source /etc/bash_completion.d/git-prompt
 fi
+
+
+
+
+set_ps1() {
+	if [ "$?" -eq "0" ]; then
+		#smiley
+		error="${GREEN}:)"
+	else
+		#frowney
+		error="${RED}:("
+	fi
+
+	GIT_PS1_SHOWDIRTYSTATE='y'
+	# GIT_PS1_SHOWSTASHSTATE='y'
+	# GIT_PS1_SHOWUNTRACKEDFILES='y'
+	# GIT_PS1_DESCRIBE_STYLE='contains'
+	# GIT_PS1_SHOWUPSTREAM='auto'
+
+	RESET=$(tput sgr0)
+	BLUE='\[\033[38;5;12m\]'
+	RED='\[\033[38;0;31m\]'
+	YELLOW='\[\033[38;5;226m\]'
+	GREEN='\[\033[38;5;82m\]'
+
+	begin="${BLUE}["
+	user="${BLUE}\u${YELLOW}@\h"
+	if [[ $EUID -eq 0 ]]; then
+		user="${RED}\u${YELLOW}@\h"
+	fi
+	dir="${GREEN}\W"
+	git="$(__git_ps1)"
+	end="${BLUE}]"
+
+	prompt="${RESET}\\$"
+
+	export PS1="${begin} ${user} ${dir}${git} ${error} ${end}${prompt} "
+}
+
+PROMPT_COMMAND=set_ps1
 
 export EDITOR='/usr/bin/vim'
 export PAGER='/usr/bin/less'
@@ -123,3 +161,4 @@ pythonserver() {
 weather() {
     curl -s "https://wttr.in/${1:-Ponorogo}?m2" | sed -n "1,27p"
 }
+
