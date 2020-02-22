@@ -104,8 +104,6 @@ set $ws7  "7:  Notes"
 set $ws8  "8:  Chat"
 set $ws9  "9:  Music"
 set $ws10 "10:  Files"
-set $ws11 11
-set $ws12 12
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -140,6 +138,18 @@ bindsym $mod+control+Shift+Up move workspace to output up
 bindsym $mod+control+Shift+Down move workspace to output down
 bindsym $mod+control+Shift+Left move workspace to output left
 bindsym $mod+control+Shift+Right move workspace to output right
+
+# Assign Workspaces to Monitors
+workspace $ws1 output eDP-1-1
+workspace $ws2 output DP-0
+workspace $ws3 output DP-0
+workspace $ws4 output DP-0 
+workspace $ws5 output eDP-1-1
+workspace $ws6 output eDP-1-1
+workspace $ws7 output HDMI-0
+workspace $ws8 output HDMI-0
+workspace $ws9 output HDMI-0
+workspace $ws10 output HDMI-0
 
 # focus on window when first opens
 for_window [class="."] focus
