@@ -103,7 +103,7 @@ set $ws6  "6:  DB"
 set $ws7  "7:  Notes"
 set $ws8  "8:  Chat"
 set $ws9  "9:  Music"
-set $ws10 "10:  Floating"
+set $ws10 "10:  Files"
 set $ws11 11
 set $ws12 12
 
@@ -154,13 +154,10 @@ for_window [class="Spotify"] move to workspace $ws9
 assign [class="robo3t"] → $ws6
 for_window [class="robo3t"] move to workspace $ws6
 assign [class="Slack"] → $ws8
+assign [class="Pcmanfm"] → $ws10
 
 # assign [class="zoom"] → $ws8
 for_window [class="zoom"] move to workspace $ws8
-
-# Create Floating workspace
-for_window [workspace = $ws10] floating enable
-for_window [workspace = $ws1] floating enable
 
 # Floating Windows
 for_window [class="zoom"] floating enable
@@ -229,6 +226,7 @@ bindsym $mod+Super_L mode "launch"
 
 mode "launch" {
     bindsym c exec google-chrome ; mode "default"
+    bindsym f exec pcmanfm; mode "default"      
     bindsym n exec subl ; mode "default"
     bindsym p exec pstorm ; mode "default"
     bindsym t exec thunar ; mode "default"
@@ -271,7 +269,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
     font pango:monospace 10, FontAwesome 10
     colors {
         background $bg-color
@@ -288,8 +286,10 @@ exec_always feh --bg-fill ~/Insync/rafaelglikis@gmail.com/Google\ Drive/etc/imag
 exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
 
 # Change workspaces with Alt Tab
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+Tab workspace next_on_output
+bindsym $mod+Shift+Tab workspace prev_on_output
+bindsym $mod+grave focus output right
+bindsym $mod+Shift+grave focus output left
 
 # Screen Layout
 exec --no-startup-id xrandr --output eDP-1-1 --mode 1920x1080 --pos 1280x360 --rotate normal --output DP-0 --mode 2560x1440 --pos 3200x0 --rotate normal --output DP-1 --off --output HDMI-0 --primary --mode 1280x1024 --pos 0x360 --rotate normal
@@ -313,3 +313,9 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Autostart
 exec --no-startup-id insync
+
+# Mouse 
+## The middle button over a titlebar kills the window
+bindsym --release button2 kill
+## The right button toggles floating
+bindsym button3 floating toggle
