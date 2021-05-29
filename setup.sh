@@ -2,7 +2,7 @@
 
 # Setup all
 echo "Setting Up Tools"
-sudo apt install git tmux vim zsh stow -y
+sudo apt install git tmux vim zsh stow bat -y
 
 echo "Setting up Vim Plugins"
 vim +PluginInstall +qall
