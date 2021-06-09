@@ -21,7 +21,7 @@
 
 [color]
   branch = always
-  diff = always
+  diff = auto
   grep = always
   interactive = always
   pager = true
