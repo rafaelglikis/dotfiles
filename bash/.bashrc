@@ -162,4 +162,5 @@ weather() {
     curl -s "https://wttr.in/${1:-Ponorogo}?m2" | sed -n "1,27p"
 }
 
+alias cat="batcat -p"
 alias bat=batcat

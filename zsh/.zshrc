@@ -123,4 +123,5 @@ export TERM=xterm-256color
 
 DOCKER_LW_ENV=$HOME/lw/devsetup/
 alias lwdc="docker-compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_ENV}docker-compose.override.yml -f ${DOCKER_LW_ENV}extra/account.yml -f ${DOCKER_LW_ENV}extra/adminer.yml"
-alias bat=batcat
+alias cat="batcat -p"
+alias bat="batcat"
