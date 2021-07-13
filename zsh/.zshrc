@@ -71,6 +71,7 @@ export UPDATE_ZSH_DAYS=13
 plugins=(
   git 
   zsh-syntax-highlighting
+  zsh-autopair
   zsh-autosuggestions
   extract
   colored-man-pages
