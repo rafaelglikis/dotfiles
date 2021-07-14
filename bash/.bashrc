@@ -161,6 +161,8 @@ pythonserver() {
 weather() {
     curl -s "https://wttr.in/${1:-Ponorogo}?m2" | sed -n "1,27p"
 }
+[[ -s /home/rafael/.autojump/etc/profile.d/autojump.sh ]] && source /home/rafael/.autojump/etc/profile.d/autojump.sh
+
 
 alias cat="batcat -p"
 alias bat=batcat

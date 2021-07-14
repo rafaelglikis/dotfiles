@@ -72,6 +72,7 @@ plugins=(
   git 
   zsh-syntax-highlighting
   zsh-autopair
+  autojump
   zsh-autosuggestions
   extract
   colored-man-pages
@@ -121,6 +122,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export TERM=xterm-256color
+[[ -s /home/rafael/.autojump/etc/profile.d/autojump.sh ]] && source /home/rafael/.autojump/etc/profile.d/autojump.sh
+
 
 DOCKER_LW_ENV=$HOME/lw/devsetup/
 alias lwdc="docker-compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_ENV}docker-compose.override.yml -f ${DOCKER_LW_ENV}extra/account.yml -f ${DOCKER_LW_ENV}extra/adminer.yml"
