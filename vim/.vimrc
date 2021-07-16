@@ -82,6 +82,14 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+" Others
+set relativenumber
+set nohlsearch
+set hidden
+set smartcase
+set ignorecase
+set scrolloff=8
+
 """""""""""""""""""""""" AIRLINE
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
