@@ -2,7 +2,7 @@
 
 # Setup all
 echo "Setting Up Tools"
-sudo apt install git tmux vim zsh stow bat tmuxp python python-pip python3 python3-pip -y
+sudo apt install git tmux vim zsh stow bat tmuxp python python-pip python3 python3-pip meld -y
 
 echo "Setting up Vim Plugins"
 vim +PluginInstall +qall
