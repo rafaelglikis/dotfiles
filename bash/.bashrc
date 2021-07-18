@@ -9,9 +9,6 @@ if [ -f /etc/bash_completion.d/git-prompt ]; then
 	source /etc/bash_completion.d/git-prompt
 fi
 
-
-
-
 set_ps1() {
 	if [ "$?" -eq "0" ]; then
 		#smiley
@@ -61,6 +58,9 @@ bind '"\e[B": history-search-forward'
 # Aliases
 alias myip='hostname -i'
 alias exip='curl ipinfo.io/ip'
+alias cat="batcat -p"
+alias bat=batcat
+alias r='ranger'
 
 if [ -x /usr/bin/dircolors ]; then
     test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
@@ -134,17 +134,17 @@ function extract {
 
 # run {times} {command}
 function run() {
-        number=$1
-        shift
-        for n in $(seq $number); do
-                $@
-                sleep 1
-        done
+    number=$1
+    shift
+    for n in $(seq $number); do
+        $@
+        sleep 1
+    done
 }
 
 #run forever
 forever() {
-        while true; do $@; sleep 1; done
+    while true; do $@; sleep 1; done
 }
 
 phpserver() {
@@ -161,8 +161,8 @@ pythonserver() {
 weather() {
     curl -s "https://wttr.in/${1:-Ponorogo}?m2" | sed -n "1,27p"
 }
+
 [[ -s /home/rafael/.autojump/etc/profile.d/autojump.sh ]] && source /home/rafael/.autojump/etc/profile.d/autojump.sh
 
 
-alias cat="batcat -p"
-alias bat=batcat
+
