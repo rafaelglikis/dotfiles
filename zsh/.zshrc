@@ -30,7 +30,6 @@ plugins=(
   copyfile
   docker
   docker-compose
-  dotenv
   emoji
   golang
   history
