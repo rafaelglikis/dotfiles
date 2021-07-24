@@ -14,6 +14,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
+
 filetype plugin indent on
 " :PluginInstall
 
@@ -89,6 +90,15 @@ set hidden
 set smartcase
 set ignorecase
 set scrolloff=8
+
+
+let mapleader = " "
+
+" Add new lines without entering insert mode
+nmap oo m`o<Esc>`` 
+nmap OO m`O<Esc>``
+set timeoutlen=200
+imap jj <Esc>
 
 """""""""""""""""""""""" AIRLINE
 let g:airline#extensions#tabline#enabled = 1
