@@ -1,0 +1,65 @@
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+imap jj <Esc>
+
+let mapleader = " "
+
+nmap oo o<Esc>k
+nmap OO O<Esc>j
+set timeoutlen=500
+
+nnoremap <leader>si :source ~/.ideavimrc<CR>
+
+" Navigation
+map <leader>h :action Back<cr>
+nmap <leader>l :action Forward<cr>
+
+" Splits manipulation
+nmap <leader>wo :action NextSplitter<cr>
+nmap <leader>wp :action PrevSplitter<cr>
+nmap <leader>ws :action SplitHorizontally<cr>
+nmap <leader>wv :action SplitVertically<cr>
+nmap <leader>wc :action Unsplit<cr>
+nmap <leader>wC :action UnsplitAll<cr>
+
+" Refactorings
+vmap T :action Refactorings.QuickListPopupAction<cr>
+nmap <leader>rr :action RenameElement<cr>
+nmap <leader>rg :action Generate<cr>
+nmap <leader>rI :action OptimizeImports<cr>
+nmap <leader>ri :action Inline<cr>
+
+"VCS
+map <leader>t :action Vcs.UpdateProject<CR>
+
+map <leader>a :action $SelectAll<CR>
+map <leader>b :action GotoDeclaration<CR>
+map <leader>d :action EditorDuplicate<CR>
+map <leader>e :action RecentFiles<CR>
+map <leader>f :action Find<CR>
+map <leader>g :action GotoLine<CR>
+map <leader>i :action ImplementMethods<CR>
+map <leader>m :action EditorScrollToCenter<CR>
+map <leader>n :action FileChooser.NewFolder<CR>
+map <leader>o :action OverrideMethods<CR>
+map <leader>p :action ParameterInfo<CR>
+map <leader>q :action QuickJavaDoc<CR>
+map <leader>r :action Replace<CR>
+map <leader>u :action GotoSuperMethod<CR>
+map <leader>w :action EditorSelectWord<CR>
+map <leader>[ :action EditorCodeBlockStart<CR>
+map <leader>] :action EditorCodeBlockEnd<CR>
