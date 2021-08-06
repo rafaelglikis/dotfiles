@@ -1,3 +1,4 @@
+source .vimrc
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
@@ -14,13 +15,8 @@ set scrolloff=5
 "map \b <Action>(ToggleLineBreakpoint)
 
 " Find more examples here: https://jb.gg/share-ideavimrc
-imap jj <Esc>
-
-let mapleader = " "
-
 nmap oo o<Esc>k
 nmap OO O<Esc>j
-set timeoutlen=200
 
 nnoremap <leader>si :source ~/.ideavimrc<CR>
 
