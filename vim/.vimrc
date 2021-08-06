@@ -100,6 +100,10 @@ set timeoutlen=200
 imap jk <Esc>
 imap kj <Esc>
 
+" paste last thing yanked, not deleted
+nmap ,p "0p
+nmap ,P "0P
+
 """""""""""""""""""""""" AIRLINE
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
