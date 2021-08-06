@@ -36,7 +36,6 @@ let g:airline#extensions#ale#enabled = 1
 
 """""""""""""""""""""""" GENERAL 
 set number
-set paste
 set showcmd
 set showmode
 set autoread
@@ -98,7 +97,8 @@ let mapleader = " "
 nmap oo m`o<Esc>`` 
 nmap OO m`O<Esc>``
 set timeoutlen=200
-imap jj <Esc>
+imap jk <Esc>
+imap kj <Esc>
 
 """""""""""""""""""""""" AIRLINE
 let g:airline#extensions#tabline#enabled = 1

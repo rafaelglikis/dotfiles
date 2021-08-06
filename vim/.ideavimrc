@@ -20,7 +20,7 @@ let mapleader = " "
 
 nmap oo o<Esc>k
 nmap OO O<Esc>j
-set timeoutlen=500
+set timeoutlen=200
 
 nnoremap <leader>si :source ~/.ideavimrc<CR>
 
@@ -46,7 +46,7 @@ nmap <leader>ri :action Inline<cr>
 "VCS
 map <leader>t :action Vcs.UpdateProject<CR>
 
-map <leader>a :action $SelectAll<CR>
+map <leader>a :action Annotate<CR>
 map <leader>b :action GotoDeclaration<CR>
 map <leader>d :action EditorDuplicate<CR>
 map <leader>e :action RecentFiles<CR>
