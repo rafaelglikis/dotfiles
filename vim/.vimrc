@@ -104,6 +104,12 @@ imap kj <Esc>
 nmap ,p "0p
 nmap ,P "0P
 
+nmap ; :
+vmap ; :
+
+" use systemps clipboard
+set clipboard=unnamedplus
+
 """""""""""""""""""""""" AIRLINE
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
