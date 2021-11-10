@@ -23,9 +23,7 @@ plugins=(
   cp
   rsync
   web-search
-  colored-man-pages
   composer
-  vagrant
   copydir
   copyfile
   docker
@@ -34,10 +32,7 @@ plugins=(
   golang
   history
   nmap
-  thefuck
   tmux
-  web-search
-  omz reload
 )
 
 [[ -s /home/rafael/.autojump/etc/profile.d/autojump.sh ]] && source /home/rafael/.autojump/etc/profile.d/autojump.sh
