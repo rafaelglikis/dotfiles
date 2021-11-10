@@ -164,5 +164,4 @@ weather() {
 
 [[ -s /home/rafael/.autojump/etc/profile.d/autojump.sh ]] && source /home/rafael/.autojump/etc/profile.d/autojump.sh
 
-
-
+. ~/.bash_completion

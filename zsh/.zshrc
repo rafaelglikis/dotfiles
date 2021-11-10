@@ -37,7 +37,7 @@ plugins=(
   thefuck
   tmux
   web-search
-  zsh_reload
+  omz reload
 )
 
 [[ -s /home/rafael/.autojump/etc/profile.d/autojump.sh ]] && source /home/rafael/.autojump/etc/profile.d/autojump.sh
@@ -61,3 +61,7 @@ alias r='ranger'
 
 DOCKER_LW_ENV=$HOME/lw/devsetup/
 alias lwdc="docker-compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_ENV}docker-compose.override.yml -f ${DOCKER_LW_ENV}extra/account.yml -f ${DOCKER_LW_ENV}extra/adminer.yml"
+
+autoload -U bashcompinit
+bashcompinit
+eval "$(register-python-argcomplete3 lw)"

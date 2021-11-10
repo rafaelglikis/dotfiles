@@ -1,0 +1,6 @@
+if [ -d "~/.bash_completion.d" ]; then
+    for bcfile in ~/.bash_completion.d/* ; do
+
+      . $bcfile
+    done
+fi
