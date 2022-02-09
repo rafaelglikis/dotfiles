@@ -11,11 +11,13 @@ dotfiles=(
 )
 
 for dir in ${dotfiles[*]}; do
-    for path in $(find $dir -type f); do
+    for path in $(find "$dir" -type f); do
         src=$(pwd)/$path
         dest=~/${path#"$dir/"}
-        echo Linking $src to $dest
-        ln -s $src $dest --force
+        path_without_filename=$(dirname "$dest")
+        mkdir -p "$path_without_filename"
+        echo Linking "$src" to "$dest"
+        ln -s "$src" "$dest" --force
     done
 done
 
