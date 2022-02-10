@@ -73,15 +73,6 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-" Autoclose Brackets 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-
 " Others
 set relativenumber
 set nohlsearch
@@ -96,9 +87,9 @@ let mapleader = " "
 " Add new lines without entering insert mode
 nmap oo m`o<Esc>`` 
 nmap OO m`O<Esc>``
-set timeoutlen=200
-imap jk <Esc>
-imap kj <Esc>
+set timeout timeoutlen=1000 ttimeoutlen=100
+imap jk <Esc>`^
+imap kj <Esc>`^
 
 " paste last thing yanked, not deleted
 nmap ,p "0p
