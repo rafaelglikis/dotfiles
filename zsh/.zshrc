@@ -3,7 +3,7 @@ export ZSH="/home/rafael/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 export UPDATE_ZSH_DAYS=13
-
+eval $(thefuck --alias)
 plugins=(
   git 
   zsh-syntax-highlighting
@@ -14,24 +14,14 @@ plugins=(
   colored-man-pages
   sudo
   history
-  catimg
-  npm
-  pip 
   python 
   colorize
-  command-not-found
   cp
   rsync
-  web-search
-  composer
-  copydir
-  copyfile
   docker
   docker-compose
   emoji
   golang
-  history
-  nmap
   tmux
 )
 
@@ -49,6 +39,7 @@ fi
 
 export TERM=xterm-256color
 
+setopt HIST_IGNORE_SPACE
 # Aliases
 alias cat="batcat -p"
 alias bat="batcat"
@@ -60,3 +51,8 @@ alias lwdc="docker-compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_
 autoload -U bashcompinit
 bashcompinit
 eval "$(register-python-argcomplete3 lw)"
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
