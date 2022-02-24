@@ -98,6 +98,11 @@ nmap ,P "0P
 nmap ; :
 vmap ; :
 
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-d>
+map <S-K> gt
+map <S-J> gT
+
 " use systemps clipboard
 set clipboard=unnamedplus
 

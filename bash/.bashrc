@@ -178,3 +178,21 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias k='kubectl'
+alias kgp='kubectl get pods'
+alias kgi='kubectl get ingress'
+alias kdp='kubectl describe pod'
+alias kdi='kubectl describe ingress'
+alias kns='kubens'
+alias kctx='kubectx'
+
+## functions
+function kwide {
+    kubectl $@ -o wide
+}
+
+function ktail {
+    kubectl logs --prefix -f -l app=$1
+}
+
