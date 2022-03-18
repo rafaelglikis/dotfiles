@@ -8,6 +8,7 @@ dotfiles=(
   tmux
   vim
   zsh
+  konsole
 )
 
 for dir in ${dotfiles[*]}; do
@@ -18,6 +19,7 @@ for dir in ${dotfiles[*]}; do
         mkdir -p "$path_without_filename"
         echo Linking "$src" to "$dest"
         ln -s "$src" "$dest" --force
+        ls -la "$dest" --color
     done
 done
 
