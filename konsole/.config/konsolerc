@@ -9,7 +9,7 @@ detailViewIconSize=0
 
 [MainWindow]
 Height 1080=1024
-Height 1440=911
+Height 1440=1384
 Height 2560=2503
 Height 768=703
 Height 900=1021
@@ -19,7 +19,7 @@ Width 1024=1024
 Width 1440=1440
 Width 1600=1600
 Width 1920=592
-Width 2560=1340
+Width 2560=2560
 Window-Maximized 1024x1280=true
 
 [Notification Messages]
