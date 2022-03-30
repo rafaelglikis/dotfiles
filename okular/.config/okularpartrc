@@ -1,0 +1,8 @@
+[General]
+ttsEngine=flite
+
+[Main View]
+ShowLeftPanel=false
+
+[PageView]
+MouseMode=TextSelect
