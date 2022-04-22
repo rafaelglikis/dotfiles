@@ -5,16 +5,15 @@ ZSH_THEME="robbyrussell"
 export UPDATE_ZSH_DAYS=13
 eval $(thefuck --alias)
 plugins=(
-  git 
+  git
   zsh-syntax-highlighting
-  zsh-autopair
   autojump
   zsh-autosuggestions
   extract
   colored-man-pages
   sudo
   history
-  python 
+  python
   colorize
   cp
   rsync
@@ -50,8 +49,6 @@ alias lwdc="docker-compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_
 
 autoload -U bashcompinit
 bashcompinit
-eval "$(register-python-argcomplete3 lw)"
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -73,3 +70,6 @@ function kwide {
 function ktail {
 	kubectl logs --prefix -f -l app=$1
 }
+
+eval "$(register-python-argcomplete rpt)"
+eval "$(register-python-argcomplete lw)"
