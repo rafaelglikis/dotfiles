@@ -44,7 +44,7 @@ alias cat="batcat -p"
 alias bat="batcat"
 alias r='ranger'
 
-DOCKER_LW_ENV=$HOME/lw/devsetup/
+DOCKER_LW_ENV=$HOME/dev/lw/devsetup/
 alias lwdc="docker-compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_ENV}docker-compose.override.yml -f ${DOCKER_LW_ENV}extra/account.yml -f ${DOCKER_LW_ENV}extra/adminer.yml"
 
 autoload -U bashcompinit
@@ -70,6 +70,10 @@ function kwide {
 function ktail {
 	kubectl logs --prefix -f -l app=$1
 }
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
 
 eval "$(register-python-argcomplete rpt)"
 eval "$(register-python-argcomplete lw)"
