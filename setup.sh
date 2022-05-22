@@ -4,6 +4,7 @@ dotfiles=(
   bash
   git
   ranger
+  dolphin
   ssh
   tmux
   vim
