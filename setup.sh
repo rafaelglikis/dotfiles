@@ -8,6 +8,7 @@ dotfiles=(
   tmux
   vim
   zsh
+  kde
   konsole
 )
 
