@@ -68,8 +68,6 @@
 	showPatch = true
 [log]
     date = relative
-[commit]
-  template = ~/.gitmessage
 
 [alias]
     retag = "!f() { git tag -f -a \"$1\" -m \"$1\" && git push origin \"$1\" -f; }; f"
