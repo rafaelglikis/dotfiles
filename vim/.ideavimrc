@@ -22,9 +22,13 @@ nnoremap <leader>si :source ~/.ideavimrc<CR>
 
 " Window sand panes
 nmap <leader>wo :action NextSplitter<cr>
+nmap <leader>wl :action NextSplitter<cr>
 nmap <leader>wp :action PrevSplitter<cr>
+nmap <leader>wh :action PrevSplitter<cr>
 nmap <leader>ws :action SplitHorizontally<cr>
+nmap <leader>w" :action SplitHorizontally<cr>
 nmap <leader>wv :action SplitVertically<cr>
+nmap <leader>w% :action SplitVertically<cr>
 nmap <leader>wc :action Unsplit<cr>
 nmap <leader>wC :action UnsplitAll<cr>
 
