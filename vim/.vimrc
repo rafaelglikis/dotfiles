@@ -100,8 +100,8 @@ vmap ; :
 
 nnoremap <S-Tab> <<
 inoremap <S-Tab> <C-d>
-map <S-K> gt
-map <S-J> gT
+map <S-J> gt
+map <S-K> gT
 
 " use systemps clipboard
 set clipboard=unnamedplus
