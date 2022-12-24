@@ -16,8 +16,6 @@ set idearefactormode=keep
 "map \b <Action>(ToggleLineBreakpoint)
 
 " Find more examples here: https://jb.gg/share-ideavimrc
-nmap oo o<Esc>k
-nmap OO O<Esc>j
 
 " Reimport sources bindings
 nnoremap <leader>si :source ~/.ideavimrc<CR>
@@ -73,7 +71,6 @@ map <leader>i :action ImplementMethods<CR>
 map <leader>o :action OverrideMethods<CR>
 
 " Code info
-map <leader>p :action ParameterInfo<CR>
 map <leader>q :action QuickJavaDoc<CR>
 
 

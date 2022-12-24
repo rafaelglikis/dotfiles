@@ -85,15 +85,15 @@ set scrolloff=8
 let mapleader = " "
 
 " Add new lines without entering insert mode
-nmap oo m`o<Esc>`` 
-nmap OO m`O<Esc>``
+nmap oo o<Esc>k
+nmap OO O<Esc>j
 set timeout timeoutlen=1000 ttimeoutlen=100
 imap jk <Esc>`^
 imap kj <Esc>`^
 
 " paste last thing yanked, not deleted
-nmap ,p "0p
-nmap ,P "0P
+nmap <leader>p "0p
+nmap <leader>P "0P
 
 nmap ; :
 vmap ; :
