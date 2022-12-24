@@ -57,7 +57,8 @@ map <leader>gr :action Vcs.RollbackChangedLines<CR>
 map <leader>gR :action ChangesView.Revert<CR>
 
 "Editor
-map <C-A-H> :action $LRU<CR>
+map <leader>jf :action HideAllWindows<CR>
+map <leader>jt :action ActivateTerminalToolWindow<CR>
 
 map <leader>b :action GotoDeclaration<CR>
 map <leader>d :action EditorDuplicate<CR>
