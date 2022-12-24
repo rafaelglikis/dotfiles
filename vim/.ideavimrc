@@ -49,7 +49,7 @@ map <leader>gj :action VcsShowNextChangeMarker<CR>
 map <leader>gk :action VcsShowPrevChangeMarker<CR>
 map <leader>ga :action Annotate<CR>
 map <leader>gc :action CheckinProject<CR>
-map <leader>gk :action CheckinProject<CR>
+map <leader>gP :action Vcs.Push<CR>
 
 map <leader>b :action GotoDeclaration<CR>
 map <leader>d :action EditorDuplicate<CR>
