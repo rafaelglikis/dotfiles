@@ -44,12 +44,18 @@ nmap <leader>rI :action OptimizeImports<cr>
 nmap <leader>ri :action Inline<cr>
 
 "VCS
-map <leader>t :action Vcs.UpdateProject<CR>
+map <leader>gp :action Vcs.UpdateProject<CR>
 map <leader>gj :action VcsShowNextChangeMarker<CR>
 map <leader>gk :action VcsShowPrevChangeMarker<CR>
+vmap <leader>gl :action Vcs.ShowHistoryForBlock<CR>
+nmap <leader>gl :action Vcs.ShowTabbedFileHistory<CR>
 map <leader>ga :action Annotate<CR>
+map <leader>gb :action Git.Branches<CR>
 map <leader>gc :action CheckinProject<CR>
 map <leader>gP :action Vcs.Push<CR>
+
+"Editor
+map <C-A-H> :action $LRU<CR>
 
 map <leader>b :action GotoDeclaration<CR>
 map <leader>d :action EditorDuplicate<CR>
