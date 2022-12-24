@@ -6,6 +6,8 @@ Width 2560=1129
 [CompactMode]
 FontWeight=50
 
+ShowCopyMoveMenu=true
+
 [Desktop Entry]
 DefaultProfile=Profile 9.profile
 
@@ -30,12 +32,37 @@ Height 1080=542
 Height 1440=456
 Width 1920=438
 Width 2560=425
+eDP DisplayPort-0 Height 1920x1080=458
+eDP DisplayPort-0 Width 1920x1080=439
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 Height 1920x1080=616
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 Height 2560x1440=616
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 Width 1920x1080=484
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 Width 2560x1440=476
+eDP HDMI-A-0 DisplayPort-0 Height 1920x1080=464
+eDP HDMI-A-0 DisplayPort-0 Width 1920x1080=435
 eDP HDMI-A-0 DisplayPort-1 Height 2560x1440=598
 eDP HDMI-A-0 DisplayPort-1 Width 2560x1440=463
 eDP Height 1920x1080=616
-eDP Width 1920x1080=438
+eDP Width 1920x1080=449
 
 [MainWindow]
+DisplayPort-0 HDMI-A-0 Height 1920x1080=348
+DisplayPort-0 HDMI-A-0 Width 1920x1080=1916
+DisplayPort-0 HDMI-A-0 XPosition 1920x1080=2131
+DisplayPort-0 HDMI-A-0 YPosition 1920x1080=542
+DisplayPort-0 Window-Maximized 1920x1080=true
+HDMI-A-0 eDP DisplayPort-1 Height 1920x1080=1052
+HDMI-A-0 eDP DisplayPort-1 Height 2560x1440=1412
+HDMI-A-0 eDP DisplayPort-1 Width 1920x1080=1916
+HDMI-A-0 eDP DisplayPort-1 Width 2560x1440=1276
+HDMI-A-0 eDP DisplayPort-1 XPosition 1920x1080=2
+HDMI-A-0 eDP DisplayPort-1 XPosition 2560x1440=4345
+HDMI-A-0 eDP DisplayPort-1 YPosition 1920x1080=26
+HDMI-A-0 eDP DisplayPort-1 YPosition 2560x1440=2
+HDMI-A-0 eDP Height 1920x1080=1056
+HDMI-A-0 eDP Width 1920x1080=1920
+HDMI-A-0 eDP XPosition 1920x1080=0
+HDMI-A-0 eDP YPosition 1920x1080=24
 Height 1080=1398
 Height 1440=1369
 Height 900=1011
@@ -45,14 +72,58 @@ Width 1600=1334
 Width 1920=2560
 Width 2560=1129
 Window-Maximized 1080x1920=true
+eDP DisplayPort-0 DisplayPort-1 Height 1920x1080=1440
+eDP DisplayPort-0 DisplayPort-1 Width 1920x1080=2560
+eDP DisplayPort-0 HDMI-A-0 Height 1920x1080=1056
+eDP DisplayPort-0 HDMI-A-0 Width 1920x1080=1920
+eDP DisplayPort-0 HDMI-A-0 Window-Maximized 1920x1080=true
+eDP DisplayPort-0 HDMI-A-0 XPosition 1920x1080=962
+eDP DisplayPort-0 HDMI-A-0 YPosition 1920x1080=1106
+eDP DisplayPort-0 Height 1080x1920=1056
+eDP DisplayPort-0 Height 1920x1080=1052
+eDP DisplayPort-0 Width 1080x1920=1920
+eDP DisplayPort-0 Width 1920x1080=1338
+eDP DisplayPort-0 XPosition 1920x1080=2499
+eDP DisplayPort-0 YPosition 1920x1080=26
+eDP DisplayPort-1 Height 1920x1080=1418
+eDP DisplayPort-1 Width 1920x1080=2560
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 Height 1920x1080=1056
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 Height 2560x1440=1416
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 Width 1920x1080=956
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 Width 2560x1440=2560
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 XPosition 1920x1080=3249
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 XPosition 2560x1440=1920
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 YPosition 1920x1080=1462
+eDP HDMI-A-0 DisplayPort-0 DisplayPort-1 YPosition 2560x1440=24
+eDP HDMI-A-0 DisplayPort-0 Height 1080x1920=636
+eDP HDMI-A-0 DisplayPort-0 Height 1920x1080=1056
+eDP HDMI-A-0 DisplayPort-0 Height 480x640=1056
+eDP HDMI-A-0 DisplayPort-0 Width 1080x1920=1076
+eDP HDMI-A-0 DisplayPort-0 Width 1920x1080=1920
+eDP HDMI-A-0 DisplayPort-0 Width 480x640=1920
+eDP HDMI-A-0 DisplayPort-0 XPosition 1080x1920=2
+eDP HDMI-A-0 DisplayPort-0 XPosition 1920x1080=1922
+eDP HDMI-A-0 DisplayPort-0 YPosition 1080x1920=1150
+eDP HDMI-A-0 DisplayPort-0 YPosition 1920x1080=1082
+eDP HDMI-A-0 DisplayPort-1 DisplayPort-0 Height 1920x1080=1076
+eDP HDMI-A-0 DisplayPort-1 DisplayPort-0 Width 1920x1080=1916
+eDP HDMI-A-0 DisplayPort-1 DisplayPort-0 XPosition 1920x1080=2
+eDP HDMI-A-0 DisplayPort-1 DisplayPort-0 XPosition 2560x1440=3202
+eDP HDMI-A-0 DisplayPort-1 DisplayPort-0 YPosition 1920x1080=2
+eDP HDMI-A-0 DisplayPort-1 DisplayPort-0 YPosition 2560x1440=26
 eDP HDMI-A-0 DisplayPort-1 Height 2560x1440=1416
 eDP HDMI-A-0 DisplayPort-1 Width 2560x1440=2560
 eDP HDMI-A-0 DisplayPort-1 XPosition 2560x1440=1920
 eDP HDMI-A-0 DisplayPort-1 YPosition 2560x1440=24
-eDP Height 1920x1080=519
-eDP Width 1920x1080=372
-eDP XPosition 1920x1080=1120
-eDP YPosition 1920x1080=29
+eDP HDMI-A-0 Height 1920x1080=1056
+eDP HDMI-A-0 Width 1920x1080=1920
+eDP HDMI-A-0 XPosition 1920x1080=1012
+eDP HDMI-A-0 YPosition 1920x1080=2184
+eDP Height 1920x1080=1056
+eDP Width 1920x1080=1920
+eDP Window-Maximized 1920x1080=true
+eDP XPosition 1920x1080=0
+eDP YPosition 1920x1080=24
 
 [Open-with settings]
 CompletionMode=1
@@ -63,10 +134,6 @@ IconSize=32
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
-
-[Search]
-Location=Everywhere
-What=Content
 
 [SettingsDialog]
 Height 1440=456
