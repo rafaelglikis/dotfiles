@@ -45,6 +45,8 @@ nmap <leader>ri :action Inline<cr>
 
 "VCS
 map <leader>t :action Vcs.UpdateProject<CR>
+map <leader>gj :action VcsShowNextChangeMarker<CR>
+map <leader>gk :action VcsShowPrevChangeMarker<CR>
 
 map <leader>a :action Annotate<CR>
 map <leader>b :action GotoDeclaration<CR>
