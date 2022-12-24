@@ -53,6 +53,8 @@ map <leader>ga :action Annotate<CR>
 map <leader>gb :action Git.Branches<CR>
 map <leader>gc :action CheckinProject<CR>
 map <leader>gP :action Vcs.Push<CR>
+map <leader>gr :action Vcs.RollbackChangedLines<CR>
+map <leader>gR :action ChangesView.Revert<CR>
 
 "Editor
 map <C-A-H> :action $LRU<CR>
