@@ -4,6 +4,9 @@ source .vimrc
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
 set ideajoin
+set sneak
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's', 'S']
 set idearefactormode=keep
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
@@ -19,6 +22,10 @@ set idearefactormode=keep
 
 " Reimport sources bindings
 nnoremap <leader>si :source ~/.ideavimrc<CR>
+
+" IDE Shortcuts
+" Use ctrl-c as an ide shortcut in normal and visual modes
+sethandler <C-C> n-v:ide i:vim
 
 " Window sand panes
 nmap <leader>wo :action NextSplitter<cr>
