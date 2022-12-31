@@ -77,10 +77,11 @@ map <leader>r :action Replace<CR>
 map <leader>[ :action EditorCodeBlockStart<CR>
 map <leader>] :action EditorCodeBlockEnd<CR>
 " Bookmarks
-map <leader>m :action ToggleBookmark<CR>
-map <leader>M :action ShowBookmarks<CR>
-" map <leader>mj :action GotoNextBookmarkInEditor<CR> Not working
-" map <leader>mk :action GotoPreviousBookmarkInEditor<CR> Not working
+map <leader>mm :action ToggleBookmark<CR>
+map <leader>mr :action EditBookmark<CR>
+map <leader>mM :action ShowBookmarks<CR>
+map <leader>mj :action GotoNextBookmark<CR>
+map <leader>mk :action GotoPreviousBookmark<CR>
 
 " Code Generation
 vmap T :action Refactorings.QuickListPopupAction<cr>
