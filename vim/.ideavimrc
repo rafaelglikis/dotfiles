@@ -80,6 +80,9 @@ map <leader>M :action ShowBookmarks<CR>
 vmap T :action Refactorings.QuickListPopupAction<cr>
 map <leader>d :action EditorDuplicate<CR>
 nmap <leader>rr :action RenameElement<cr>
+vmap <leader>rv :action IntroduceVariable<cr>
+vmap <leader>rc :action IntroduceConstant<cr>
+vmap <leader>rm :action ExtractMethod<cr>
 nmap <leader>rg :action Generate<cr>
 nmap <leader>rI :action OptimizeImports<cr>
 nmap <leader>ri :action Inline<cr>
