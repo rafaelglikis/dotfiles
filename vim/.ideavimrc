@@ -27,6 +27,12 @@ nnoremap <leader>si :source ~/.ideavimrc<CR>
 " Use ctrl-c as an ide shortcut in normal and visual modes
 sethandler <C-C> n-v:ide i:vim
 
+" Change panes with alt keys
+nnoremap <A-J> <C-W><C-J>
+nnoremap <A-K> <C-W><C-K>
+nnoremap <A-L> <C-W><C-L>
+nnoremap <A-H> <C-W><C-H>
+
 " Window sand panes
 nmap <leader>wo :action NextSplitter<cr>
 nmap <leader>wl :action NextSplitter<cr>
