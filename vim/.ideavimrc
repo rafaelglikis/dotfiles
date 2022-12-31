@@ -11,9 +11,7 @@ set idearefactormode=keep
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
-
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
+map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
@@ -84,8 +82,10 @@ map <leader>mj :action GotoNextBookmark<CR>
 map <leader>mk :action GotoPreviousBookmark<CR>
 
 " Code Generation
+map <leader>i :action ImplementMethods<CR>
+map <leader>o :action OverrideMethods<CR>
+" Refactorings
 vmap T :action Refactorings.QuickListPopupAction<cr>
-map <leader>d :action EditorDuplicate<CR>
 nmap <leader>rr :action RenameElement<cr>
 vmap <leader>rv :action IntroduceVariable<cr>
 vmap <leader>rc :action IntroduceConstant<cr>
@@ -93,8 +93,6 @@ vmap <leader>rm :action ExtractMethod<cr>
 nmap <leader>rg :action Generate<cr>
 nmap <leader>rI :action OptimizeImports<cr>
 nmap <leader>ri :action Inline<cr>
-map <leader>i :action ImplementMethods<CR>
-map <leader>o :action OverrideMethods<CR>
 
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
