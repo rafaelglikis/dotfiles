@@ -9,11 +9,13 @@ dotfiles=(
   tmux
   vim
   zsh
+  i3
   kde
   konsole
 )
 
 for dir in ${dotfiles[*]}; do
+    # shellcheck disable=SC2044
     for path in $(find "$dir" -type f); do
         src=$(pwd)/$path
         dest=~/${path#"$dir/"}
