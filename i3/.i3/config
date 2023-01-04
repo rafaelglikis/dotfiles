@@ -129,9 +129,9 @@ bindsym Mod4+minus scratchpad show
 set $ws1 "1: Code"
 set $ws2 "2: Terminal"
 set $ws3 "3: Browser"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
+set $ws4 "4: Chat"
+set $ws5 "5: Notes"
+set $ws6 "6: More Code"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9: Misc"
@@ -149,7 +149,10 @@ bindsym Mod4+8 workspace number $ws8
 bindsym Mod4+9 workspace number $ws9
 bindsym Mod4+0 workspace number $ws10
 bindsym Mod4+Tab workspace next
+bindsym Mod4+period workspace next
+bindsym Mod4+comma workspace prev
 
+workspace_layout stacked
 
 # move focused container to workspace
 bindsym Mod4+Shift+1 move container to workspace number $ws1
@@ -162,6 +165,10 @@ bindsym Mod4+Shift+7 move container to workspace number $ws7
 bindsym Mod4+Shift+8 move container to workspace number $ws8
 bindsym Mod4+Shift+9 move container to workspace number $ws9
 bindsym Mod4+Shift+0 move container to workspace number $ws10
+
+for_window [class="obsidian"] move to workspace $ws5
+for_window [class="jetbrains-pycharm"] move to workspace $ws6
+for_window [class="slack"] move to workspace $ws4
 
 # reload the configuration file
 bindsym Mod4+Shift+c reload
