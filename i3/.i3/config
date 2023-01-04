@@ -21,7 +21,7 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 # start kwallet
-exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
+exec --no-startup-id sudo /usr/share/libpam-kwallet-common/pam_kwallet_init
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
