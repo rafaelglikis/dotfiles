@@ -204,6 +204,17 @@ mode "resize" {
 
 bindsym Mod4+r mode "resize"
 
+set $launch Launch
+mode $launch {
+    bindsym s exec --no-startup-id slack, mode "default"
+    bindsym p exec --no-startup-id phpstorm, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym Control+space mode "$launch"
+
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 
 mode "$mode_system" {
