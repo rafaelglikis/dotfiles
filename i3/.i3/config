@@ -168,7 +168,9 @@ bindsym Mod4+Shift+0 move container to workspace number $ws10
 
 for_window [class="obsidian"] move to workspace $ws5
 for_window [class="jetbrains-pycharm"] move to workspace $ws6
+for_window [class="jetbrains-phpstorm"] move to workspace $ws1
 for_window [class="slack"] move to workspace $ws4
+for_window [class="google-chrome"] move to workspace $ws3
 
 # reload the configuration file
 bindsym Mod4+Shift+c reload
@@ -208,6 +210,8 @@ set $launch Launch
 mode $launch {
     bindsym s exec --no-startup-id slack, mode "default"
     bindsym p exec --no-startup-id phpstorm, mode "default"
+    bindsym y exec --no-startup-id pycharm, mode "default"
+    bindsym c exec --no-startup-id google-chrome, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
