@@ -13,6 +13,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'unblevable/quick-scope'
 
 call vundle#end()
 
@@ -96,13 +97,8 @@ imap kj <Esc>`^
 nmap <leader>p "0p
 nmap <leader>P "0P
 
-nmap ; :
-vmap ; :
-
 nnoremap <S-Tab> <<
 inoremap <S-Tab> <C-d>
-map <S-J> gt
-map <S-K> gT
 
 " use systemps clipboard
 set clipboard=unnamedplus

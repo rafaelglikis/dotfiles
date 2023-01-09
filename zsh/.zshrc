@@ -75,8 +75,8 @@ function ktail {
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 
-eval "$(register-python-argcomplete rpt)"
-eval "$(register-python-argcomplete lw)"
+eval "$(register-python-argcomplete3 rpt)"
+eval "$(register-python-argcomplete3 lw)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

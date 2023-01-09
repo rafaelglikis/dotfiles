@@ -10,7 +10,6 @@ dotfiles=(
   vim
   zsh
   i3
-  kde
   konsole
 )
 

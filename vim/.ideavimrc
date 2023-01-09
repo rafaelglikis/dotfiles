@@ -4,13 +4,14 @@ source .vimrc
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
 set ideajoin
+set sneak
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's', 'S']
 set idearefactormode=keep
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
-
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
+map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
@@ -19,6 +20,16 @@ set idearefactormode=keep
 
 " Reimport sources bindings
 nnoremap <leader>si :source ~/.ideavimrc<CR>
+
+" IDE Shortcuts
+" Use ctrl-c as an ide shortcut in normal and visual modes
+sethandler <C-C> n-v:ide i:vim
+
+" Change panes with alt keys
+nnoremap <A-J> <C-W><C-J>
+nnoremap <A-K> <C-W><C-K>
+nnoremap <A-L> <C-W><C-L>
+nnoremap <A-H> <C-W><C-H>
 
 " Window sand panes
 nmap <leader>wo :action NextSplitter<cr>
@@ -63,16 +74,25 @@ map <leader>f :action Find<CR>
 map <leader>r :action Replace<CR>
 map <leader>[ :action EditorCodeBlockStart<CR>
 map <leader>] :action EditorCodeBlockEnd<CR>
+" Bookmarks
+map <leader>mm :action ToggleBookmark<CR>
+map <leader>mr :action EditBookmark<CR>
+map <leader>mM :action ShowBookmarks<CR>
+map <leader>mj :action GotoNextBookmark<CR>
+map <leader>mk :action GotoPreviousBookmark<CR>
 
 " Code Generation
+map <leader>i :action ImplementMethods<CR>
+map <leader>o :action OverrideMethods<CR>
+" Refactorings
 vmap T :action Refactorings.QuickListPopupAction<cr>
-map <leader>d :action EditorDuplicate<CR>
 nmap <leader>rr :action RenameElement<cr>
+vmap <leader>rv :action IntroduceVariable<cr>
+vmap <leader>rc :action IntroduceConstant<cr>
+vmap <leader>rm :action ExtractMethod<cr>
 nmap <leader>rg :action Generate<cr>
 nmap <leader>rI :action OptimizeImports<cr>
 nmap <leader>ri :action Inline<cr>
-map <leader>i :action ImplementMethods<CR>
-map <leader>o :action OverrideMethods<CR>
 
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
