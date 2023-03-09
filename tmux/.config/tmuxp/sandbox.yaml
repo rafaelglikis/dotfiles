@@ -1,0 +1,12 @@
+session_name: Sandbox
+windows:
+  - window_name: ZSH
+  - window_name: PHP Interactive
+    panes:
+      - shell_command: psysh
+  - window_name: Node Interactive
+    panes:
+      - shell_command: node
+  - window_name: Python Interactive
+    panes:
+      - shell_command: python
