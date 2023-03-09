@@ -11,6 +11,7 @@ dotfiles=(
   zsh
   i3
   konsole
+  xbindkeys
 )
 
 for dir in ${dotfiles[*]}; do

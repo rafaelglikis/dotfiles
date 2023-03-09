@@ -1,0 +1,28 @@
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+# Debug xbindkeys -n 
+# Reload config killall -HUP xbindkeys
+
+"xbindkeys_show" 
+  control+shift + q
+
+"jumpapp -C google-chrome"
+ Alt+Mod2+Mod4 + b
+
+"jumpapp -C slack"
+ Alt+Mod2+Mod4 + m
+
+"jumpapp -C konsole"
+ Alt+Mod2+Mod4 + t
+
+"jumpapp -C obsidian || /opt/obsidian/Obsidian.AppImage"
+ Alt+Mod2+Mod4 + o
+
+"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -R -f jetbrains-pycharm || jumpapp -C -m -r -R -f jetbrains-webstorm || jumpapp -C -m -r -R -f jetbrains-goland || phpstorm"
+ Alt+Mod2+Mod4 + p
+
+"flameshot gui"
+ Print
+
+"jumpapp -C rambox"
+ Alt+Mod2+Mod4 + w
