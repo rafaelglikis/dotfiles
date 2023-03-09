@@ -83,6 +83,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 eval "$(register-python-argcomplete3 rpt)"
 eval "$(register-python-argcomplete3 lw)"
 
