@@ -71,6 +71,10 @@ function ktail {
 	kubectl logs --prefix -f -l app=$1
 }
 
+forever() {
+    while true; do $@; sleep 1; done
+}
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
