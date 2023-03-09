@@ -78,6 +78,10 @@ forever() {
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
 
 eval "$(register-python-argcomplete3 rpt)"
 eval "$(register-python-argcomplete3 lw)"
