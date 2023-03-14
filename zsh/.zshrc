@@ -1,6 +1,6 @@
 export ZSH="/home/rafael/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="jispwoso"
 
 export UPDATE_ZSH_DAYS=13
 eval $(thefuck --alias)
