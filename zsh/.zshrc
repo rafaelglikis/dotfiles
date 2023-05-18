@@ -1,5 +1,5 @@
 export ZSH="/home/rafael/.oh-my-zsh"
-
+source ~/.profile
 ZSH_THEME="jispwoso"
 
 export UPDATE_ZSH_DAYS=13
@@ -90,3 +90,4 @@ eval "$(register-python-argcomplete3 lw)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
