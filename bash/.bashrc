@@ -75,7 +75,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Copy w/ progress
-cp () {
+cpp () {
   rsync -ah --progress $1 $2
 }
 
