@@ -1,6 +1,6 @@
 export ZSH="/home/rafael/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
+source ~/.profile
+ZSH_THEME="jispwoso"
 
 export UPDATE_ZSH_DAYS=13
 eval $(thefuck --alias)
@@ -71,10 +71,19 @@ function ktail {
 	kubectl logs --prefix -f -l app=$1
 }
 
+forever() {
+    while true; do $@; sleep 1; done
+}
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
 
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 eval "$(register-python-argcomplete3 rpt)"
 eval "$(register-python-argcomplete3 lw)"
 
