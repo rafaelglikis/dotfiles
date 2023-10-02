@@ -1,7 +1,7 @@
 export ZSH="/home/rafael/.oh-my-zsh"
 source ~/.profile
 ZSH_THEME="jispwoso"
-
+export DISABLE_AUTO_TITLE='true'
 export UPDATE_ZSH_DAYS=13
 eval $(thefuck --alias)
 plugins=(
@@ -39,13 +39,10 @@ fi
 export TERM=xterm-256color
 
 setopt HIST_IGNORE_SPACE
-# Aliases
-alias cat="batcat -p"
-alias bat="batcat"
-alias r='ranger'
+
 
 DOCKER_LW_ENV=$HOME/dev/lw/devsetup/
-alias lwdc="docker-compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_ENV}docker-compose.override.yml -f ${DOCKER_LW_ENV}extra/account.yml -f ${DOCKER_LW_ENV}extra/adminer.yml"
+alias lwdc="docker compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_ENV}docker-compose.override.yml -f ${DOCKER_LW_ENV}extra/account.yml -f ${DOCKER_LW_ENV}extra/adminer.yml"
 
 autoload -U bashcompinit
 bashcompinit
@@ -54,6 +51,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Aliases
 alias k='kubectl'
 alias kgp='kubectl get pods'
 alias kgi='kubectl get ingress'
@@ -61,6 +59,10 @@ alias kdp='kubectl describe pod'
 alias kdi='kubectl describe ingress'
 alias kns='kubens'
 alias kctx='kubectx'
+alias tetris=tint
+alias cat="batcat -p"
+alias bat="batcat"
+alias r='ranger'
 
 ## functions
 function kwide {
@@ -84,8 +86,6 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
-eval "$(register-python-argcomplete3 rpt)"
-eval "$(register-python-argcomplete3 lw)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
