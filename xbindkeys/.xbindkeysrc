@@ -3,13 +3,13 @@
 # Debug xbindkeys -n 
 # Reload config killall -HUP xbindkeys
 
-"xbindkeys_show" 
-  control+shift + q
-
 "jumpapp -C -m -r -f google-chrome"
  Alt+Mod2+Mod4 + b
 
-"jumpapp -C -m -r -f slack"
+"jumpapp -C -m -r -f firefox"
+ Alt+Mod2+Mod4 + n
+
+"jumpapp -C -m -r slack || slack"
  Alt+Mod2+Mod4 + m
 
 "jumpapp -C -m -r -f zoom"
@@ -27,17 +27,17 @@
 "jumpapp -C -m -r -f obsidian || /opt/obsidian/Obsidian.AppImage"
  Alt+Mod2+Mod4 + o
 
-"jumpapp -C -m -r -f jetbrains || phpstorm"
+"jumpapp -C -m -r -f jetbrains || ~/bin/phpstorm"
  Alt+Mod2+Mod4 + p
 
-"jumpapp -C -m -r -f jetbrains-goland || goland"
+"jumpapp -C -m -r -f jetbrains-goland || ~/bin/goland"
  Alt+Mod2+Mod4 + g
 
 "flameshot gui"
  Print
 
-"jumpapp -C -m -r -f rambox"
- Alt+Mod2+Mod4 + w
-
-"jumpapp -C -m -r -f Studio 3T || ~/studio3t/Studio-3T"
+"jumpapp -C -m -r -f robo3T || /usr/local/bin/robo3t/bin/robo3t"
  Alt+Mod2+Mod4 + d
+
+"jumpapp -C -m -r -f robo3T || /usr/local/bin/robo3t/bin/robo3t"
+ Alt+Mod2+Mod4 + u
