@@ -1,0 +1,5 @@
+if [ -d "/home/$USER/.zsh_completion.d" ]; then
+    for ZSH_COMPLETION_FILE in ~/.zsh_completion.d/* ; do
+        [ -f "$ZSH_COMPLETION_FILE" ] && source $ZSH_COMPLETION_FILE
+    done
+fi
