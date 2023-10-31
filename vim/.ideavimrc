@@ -2,9 +2,10 @@ source .vimrc
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
+Plug 'tpope/vim-surround' " https://github.com/tpope/vim-surround
 set scrolloff=5
 set ideajoin
-set sneak
+"set sneak
 set quickscope
 set idearefactormode=keep
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's', 'S']
@@ -70,6 +71,8 @@ map <leader>h :action Back<cr>
 nmap <leader>l :action Forward<cr>
 map <leader>b :action GotoDeclaration<CR>
 map <leader>w :action EditorSelectWord<CR>
+vnoremap w :action EditorSelectWord<CR>
+vnoremap W :action EditorUnSelectWord<CR>
 map <leader>e :action RecentFiles<CR>
 map <leader>u :action GotoSuperMethod<CR>
 map <leader>f :action Find<CR>
@@ -101,4 +104,10 @@ nmap <leader>ri :action Inline<cr>
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
 
+
+""" Experimental
+nnoremap <C-c> "*yy
+nnoremap <C-v> "*p
+vnoremap <C-c> "*y
+vnoremap <C-v> "*p
 
