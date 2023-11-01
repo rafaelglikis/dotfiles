@@ -27,7 +27,7 @@
 "jumpapp -C -m -r -f obsidian || /opt/obsidian/Obsidian.AppImage"
  Alt+Mod2+Mod4 + o
 
-"jumpapp -C -m -r -f jetbrains || ~/bin/phpstorm"
+"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || ~/bin/phpstorm"
  Alt+Mod2+Mod4 + p
 
 "jumpapp -C -m -r -f jetbrains-goland || ~/bin/goland"
@@ -36,8 +36,8 @@
 "flameshot gui"
  Print
 
-"jumpapp -C -m -r -f robo3T || /usr/local/bin/robo3t/bin/robo3t"
+"jumpapp -C -m -r -f jetbrains-datagrip || ~/bin/datagrip"
  Alt+Mod2+Mod4 + d
 
-"jumpapp -C -m -r -f robo3T || /usr/local/bin/robo3t/bin/robo3t"
+"jumpapp -C -m -r -f jetbrains-datagrip || ~/bin/datagrip"
  Alt+Mod2+Mod4 + u
