@@ -41,3 +41,7 @@
 
 "jumpapp -C -m -r -f jetbrains-datagrip || ~/bin/datagrip"
  Alt+Mod2+Mod4 + u
+
+# Skip youtube ads
+"playerctl position +500"
+ Alt+Mod2+Mod4 + 1
