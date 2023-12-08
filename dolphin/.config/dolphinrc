@@ -4,14 +4,10 @@ State=AAAA/wAAAAD9AAAAAwAAAAAAAAEQAAAFM/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAG
 Width 2560=1129
 
 [CompactMode]
-FontWeight=50
 ShowCopyMoveMenu=true
 
 [Desktop Entry]
 DefaultProfile=Profile 9.profile
-
-[DetailsMode]
-FontWeight=50
 
 [Favorite Profiles]
 Favorites=
@@ -20,13 +16,16 @@ Favorites=
 BrowseThroughArchives=true
 ShowCopyMoveMenu=true
 ShowFullPath=true
-Version=201
+Version=202
 ViewPropsTimestamp=2021,2,9,21,41,4
 
-[IconsMode]
-FontWeight=50
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
 
 [KPropertiesDialog]
+4 screens: Height=458
+4 screens: Width=439
 Height 1080=542
 Height 1440=456
 Width 1920=438
