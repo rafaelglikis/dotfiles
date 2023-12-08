@@ -1,11 +1,14 @@
 source .vimrc
+let $PATH=$PATH.":/home/rafael/bin"
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
 Plug 'tpope/vim-surround' " https://github.com/tpope/vim-surround
 set scrolloff=5
 set ideajoin
+set surround
 "set sneak
+set easymotion
 set quickscope
 set idearefactormode=keep
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's', 'S']
@@ -27,6 +30,7 @@ nnoremap <leader>si :source ~/.ideavimrc<CR>
 " IDE Shortcuts
 " Use ctrl-c as an ide shortcut in normal and visual modes
 sethandler <C-C> n-v:ide i:vim
+sethandler <C-V> n-v:ide i:vim
 
 " Change panes with alt keys
 nnoremap <A-J> <C-W><C-J>
@@ -70,6 +74,7 @@ map <leader>jt :action ActivateTerminalToolWindow<CR>
 map <leader>h :action Back<cr>
 nmap <leader>l :action Forward<cr>
 map <leader>b :action GotoDeclaration<CR>
+map <leader>B <Action>(ToggleLineBreakpoint)
 map <leader>w :action EditorSelectWord<CR>
 vnoremap w :action EditorSelectWord<CR>
 vnoremap W :action EditorUnSelectWord<CR>
@@ -104,10 +109,4 @@ nmap <leader>ri :action Inline<cr>
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
 
-
-""" Experimental
-nnoremap <C-c> "*yy
-nnoremap <C-v> "*p
-vnoremap <C-c> "*y
-vnoremap <C-v> "*p
-
+nmap <leader>/ :action Find<cr>
