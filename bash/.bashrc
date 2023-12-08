@@ -186,6 +186,7 @@ alias kdp='kubectl describe pod'
 alias kdi='kubectl describe ingress'
 alias kns='kubens'
 alias kctx='kubectx'
+alias timestamp='date +%s'
 
 ## functions
 function kwide {

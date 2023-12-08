@@ -63,6 +63,7 @@ alias tetris=tint
 alias cat="batcat -p"
 alias bat="batcat"
 alias r='ranger'
+alias timestamp='date +%s'
 
 ## functions
 function kwide {
