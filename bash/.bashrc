@@ -56,11 +56,15 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 # Aliases
-alias myip='hostname -i'
-alias exip='curl ipinfo.io/ip'
+alias du="du -hsc";
+alias whatsmyip = "dig -4 +short myip.opendns.com @resolver1.opendns.com";
+alias whatsmyip2 = "curl -4 -s https://ifconfig.co";
+alias whatsmyip3='curl ipinfo.io/ip'
 alias cat="batcat -p"
 alias bat=batcat
 alias r='ranger'
+alias copy='xclip -sel clip'
+alias copy-branch="git branch --color=never | grep '*' | awk '{print \$2}' | xclip -sel clip"
 
 if [ -x /usr/bin/dircolors ]; then
     test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
@@ -73,6 +77,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
     alias psgrep='ps aux |grep -v grep |grep -i'
 fi
+
+remove_colors() {
+  sed -r "s/\x1B\[[0-9;]*[mK]//g"
+}
 
 # Copy w/ progress
 cpp () {

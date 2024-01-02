@@ -63,7 +63,13 @@ alias tetris=tint
 alias cat="batcat -p"
 alias bat="batcat"
 alias r='ranger'
+alias du="du -hsc"
+alias whatsmyip="dig -4 +short myip.opendns.com @resolver1.opendns.com"
+alias whatsmyip2="curl -4 -s https://ifconfig.co"
+alias whatsmyip3='curl ipinfo.io/ip'
 alias timestamp='date +%s'
+alias copy='xclip -sel clip'
+alias copy-branch="git branch --color=never | grep '*' | awk '{print \$2}' | xclip -sel clip"
 
 ## functions
 function kwide {
@@ -76,6 +82,10 @@ function ktail {
 
 forever() {
     while true; do $@; sleep 1; done
+}
+
+remove_colors() {
+  sed -r "s/\x1B\[[0-9;]*[mK]//g"
 }
 
 # Generated for envman. Do not edit.
