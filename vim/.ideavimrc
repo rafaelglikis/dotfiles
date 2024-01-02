@@ -32,16 +32,11 @@ nnoremap <leader>si :source ~/.ideavimrc<CR>
 sethandler <C-C> n-v:ide i:vim
 sethandler <C-V> n-v:ide i:vim
 
-" Change panes with alt keys
-nnoremap <A-J> <C-W><C-J>
-nnoremap <A-K> <C-W><C-K>
-nnoremap <A-L> <C-W><C-L>
-nnoremap <A-H> <C-W><C-H>
-
 " Window sand panes
 nmap <leader>wo :action NextSplitter<cr>
 nmap <leader>wl :action NextSplitter<cr>
 nmap <leader>wp :action PrevSplitter<cr>
+nmap <leader>ws :action SplitHorizontally<cr>
 nmap <leader>wh :action PrevSplitter<cr>
 nmap <leader>ws :action SplitHorizontally<cr>
 nmap <leader>w" :action SplitHorizontally<cr>
@@ -49,6 +44,11 @@ nmap <leader>wv :action SplitVertically<cr>
 nmap <leader>w% :action SplitVertically<cr>
 nmap <leader>wc :action Unsplit<cr>
 nmap <leader>wC :action UnsplitAll<cr>
+" Change panes with alt keys
+nnoremap <A-J> <C-W><C-J>
+nnoremap <A-K> <C-W><C-K>
+nnoremap <A-L> <C-W><C-L>
+nnoremap <A-H> <C-W><C-H>
 
 
 " VCS and Git Bindings
@@ -69,6 +69,7 @@ map <A-.> gt
 map <A-,> gT
 map <leader>jf :action HideAllWindows<CR>
 map <leader>jt :action ActivateTerminalToolWindow<CR>
+map <leader>jd :action PhpListenDebugAction<CR>
 
 " Code Navigation
 map <leader>h :action Back<cr>
@@ -81,9 +82,14 @@ vnoremap W :action EditorUnSelectWord<CR>
 map <leader>e :action RecentFiles<CR>
 map <leader>u :action GotoSuperMethod<CR>
 map <leader>f :action Find<CR>
+nmap <leader>/ :action Find<cr>
+map <leader>F :action FindInPath<CR> " Search files contents everywhere
 map <leader>r :action Replace<CR>
+map <leader>R :action ReplaceInPath<CR> " Replace files contents everywhere
 map <leader>[ :action EditorCodeBlockStart<CR>
 map <leader>] :action EditorCodeBlockEnd<CR>
+vmap <leader>n :action SelectNextOccurrence<CR>
+
 " Bookmarks
 map <leader>mm :action ToggleBookmark<CR>
 map <leader>mr :action EditBookmark<CR>
@@ -109,4 +115,3 @@ nmap <leader>ri :action Inline<cr>
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
 
-nmap <leader>/ :action Find<cr>
