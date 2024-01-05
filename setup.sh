@@ -12,7 +12,6 @@ dotfiles=(
   i3
   konsole
   xbindkeys
-  obsidian
 )
 
 for dir in ${dotfiles[*]}; do
