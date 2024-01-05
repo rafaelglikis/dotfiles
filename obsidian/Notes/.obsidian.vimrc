@@ -54,9 +54,10 @@ exmap ftab obcommand editor:open-link-in-new-leaf
 exmap fwin obcommand editor:open-link-in-new-window
 exmap fwindow obcommand editor:open-link-in-new-window
 exmap fsplit obcommand editor:open-link-in-new-split
-nmap <Space>b :follow
-nmap <Space>B :ftab
-nmap <Space>B :fwin
+nmap <Space>b :ftab
+nmap <Space>B :fsplit
+nmap <Space>f :follow
+nmap <Space>W :fwin
 exmap back obcommand app:go-back
 exmap forward obcommand app:go-forward
 nmap <Space>h :back
