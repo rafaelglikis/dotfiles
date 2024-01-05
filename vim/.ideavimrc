@@ -114,4 +114,3 @@ nmap <leader>ri :action Inline<cr>
 
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
-

@@ -114,3 +114,5 @@ set laststatus=1
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
