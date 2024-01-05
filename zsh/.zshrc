@@ -69,7 +69,7 @@ alias whatsmyip2="curl -4 -s https://ifconfig.co"
 alias whatsmyip3='curl ipinfo.io/ip'
 alias timestamp='date +%s'
 alias copy='xclip -sel clip'
-alias copy-branch="git branch --color=never | grep '*' | awk '{print \$2}' | xclip -sel clip"
+alias copy-branch="git branch --show-current | xclip -sel clip"
 
 ## functions
 function kwide {

@@ -64,7 +64,7 @@ alias cat="batcat -p"
 alias bat=batcat
 alias r='ranger'
 alias copy='xclip -sel clip'
-alias copy-branch="git branch --color=never | grep '*' | awk '{print \$2}' | xclip -sel clip"
+alias copy-branch="git branch --show-current | xclip -sel clip"
 
 if [ -x /usr/bin/dircolors ]; then
     test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
