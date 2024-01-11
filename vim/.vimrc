@@ -6,7 +6,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'w0rp/ale'
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
@@ -15,7 +15,11 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'unblevable/quick-scope'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'machakann/vim-highlightedyank'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end()
 
@@ -33,6 +37,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 map <C-n> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Ctrl+n toggle nerdtree
+map <C-N> :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""" ALE
 let g:ale_completion_enabled = 1
@@ -69,10 +75,10 @@ set smartcase       " ...unless we type a capital
 
 """""""""""""""""""""""" WINDOW
 " Use only one key to move between windows (C-W j -> C-j)
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
 " Natural Split (New panels to the right)
 set splitbelow
 set splitright
@@ -114,7 +120,22 @@ set laststatus=1
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 
-autocmd InsertEnter * :set norelatirerumber
+autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
 map <leader>sr :set relativenumber!<CR>
+" Fuzzy finder
+nnoremap <C-p> :GFiles<CR>
+nnoremap <leader>F :Rg<CR>
+" tmux splits
+nmap <leader>w" :split <CR>
+nmap <leader>w% :vsplit <CR>
+" source vimrc
+nnoremap <Leader><CR> :so ~/.vimrc<CR>
+" Colorscheme
+set termguicolors 
+let ayucolor="dark"
+colorscheme ayu
+nnoremap <C-j> :cnext<CR>
+nnoremap <C-k> :cprev<CR>
+nnoremap <C-E> :copen<CR>
