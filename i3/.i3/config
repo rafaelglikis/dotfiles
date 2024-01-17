@@ -149,7 +149,6 @@ bindsym Mod4+8 workspace number $ws8
 bindsym Mod4+9 workspace number $ws9
 bindsym Mod4+0 workspace number $ws10
 bindsym Mod4+Tab workspace next
-bindsym Mod4+Tab workspace next
 bindsym Mod4+period workspace next
 bindsym Mod4+comma workspace prev
 
