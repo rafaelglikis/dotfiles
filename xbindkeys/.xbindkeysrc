@@ -4,43 +4,34 @@
 # Reload config killall -HUP xbindkeys
 
 "jumpapp -C -m -r -f google-chrome"
- Alt+Mod2+Mod4 + b
+ Mod2+Mod4 + b
 
 "jumpapp -C -m -r -f firefox"
- Alt+Mod2+Mod4 + n
+ Mod2+Mod4 + n
 
 "jumpapp -C -m -r slack || slack"
- Alt+Mod2+Mod4 + m
+ Mod2+Mod4 + m
 
 "jumpapp -C -m -r -f zoom"
- Alt+Mod2+Mod4 + z
+ Mod2+Mod4 + z
 
 "jumpapp -C -m -r -f dolphin"
  Alt+Mod2+Mod4 + f
 
 "jumpapp -C -m -r -f konsole"
- Alt+Mod2+Mod4 + t
-
-"jumpapp -C -m -r -f konsole"
- Alt+Mod2+Mod4 + i
+ Mod2+Mod4 + i
 
 "jumpapp -C -m -r -f obsidian || /opt/obsidian/Obsidian.AppImage"
- Alt+Mod2+Mod4 + o
+ Mod2+Mod4 + o
 
-"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || ~/bin/phpstorm"
- Alt+Mod2+Mod4 + p
-
-"jumpapp -C -m -r -f jetbrains-goland || ~/bin/goland"
- Alt+Mod2+Mod4 + g
+"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || ~/bin/phpstorm"
+ Mod2+Mod4 + p
 
 "flameshot gui"
  Print
 
 "jumpapp -C -m -r -f jetbrains-datagrip || ~/bin/datagrip"
- Alt+Mod2+Mod4 + d
-
-"jumpapp -C -m -r -f jetbrains-datagrip || ~/bin/datagrip"
- Alt+Mod2+Mod4 + u
+ Mod2+Mod4 + u
 
 # Skip youtube ads
 "playerctl position +500"
