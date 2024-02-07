@@ -1,6 +1,6 @@
 export ZSH="/home/rafael/.oh-my-zsh"
 source ~/.profile
-ZSH_THEME="jispwoso"
+ZSH_THEME="robbyrussell"
 export DISABLE_AUTO_TITLE='true'
 export UPDATE_ZSH_DAYS=13
 eval $(thefuck --alias)
