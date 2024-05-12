@@ -24,6 +24,8 @@ Places Icons Auto-resize=false
 Places Icons Static Size=32
 
 [KPropertiesDialog]
+1920x1080 screen: Height=616
+1920x1080 screen: Width=514
 4 screens: Height=458
 4 screens: Width=439
 Height 1080=542
