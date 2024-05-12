@@ -45,7 +45,7 @@ exmap newtab obcommand workspace:new-tab
 nmap <Space>wv :vsplit
 nmap <Space>w% :vsplit
 nmap <Space>ws :hsplit
-nmap <Space>ws :hsplit
+nmap <Space>w" :hsplit
 nmap <Space>n :newtab
 
 """ Navigation
