@@ -21,16 +21,16 @@
 "jumpapp -C -m -r -f konsole"
  Mod2+Mod4 + i
 
-"jumpapp -C -m -r -f obsidian || /opt/obsidian/Obsidian.AppImage"
+"jumpapp -C -m -r -f obsidian || obsidian"
  Mod2+Mod4 + o
 
-"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || ~/bin/phpstorm"
+"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || phpstorm"
  Mod2+Mod4 + p
 
 "flameshot gui"
  Print
 
-"jumpapp -C -m -r -f jetbrains-datagrip || ~/bin/datagrip"
+"jumpapp -C -m -r -f jetbrains-datagrip || datagrip"
  Mod2+Mod4 + u
 
 "jumpapp -C -m -r -f spotify"
