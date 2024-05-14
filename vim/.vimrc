@@ -20,6 +20,7 @@ Plugin 'machakann/vim-highlightedyank'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'ayu-theme/ayu-vim'
+Plugin 'wellle/targets.vim'
 
 call vundle#end()
 
@@ -124,10 +125,22 @@ autocmd InsertLeave * :set relativenumber
 map <leader>sr :set relativenumber!<CR>
 " Fuzzy finder
 nnoremap <C-p> :GFiles<CR>
-nnoremap <leader>F :Rg<CR>
+nnoremap <leader>F :Rg<CRke>
 " tmux splits
 nmap <leader>w" :split <CR>
 nmap <leader>w% :vsplit <CR>
+nnoremap <leader>Y ggyG
+
+" Move lines
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Function commands
+nnoremap yaf va{Vo{y<CR>
+nnoremap caf va{Vo{c<CR>
+nnoremap daf va{Vo{d<CR>
+nnoremap caf va{Vo{c<CR>
+
 " source vimrc
 nnoremap <Leader><CR> :so ~/.vimrc<CR>
 " Colorscheme

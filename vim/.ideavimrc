@@ -49,26 +49,41 @@ nnoremap <A-K> <C-W><C-K>
 nnoremap <A-L> <C-W><C-L>
 nnoremap <A-H> <C-W><C-H>
 
-
 " VCS and Git Bindings
+" map <leader>gs :action Vcs.Show.Local.Changes<CR>
 map <leader>gp :action Vcs.UpdateProject<CR>
 map <leader>gj :action VcsShowNextChangeMarker<CR>
 map <leader>gk :action VcsShowPrevChangeMarker<CR>
-vmap <leader>gl :action Vcs.ShowHistoryForBlock<CR>
 nmap <leader>gl :action Vcs.ShowTabbedFileHistory<CR>
+nmap <leader>gL :action Vcs.Show.Log<CR>
+nmap <leader>gg :action Vcs.Log.OpenAnotherTabInEditor<CR>
+vmap <leader>gsl :action Vcs.ShowHistoryForBlock<CR>
+nmap <leader>gss :action Git.Show.Stash<CR>
 map <leader>ga :action Annotate<CR>
 map <leader>gb :action Git.Branches<CR>
 map <leader>gc :action CheckinProject<CR>
+map <leader>gf :action Git.Fetch<CR>
 map <leader>gP :action Vcs.Push<CR>
 map <leader>gr :action Vcs.RollbackChangedLines<CR>
 map <leader>gR :action ChangesView.Revert<CR>
+map <leader>g; :action NextDiff<CR>
+map <leader>g: :action PreviousDiff<CR>
+" GitLab.Copy.Link
 
 " General Editor Bindings
 map <A-.> gt
 map <A-,> gT
 map <leader>jf :action HideAllWindows<CR>
-map <leader>jt :action ActivateTerminalToolWindow<CR>
+map <leader>jF :action ToggleDistractionFreeMode<CR>
 map <leader>jd :action PhpListenDebugAction<CR>
+map <leader>jg :action EditorToggleShowGutterIcons<CR>
+" Tools
+map <leader>jt :action ActivateTerminalToolWindow<CR>
+map <leader>jr :action HTTPClient.RunAll<CR>
+map <leader>jp :action ActivateProjectToolWindow<CR>
+map <leader>jb :action ActivateBookmarksToolWindow<CR>
+map <leader>js :action ActivateStructureToolWindow<CR>
+map <leader>jd :action ActivateDatabaseToolWindow<CR>
 
 " Code Navigation
 map <leader>h :action Back<cr>
@@ -115,3 +130,4 @@ nmap <leader>ri :action Inline<cr>
 
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
+
