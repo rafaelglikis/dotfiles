@@ -3,11 +3,18 @@ MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAwAAAAAAAAEQAAAFM/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAmAAAApwAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAmAAAFMwAAAF0BAAADAAAAAQAAALAAAAUz/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAACYAAAUzAAABDwEAAAMAAAADAAAKAAAAAH/8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAKAAAAAAoBAAADAAADWAAABTMAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
 Width 2560=1129
 
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:move-content-display
+
 [CompactMode]
 ShowCopyMoveMenu=true
 
 [Desktop Entry]
 DefaultProfile=Profile 9.profile
+
+[ExtractDialog]
+4 screens: Height=1300
+4 screens: Width=960
 
 [Favorite Profiles]
 Favorites=
@@ -26,8 +33,10 @@ Places Icons Static Size=32
 [KPropertiesDialog]
 1920x1080 screen: Height=616
 1920x1080 screen: Width=514
-4 screens: Height=458
-4 screens: Width=439
+3 screens: Height=458
+3 screens: Width=291
+4 screens: Height=560
+4 screens: Width=555
 Height 1080=542
 Height 1440=456
 Width 1920=438
