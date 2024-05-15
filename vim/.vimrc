@@ -51,7 +51,7 @@ set autoread
 set mouse=a
 syntax on
 
-"""""""""""""""""""""""" INDENTATION 
+"""""""""""""""""""""""" INDENTATION
 set autoindent
 set smartindent
 set smarttab
@@ -59,6 +59,13 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
+
+" Easier indentation shortcuts
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+vmap > >gv
+vmap < <gv
+
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 " Don't wrap lines
