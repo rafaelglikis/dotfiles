@@ -1,28 +1,31 @@
 [user]
 	name = rafaelglikis
 	email = rafaelglikis@gmail.com
+
 [core]
 	autocrlf = input
+
 [alias]
-	fpush = push --force
-	sclone = clone --depth=1
-	undocommit = reset HEAD~
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	hreset = reset --hard
-	cdiff = diff --color --color-words --abbrev
-	clog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-  last = log -1 HEAD
-
-	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-
-	reup = rebase-update # depot_tools specific
 	git = !exec git
-
-	retag = "!f() { git tag -f -a \"$1\" -m \"$1\" && git push origin \"$1\" -f; }; f"
-    deltag = "!f() { git tag -d \"$1\" && git push --delete origin \"$1\"; }; f"
-    set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+    econf = config --global --edit
+	# Log
+    ll = log --oneline
+    lol = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    last = log -1 HEAD --stat
+	# Commit
+    append = commit -a --amend --no-edit
+    undo = reset HEAD~
+    # Branch
+    fix = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+	hreset = reset --hard
+    # Tagging
+    retag = "!f() { git tag -f -a \"$1\" -m \"$1\" && git push origin \"$1\" -f; }; f"
+	deltag = "!f() { git tag -d \"$1\" && git push --delete origin \"$1\"; }; f"
+    # Misc
+    st = status -s
+    pr = pull --rebase
+	fp = push --force
+	dv = difftool -t vimdiff -y
 
 [color]
   branch = always
@@ -42,41 +45,18 @@
 [mergetool "meld"]
 	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
 
-# correct typos
 [help]
 	autocorrect = 1
 
-# push easily. http://stackoverflow.com/a/23918418/89484
 [push]
 	default = current
 	followTags = true
-
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
-
-[diff]
-    tool = meld
-
-[difftool]
-	prompt = false
 
 [fetch]
 	prune = true
 
 [stash]
 	showPatch = true
+
 [log]
     date = relative
-
-[alias]
-    retag = "!f() { git tag -f -a \"$1\" -m \"$1\" && git push origin \"$1\" -f; }; f"
-	deltag = "!f() { git tag -d \"$1\" && git push --delete origin \"$1\"; }; f"
-
-# Enforce SSH
-#[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
-#[url "ssh://git@gitlab.com/"]
-    insteadOf = https://gitlab.com/
-
