@@ -87,9 +87,10 @@ map <leader>jt :action ActivateTerminalToolWindow<CR>
 map <leader>jr :action HTTPClient.RunAll<CR>
 map <leader>jp :action ActivateProjectToolWindow<CR>
 map <leader>jb :action ActivateBookmarksToolWindow<CR>
-map <leader>js :action ActivateStructureToolWindow<CR>
 map <leader>jd :action ActivateDatabaseToolWindow<CR>
 map <leader>jc :action CopyReferencePopupGroup<CR>
+map <leader>jh :action HighlightUsagesInFile<CR>
+map <leader>js :action NewScratchFile<CR>
 
 " Code Navigation
 map <leader>h :action Back<cr>
@@ -112,15 +113,19 @@ map <leader>R :action ReplaceInPath<CR>
 map <leader>[ :action EditorCodeBlockStart<CR>
 map <leader>] :action EditorCodeBlockEnd<CR>
 vmap <leader>n :action SelectNextOccurrence<CR>
-nnoremap [m :action MethodUp<cr>
-nnoremap ]m :action MethodDown<cr>
+nnoremap [[ :action MethodUp<cr>
+nnoremap ]] :action MethodDown<cr>
+nnoremap ]e :action GotoNextError<cr>
+nnoremap [e :action GotoPreviousError<cr>
 
 " Bookmarks
 map <leader>mm :action ToggleBookmark<CR>
 map <leader>mr :action EditBookmark<CR>
-map <leader>mM :action ShowBookmarks<CR>
+map <leader>ml :action ShowBookmarks<CR>
 map <leader>mj :action GotoNextBookmark<CR>
+map <leader>mn :action GotoNextBookmark<CR>
 map <leader>mk :action GotoPreviousBookmark<CR>
+map <leader>mp :action GotoPreviousBookmark<CR>
 
 " Code Generation
 map <leader>i :action ImplementMethods<CR>
@@ -139,4 +144,3 @@ nmap <leader>ri :action Inline<cr>
 
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
-
