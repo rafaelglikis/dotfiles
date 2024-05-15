@@ -25,6 +25,7 @@ map <leader>d <Action>(Debug)
 
 " Reimport sources bindings
 nnoremap <leader><CR> :source ~/.ideavimrc<CR>
+map <leader>jj :e ~/.ideavimrc<CR>
 
 " IDE Shortcuts
 " Use ctrl-c as an ide shortcut in normal and visual modes
@@ -77,6 +78,7 @@ map <leader>jf :action HideAllWindows<CR>
 map <leader>jF :action ToggleDistractionFreeMode<CR>
 map <leader>jd :action PhpListenDebugAction<CR>
 map <leader>jg :action EditorToggleShowGutterIcons<CR>
+
 " Tools
 map <leader>jt :action ActivateTerminalToolWindow<CR>
 map <leader>jr :action HTTPClient.RunAll<CR>
@@ -105,6 +107,8 @@ map <leader>R :action ReplaceInPath<CR>
 map <leader>[ :action EditorCodeBlockStart<CR>
 map <leader>] :action EditorCodeBlockEnd<CR>
 vmap <leader>n :action SelectNextOccurrence<CR>
+nnoremap m[ :action MethodUp<cr>
+nnoremap m] :action MethodDown<cr>
 
 " Bookmarks
 map <leader>mm :action ToggleBookmark<CR>
