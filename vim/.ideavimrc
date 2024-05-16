@@ -68,6 +68,7 @@ map <leader>gr :action Vcs.RollbackChangedLines<CR>
 map <leader>gR :action ChangesView.Revert<CR>
 map <leader>gm :action Git.ResolveConflicts<CR>
 map <leader>gM :action Git.Menu<CR>
+map <leader>g :action Git.Menu<CR>
 map <leader>gd :action Diff.ShowDiff<CR>
 map <leader>gn :action NextDiff<CR>
 map <leader>gp :action PreviousDiff<CR>
