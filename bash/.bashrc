@@ -9,42 +9,9 @@ if [ -f /etc/bash_completion.d/git-prompt ]; then
 	source /etc/bash_completion.d/git-prompt
 fi
 
-set_ps1() {
-	if [ "$?" -eq "0" ]; then
-		#smiley
-		error="${GREEN}:)"
-	else
-		#frowney
-		error="${RED}:("
-	fi
-
-	GIT_PS1_SHOWDIRTYSTATE='y'
-	# GIT_PS1_SHOWSTASHSTATE='y'
-	# GIT_PS1_SHOWUNTRACKEDFILES='y'
-	# GIT_PS1_DESCRIBE_STYLE='contains'
-	# GIT_PS1_SHOWUPSTREAM='auto'
-
-	RESET=$(tput sgr0)
-	BLUE='\[\033[38;5;12m\]'
-	RED='\[\033[38;0;31m\]'
-	YELLOW='\[\033[38;5;226m\]'
-	GREEN='\[\033[38;5;82m\]'
-
-	begin="${BLUE}["
-	user="${BLUE}\u${YELLOW}@\h"
-	if [[ $EUID -eq 0 ]]; then
-		user="${RED}\u${YELLOW}@\h"
-	fi
-	dir="${GREEN}\W"
-	git="$(__git_ps1)"
-	end="${BLUE}]"
-
-	prompt="${RESET}\\$"
-
-	export PS1="${begin} ${user} ${dir}${git} ${error} ${end}${prompt} "
-}
-
-PROMPT_COMMAND=set_ps1
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;33m\]$(__git_ps1)\[\033[00m\]$ "
 
 export EDITOR='/usr/bin/vim'
 export PAGER='/usr/bin/less'
@@ -57,8 +24,8 @@ bind '"\e[B": history-search-forward'
 
 # Aliases
 alias du="du -hsc";
-alias whatsmyip = "dig -4 +short myip.opendns.com @resolver1.opendns.com";
-alias whatsmyip2 = "curl -4 -s https://ifconfig.co";
+alias whatsmyip="dig -4 +short myip.opendns.com @resolver1.opendns.com";
+alias whatsmyip2="curl -4 -s https://ifconfig.co";
 alias whatsmyip3='curl ipinfo.io/ip'
 alias cat="batcat -p"
 alias bat=batcat
@@ -206,7 +173,6 @@ function ktail {
     kubectl logs --prefix -f -l app=$1
 }
 
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
@@ -224,4 +190,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-source "$HOME/.cargo/env"
+if [ -f "HOME/.cargo/env" ] ; then
+    source "$HOME/.cargo/env"
+fi
