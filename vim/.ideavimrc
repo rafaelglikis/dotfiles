@@ -16,7 +16,6 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's', 'S']
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
-map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
@@ -104,6 +103,7 @@ vnoremap W :action EditorUnSelectWord<CR>
 map <leader>e :action RecentFiles<CR>
 map <leader>u :action GotoSuperMethod<CR>
 map <leader>f :action Find<CR>
+map gf WBlvE:action GotoFile<CR>
 nmap <leader>/ :action Find<cr>
 " Search files contents everywhere
 map <leader>F :action FindInPath<CR>
@@ -142,6 +142,21 @@ vmap <leader>rm :action ExtractMethod<cr>
 nmap <leader>rg :action Generate<cr>
 nmap <leader>rI :action OptimizeImports<cr>
 nmap <leader>ri :action Inline<cr>
+
+
+" Run and Debug
+nmap <leader>db <Action>(ToggleLineBreakpoint)
+vmap <leader>de <Action>(EvaluateExpression)
+nmap <leader>dR <Action>(Resume)
+nmap <leader>dr <Action>(RunToCursor)
+nmap <leader>dw <Action>(Debugger.AddToWatch)
+nmap <leader>do <Action>(StepOver)
+nmap <leader>dO <Action>(StepOut)
+nmap <leader>di <Action>(StepInto)
+
+
+
+
 
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
