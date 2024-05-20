@@ -57,7 +57,7 @@ map <leader>gk :action VcsShowPrevChangeMarker<CR>
 nmap <leader>gl :action Vcs.ShowTabbedFileHistory<CR>
 nmap <leader>gL :action Vcs.Show.Log<CR>
 nmap <leader>gg :action Vcs.Log.OpenAnotherTabInEditor<CR>
-vmap <leader>gsl :action Vcs.ShowHistoryForBlock<CR>
+vmap <leader>gl :action Vcs.ShowHistoryForBlock<CR>
 nmap <leader>gss :action Git.Show.Stash<CR>
 map <leader>ga :action Annotate<CR>
 map <leader>gb :action Git.Branches<CR>
@@ -153,10 +153,6 @@ nmap <leader>dw <Action>(Debugger.AddToWatch)
 nmap <leader>do <Action>(StepOver)
 nmap <leader>dO <Action>(StepOut)
 nmap <leader>di <Action>(StepInto)
-
-
-
-
 
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
