@@ -41,13 +41,23 @@ nmap <leader>ws :action SplitHorizontally<cr>
 nmap <leader>w" :action SplitHorizontally<cr>
 nmap <leader>wv :action SplitVertically<cr>
 nmap <leader>w% :action SplitVertically<cr>
-nmap <leader>wc :action Unsplit<cr>
-nmap <leader>wC :action UnsplitAll<cr>
+nmap <leader>wu :action Unsplit<cr>
+nmap <leader>wU :action UnsplitAll<cr>
+
 " Change panes with alt keys
 nnoremap <A-J> <C-W><C-J>
 nnoremap <A-K> <C-W><C-K>
 nnoremap <A-L> <C-W><C-L>
+nnoremap <A-S-l> :action MoveTabRight<cr>
 nnoremap <A-H> <C-W><C-H>
+" resize panes
+map <C-A-m> <Action>(MaximizeEditorInSplit)
+map <C-A-k> <Action>(StretchSplitToTop)
+map <C-A-j> <Action>(StretchSplitToBottom)
+map <C-A-h> <Action>(StretchSplitToLeft)
+map <C-A-l> <Action>(StretchSplitToRight)
+map <A-S-m> <Action>(MoveEditorToOppositeTabGroup)
+nmap <leader>tt :tabo<CR>
 
 " VCS and Git Bindings
 " map <leader>gs :action Vcs.Show.Local.Changes<CR>
@@ -68,6 +78,7 @@ map <leader>gr :action Vcs.RollbackChangedLines<CR>
 map <leader>gR :action ChangesView.Revert<CR>
 map <leader>gm :action Git.ResolveConflicts<CR>
 map <leader>gM :action Git.Menu<CR>
+map <leader>g :action Git.Menu<CR>
 map <leader>gd :action Diff.ShowDiff<CR>
 map <leader>gn :action NextDiff<CR>
 map <leader>gp :action PreviousDiff<CR>
@@ -103,7 +114,7 @@ vnoremap W :action EditorUnSelectWord<CR>
 map <leader>e :action RecentFiles<CR>
 map <leader>u :action GotoSuperMethod<CR>
 map <leader>f :action Find<CR>
-map gf WBlvE:action GotoFile<CR>
+map gf :action GotoFile<CR>
 nmap <leader>/ :action Find<cr>
 " Search files contents everywhere
 map <leader>F :action FindInPath<CR>
@@ -143,7 +154,6 @@ nmap <leader>rg :action Generate<cr>
 nmap <leader>rI :action OptimizeImports<cr>
 nmap <leader>ri :action Inline<cr>
 
-
 " Run and Debug
 nmap <leader>db <Action>(ToggleLineBreakpoint)
 vmap <leader>de <Action>(EvaluateExpression)
@@ -156,3 +166,6 @@ nmap <leader>di <Action>(StepInto)
 
 " Code info
 map <leader>q :action QuickJavaDoc<CR>
+
+"if &ide =~? 'PhpStorm'
+"endif
