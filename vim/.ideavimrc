@@ -94,7 +94,7 @@ map <leader>jd :action PhpListenDebugAction<CR>
 map <leader>jg :action EditorToggleShowGutterIcons<CR>
 
 " Tools
-map <leader>jt :action ActivateTerminalToolWindow<CR>
+map <leadersdf>jt :action ActivateTerminalToolWindow<CR>
 map <leader>jr :action HTTPClient.RunAll<CR>
 map <leader>jp :action ActivateProjectToolWindow<CR>
 map <leader>jb :action ActivateBookmarksToolWindow<CR>
@@ -169,3 +169,7 @@ map <leader>q :action QuickJavaDoc<CR>
 
 "if &ide =~? 'PhpStorm'
 "endif
+
+" Experimental
+nmap <leader>p <Action>($Paste)
+nmap <leader>s :action SaveAll<CR>
