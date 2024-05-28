@@ -9,15 +9,19 @@ set clipboard=unnamed
 exmap daily obcommand periodic-notes:open-daily-note
 exmap dnext obcommand periodic-notes:next-daily-note
 exmap dprev obcommand periodic-notes:prev-daily-note
+nmap <Space>pd :daily
 nmap <Space>pnd :dnext
 nmap <Space>ppd :dprev
-nmap <Space>pd :daily
+nmap <Space>. :dnext
+nmap <Space>, :dprev
 exmap weekly obcommand periodic-notes:open-weekly-note
 exmap wnext obcommand periodic-notes:next-weekly-note
 exmap wprev obcommand periodic-notes:prev-weekly-note
 nmap <Space>pw :weekly
 nmap <Space>pnw :wnext
 nmap <Space>ppw :wprev
+nmap <Space>> :wnext
+nmap <Space>< :wprev
 exmap monthly obcommand periodic-notes:open-monthly-note
 exmap mnext obcommand periodic-notes:next-monthly-note
 exmap mprev obcommand periodic-notes:prev-monthly-note
