@@ -108,3 +108,6 @@ exmap tabnext obcommand workspace:next-tab
 nmap gt :tabnext
 exmap tabprev obcommand workspace:previous-tab
 nmap gT :tabprev
+
+" remove extra braces
+nmap <Space>x $F[xf]x<CR>
