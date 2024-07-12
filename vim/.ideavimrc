@@ -29,7 +29,10 @@ map <leader>jj :e ~/.ideavimrc<CR>
 " IDE Shortcuts
 " Use ctrl-c as an ide shortcut in normal and visual modes
 sethandler <C-C> n-v:ide i:vim
-sethandler <C-V> n-v:ide i:vim
+sethandler <C-V> n-v:vim i:ide
+sethandler <C-[> a:ide
+sethandler <C-]> a:ide
+" nmap % <Action>(EditorMatchBrace)
 
 " Window sand panes
 nmap <leader>wo :action NextSplitter<cr>
@@ -74,14 +77,15 @@ map <leader>gb :action Git.Branches<CR>
 map <leader>gc :action CheckinProject<CR>
 map <leader>gf :action Git.Fetch<CR>
 map <leader>gP :action Vcs.Push<CR>
+map <leader>gp :action Vcs.UpdateProject<CR>
 map <leader>gr :action Vcs.RollbackChangedLines<CR>
 map <leader>gR :action ChangesView.Revert<CR>
 map <leader>gm :action Git.ResolveConflicts<CR>
 map <leader>gM :action Git.Menu<CR>
 map <leader>g :action Git.Menu<CR>
 map <leader>gd :action Diff.ShowDiff<CR>
-map <leader>gn :action NextDiff<CR>
-map <leader>gp :action PreviousDiff<CR>
+map ]g :action VcsShowNextChangeMarker<CR>
+map [g :action VcsShowPrevChangeMarker<CR>
 map ]c :action NextDiff<CR>
 map [c :action PreviousDiff<CR>
 
@@ -92,26 +96,31 @@ map <leader>jf :action HideAllWindows<CR>
 map <leader>jF :action ToggleDistractionFreeMode<CR>
 map <leader>jd :action PhpListenDebugAction<CR>
 map <leader>jg :action EditorToggleShowGutterIcons<CR>
+map <leader>ce :action copilot.enableCopilot<CR>
+map <leader>cd :action copilot.disableCopilot<CR>
 
 " Tools
-map <leadersdf>jt :action ActivateTerminalToolWindow<CR>
+map <leader>jt :action ActivateTerminalToolWindow<CR>
+map <leader>jT :action Terminal.OpenInTerminal<CR>
 map <leader>jr :action HTTPClient.RunAll<CR>
 map <leader>jp :action ActivateProjectToolWindow<CR>
 map <leader>jb :action ActivateBookmarksToolWindow<CR>
-map <leader>jd :action ActivateDatabaseToolWindow<CR>
+map <leader>jd :action NewScratchBuffer<CR>
+
 map <leader>jc :action CopyReferencePopupGroup<CR>
 map <leader>jh :action HighlightUsagesInFile<CR>
 map <leader>js :action NewScratchFile<CR>
+map <leader>jS :action Scratch.ShowFilesPopup<CR>
 
 " Code Navigation
 map <leader>h :action Back<cr>
 nmap <leader>l :action Forward<cr>
 map <leader>b :action GotoDeclaration<CR>
-map <leader>B <Action>(ToggleLineBreakpoint)
 map <leader>w :action EditorSelectWord<CR>
 vnoremap w :action EditorSelectWord<CR>
 vnoremap W :action EditorUnSelectWord<CR>
 map <leader>e :action RecentFiles<CR>
+map <leader>S :action FileStructurePopup<CR>
 map <leader>u :action GotoSuperMethod<CR>
 map <leader>f :action Find<CR>
 map gf :action GotoFile<CR>
@@ -125,6 +134,7 @@ map <leader>R :action ReplaceInPath<CR>
 map <leader>[ :action EditorCodeBlockStart<CR>
 map <leader>] :action EditorCodeBlockEnd<CR>
 vmap <leader>n :action SelectNextOccurrence<CR>
+vmap n :action SelectNextOccurrence<CR>
 nnoremap [[ :action MethodUp<cr>
 nnoremap ]] :action MethodDown<cr>
 nnoremap ]e :action GotoNextError<cr>
@@ -136,8 +146,10 @@ map <leader>mr :action EditBookmark<CR>
 map <leader>ml :action ShowBookmarks<CR>
 map <leader>mj :action GotoNextBookmark<CR>
 map <leader>mn :action GotoNextBookmark<CR>
+map ]b :action GotoNextBookmark<CR>
 map <leader>mk :action GotoPreviousBookmark<CR>
 map <leader>mp :action GotoPreviousBookmark<CR>
+map [b :action GotoPreviousBookmark<CR>
 
 " Code Generation
 map <leader>i :action ImplementMethods<CR>
@@ -155,6 +167,7 @@ nmap <leader>rI :action OptimizeImports<cr>
 nmap <leader>ri :action Inline<cr>
 
 " Run and Debug
+map <leader>B <Action>(ToggleLineBreakpoint)
 nmap <leader>db <Action>(ToggleLineBreakpoint)
 vmap <leader>de <Action>(EvaluateExpression)
 nmap <leader>dR <Action>(Resume)
@@ -172,4 +185,3 @@ map <leader>q :action QuickJavaDoc<CR>
 
 " Experimental
 nmap <leader>p <Action>($Paste)
-nmap <leader>s :action SaveAll<CR>
