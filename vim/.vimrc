@@ -134,8 +134,8 @@ map <leader>sr :set relativenumber!<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>F :Rg<CRke>
 " tmux splits
-nmap <leader>w" :split <CR>
-nmap <leader>w% :vsplit <CR>
+nmap <leader>" :split <CR>
+nmap <leader>% :vsplit <CR>
 nnoremap <leader>Y ggyG
 
 " Move lines
