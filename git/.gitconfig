@@ -11,7 +11,7 @@
 	# Log
     ll = log --oneline
     lol = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    last = log -1 HEAD --stat
+    last = !git --no-pager log -1 HEAD --stat
 	# Commit
     append = commit -a --amend --no-edit
     undo = reset HEAD~
