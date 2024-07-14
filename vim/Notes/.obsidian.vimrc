@@ -47,9 +47,9 @@ exmap hsplit obcommand workspace:split-horizontal
 exmap vsplit obcommand workspace:split-vertical
 exmap newtab obcommand workspace:new-tab
 nmap <Space>wv :vsplit
-nmap <Space>w% :vsplit
+nmap <Space>% :vsplit
 nmap <Space>ws :hsplit
-nmap <Space>w" :hsplit
+nmap <Space>" :hsplit
 nmap <Space>n :newtab
 
 """ Navigation
