@@ -16,6 +16,7 @@
 	# Commit
     append = commit -a --amend --no-edit
     undo = reset HEAD~
+	unpushed = log --branches --not --remotes
     # Branch
     fix = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 	hreset = reset --hard
