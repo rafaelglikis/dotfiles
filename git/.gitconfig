@@ -30,6 +30,7 @@
     st = status -sb
     pr = pull --rebase
 	fp = push --force
+	fap = fetch --all --prune
 
 [color]
   branch = always
