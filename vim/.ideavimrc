@@ -97,7 +97,7 @@ map <leader>jb :action ActivateBookmarksToolWindow<CR>
 map <leader>jd :action NewScratchBuffer<CR>
 
 map <leader>jc :action CopyReferencePopupGroup<CR>
-map <leader>jh :action HighlightUsagesInFile<CR>
+vmap H :action HighlightUsagesInFile<CR>
 map <leader>js :action NewScratchFile<CR>
 map <leader>jS :action Scratch.ShowFilesPopup<CR>
 
