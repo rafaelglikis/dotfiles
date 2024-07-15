@@ -178,7 +178,8 @@ nmap <leader>dO <Action>(StepOut)
 nmap <leader>di <Action>(StepInto)
 
 " Code info
-map <leader>q :action QuickJavaDoc<CR>
+map <leader>q <Action>(QuickJavaDoc)
+map <leader>Q <Action>(QuickImplementations)
 
 "if &ide =~? 'PhpStorm'
 "endif
