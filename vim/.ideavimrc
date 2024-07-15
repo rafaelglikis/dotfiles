@@ -62,32 +62,30 @@ map <C-A-l> <Action>(StretchSplitToRight)
 map <A-S-m> <Action>(MoveEditorToOppositeTabGroup)
 nmap <leader>tt :tabo<CR>
 
-" VCS and Git Bindings
-" map <leader>gs :action Vcs.Show.Local.Changes<CR>
-map <leader>gu :action Vcs.UpdateProject<CR>
-map <leader>gj :action VcsShowNextChangeMarker<CR>
-map <leader>gk :action VcsShowPrevChangeMarker<CR>
-nmap <leader>gl :action Vcs.ShowTabbedFileHistory<CR>
-nmap <leader>gL :action Vcs.Show.Log<CR>
-nmap <leader>gg :action Vcs.Log.OpenAnotherTabInEditor<CR>
-vmap <leader>gl :action Vcs.ShowHistoryForBlock<CR>
-nmap <leader>gss :action Git.Show.Stash<CR>
-map <leader>ga :action Annotate<CR>
-map <leader>gb :action Git.Branches<CR>
-map <leader>gc :action CheckinProject<CR>
-map <leader>gf :action Git.Fetch<CR>
-map <leader>gP :action Vcs.Push<CR>
-map <leader>gp :action Vcs.UpdateProject<CR>
-map <leader>gr :action Vcs.RollbackChangedLines<CR>
-map <leader>gR :action ChangesView.Revert<CR>
-map <leader>gm :action Git.ResolveConflicts<CR>
-map <leader>gM :action Git.Menu<CR>
-map <leader>g :action Git.Menu<CR>
-map <leader>gd :action Diff.ShowDiff<CR>
-map ]g :action VcsShowNextChangeMarker<CR>
-map [g :action VcsShowPrevChangeMarker<CR>
-map ]c :action NextDiff<CR>
-map [c :action PreviousDiff<CR>
+" Git
+map <leader>g <Action>(Git.Menu)
+map <leader>gb <Action>(Git.Branches)
+" Git Update
+map <leader>gp <Action>(Vcs.UpdateProject)
+map <leader>gP <Action>(Vcs.Push)
+map <leader>gf <Action>(Git.Fetch)
+map <leader>gm <Action>(Git.ResolveConflicts)
+map <leader>gd <Action>(Diff.ShowDiff)
+" Git Commit
+map <leader>gc <Action>(CheckinProject)
+nmap <leader>gs <Action>(Git.Show.Stash)
+" Git Revert
+map <leader>gr <Action>(Vcs.RollbackChangedLines)
+map <leader>gR <Action>(ChangesView.Revert)
+" Git Navigation
+map ]g <Action>(VcsShowNextChangeMarker)
+map [g <Action>(VcsShowPrevChangeMarker)
+" Git Log
+nmap <leader>gl <Action>(Vcs.ShowTabbedFileHistory)
+nmap <leader>gL <Action>(Vcs.Show.Log)
+nmap <leader>gg <Action>(Vcs.Log.OpenAnotherTabInEditor)
+vmap <leader>gl <Action>(Vcs.ShowHistoryForBlock)
+map <leader>ga <Action>(Annotate)
 
 " General Editor Bindings
 map <A-.> gt
