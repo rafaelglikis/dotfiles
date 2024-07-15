@@ -9,37 +9,33 @@ set clipboard=unnamed
 exmap daily obcommand periodic-notes:open-daily-note
 exmap dnext obcommand periodic-notes:next-daily-note
 exmap dprev obcommand periodic-notes:prev-daily-note
-nmap <Space>pd :daily
-nmap <Space>pnd :dnext
-nmap <Space>ppd :dprev
-nmap <Space>. :dnext
-nmap <Space>, :dprev
+nmap <Space>d :daily
+nmap ]d :dnext
+nmap [d :dprev
 exmap weekly obcommand periodic-notes:open-weekly-note
 exmap wnext obcommand periodic-notes:next-weekly-note
 exmap wprev obcommand periodic-notes:prev-weekly-note
-nmap <Space>pw :weekly
-nmap <Space>pnw :wnext
-nmap <Space>ppw :wprev
-nmap <Space>> :wnext
-nmap <Space>< :wprev
+nmap <Space>w :weekly
+nmap ]w :wnext
+nmap [w :wprev
 exmap monthly obcommand periodic-notes:open-monthly-note
 exmap mnext obcommand periodic-notes:next-monthly-note
 exmap mprev obcommand periodic-notes:prev-monthly-note
-nmap <Space>pm :monthly
-nmap <Space>pnm :mnext
-nmap <Space>ppm :mprev
+nmap <Space>m :monthly
+nmap ]m :mnext
+nmap [m :mprev
 exmap quarterly obcommand periodic-notes:open-quarterly-note
 exmap qnext obcommand periodic-notes:next-quarterly-note
 exmap qprev obcommand periodic-notes:prev-quarterly-note
-nmap <Space>pq :quarterly
-nmap <Space>pnq :qnext
-nmap <Space>ppq :qprev
+nmap <Space>q :quarterly
+nmap ]q :qnext
+nmap [q :qprev
 exmap yearly obcommand periodic-notes:open-yearly-note
 exmap ynext obcommand periodic-notes:next-yearly-note
 exmap yprev obcommand periodic-notes:prev-yearly-note
-nmap <Space>py :yearly
-nmap <Space>pny :ynext
-nmap <Space>ppy :yprev
+nmap <Space>y :yearly
+nmap ]y :ynext
+nmap [y :yprev
 
 """ Workspace
 exmap split obcommand workspace:split-horizontal
