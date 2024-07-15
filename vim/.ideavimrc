@@ -68,9 +68,6 @@ nmap <leader>gs <Action>(Git.Show.Stash)
 " Git Revert
 map <leader>gr <Action>(Vcs.RollbackChangedLines)
 map <leader>gR <Action>(ChangesView.Revert)
-" Git Navigation
-map ]g <Action>(VcsShowNextChangeMarker)
-map [g <Action>(VcsShowPrevChangeMarker)
 " Git Log
 nmap <leader>gl <Action>(Vcs.ShowTabbedFileHistory)
 nmap <leader>gL <Action>(Vcs.Show.Log)
@@ -111,21 +108,24 @@ vnoremap W :action EditorUnSelectWord<CR>
 map <leader>e :action RecentFiles<CR>
 map <leader>S :action FileStructurePopup<CR>
 map gf :action GotoFile<CR>
+" Code Navigation - Find and replace
 nmap <leader>/ :action Find<cr>
-" Search files contents everywhere
 map <leader>F :action FindInPath<CR>
 map <leader>? :action Replace<CR>
-" Replace files contents everywhere
 nmap <leader>T :action SelectInProjectView<CR>
 map <leader>R :action ReplaceInPath<CR>
-map <leader>[ :action EditorCodeBlockStart<CR>
-map <leader>] :action EditorCodeBlockEnd<CR>
-vmap <leader>n :action SelectNextOccurrence<CR>
 vmap n :action SelectNextOccurrence<CR>
-nnoremap [[ :action MethodUp<cr>
-nnoremap ]] :action MethodDown<cr>
-nnoremap ]e :action GotoNextError<cr>
-nnoremap [e :action GotoPreviousError<cr>
+" Code Navigation - Next previews bindings
+map <leader>[ <Action>(EditorCodeBlockStart)
+map <leader>] <Action>(EditorCodeBlockEnd)
+nnoremap [[ <Action>(MethodUp)
+nnoremap ]] <Action>(MethodDown)
+nnoremap ]e <Action>(GotoNextError)
+nnoremap [e <Action>(GotoPreviousError)
+nmap ]b <Action>(GotoNextBookmark)
+nmap [b <Action>(GotoPreviousBookmark)
+map ]g <Action>(VcsShowNextChangeMarker)
+map [g <Action>(VcsShowPrevChangeMarker)
 
 " Bookmarks
 nmap <leader>mm :action ToggleBookmark<CR>
@@ -135,8 +135,6 @@ nmap <leader>mj :action GotoNextBookmark<CR>
 nmap <leader>mn :action GotoNextBookmark<CR>
 nmap <leader>mk :action GotoPreviousBookmark<CR>
 nmap <leader>mp :action GotoPreviousBookmark<CR>
-nmap ]b :action GotoNextBookmark<CR>
-nmap [b :action GotoPreviousBookmark<CR>
 
 " Code Generation
 nmap <leader>G <Action>(Generate)
