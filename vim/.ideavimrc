@@ -35,15 +35,6 @@ sethandler <C-]> a:ide
 " nmap % <Action>(EditorMatchBrace)
 
 " Window sand panes
-nmap <leader>wo :action NextSplitter<cr>
-nmap <leader>wl :action NextSplitter<cr>
-nmap <leader>wp :action PrevSplitter<cr>
-nmap <leader>ws :action SplitHorizontally<cr>
-nmap <leader>wh :action PrevSplitter<cr>
-nmap <leader>ws :action SplitHorizontally<cr>
-nmap <leader>w" :action SplitHorizontally<cr>
-nmap <leader>wv :action SplitVertically<cr>
-nmap <leader>w% :action SplitVertically<cr>
 nmap <leader>wu :action Unsplit<cr>
 nmap <leader>wU :action UnsplitAll<cr>
 
