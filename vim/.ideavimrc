@@ -35,8 +35,8 @@ sethandler <C-]> a:ide
 " nmap % <Action>(EditorMatchBrace)
 
 " Window sand panes
-nmap <leader>u :action Unsplit<cr>
-nmap <leader>U :action UnsplitAll<cr>
+nmap <leader>u <Action>(Unsplit)
+nmap <leader>U <Action>(UnsplitAll)
 
 " Change panes with alt keys
 nnoremap <A-J> <C-W><C-J>
