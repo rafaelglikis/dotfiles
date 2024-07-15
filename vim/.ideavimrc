@@ -34,24 +34,25 @@ sethandler <C-[> a:ide
 sethandler <C-]> a:ide
 " nmap % <Action>(EditorMatchBrace)
 
-" Window sand panes
+" Window Management
+" Window Management - Splits
 nmap <leader>u <Action>(Unsplit)
 nmap <leader>U <Action>(UnsplitAll)
-
-" Change panes with alt keys
+nmap <leader>tt :tabo<CR>
+" Window Management - Splits - Navigation
 nnoremap <A-J> <C-W><C-J>
 nnoremap <A-K> <C-W><C-K>
 nnoremap <A-L> <C-W><C-L>
 nnoremap <A-S-l> :action MoveTabRight<cr>
 nnoremap <A-H> <C-W><C-H>
-" resize panes
-map <C-A-m> <Action>(MaximizeEditorInSplit)
+" Window Management - Splits - Resize
 map <C-A-k> <Action>(StretchSplitToTop)
 map <C-A-j> <Action>(StretchSplitToBottom)
 map <C-A-h> <Action>(StretchSplitToLeft)
 map <C-A-l> <Action>(StretchSplitToRight)
+map <C-A-m> <Action>(MaximizeEditorInSplit)
+" Window Management - Splits - Move
 map <A-S-m> <Action>(MoveEditorToOppositeTabGroup)
-nmap <leader>tt :tabo<CR>
 
 " Git
 map <leader>g <Action>(Git.Menu)
@@ -99,29 +100,32 @@ map <leader>js :action NewScratchFile<CR>
 map <leader>jS :action Scratch.ShowFilesPopup<CR>
 
 " Code Navigation
-map <leader>h :action Back<cr>
-nmap <leader>l :action Forward<cr>
-map <leader>b :action GotoDeclaration<CR>
-map <leader>w :action EditorSelectWord<CR>
-vnoremap w :action EditorSelectWord<CR>
-vnoremap W :action EditorUnSelectWord<CR>
-map <leader>e :action RecentFiles<CR>
-map <leader>S :action FileStructurePopup<CR>
-map gf :action GotoFile<CR>
-" Code Navigation - Find and replace
-nmap <leader>/ <Action>(Find)
-map <leader>F <Action>(FindInPath)
-map <leader>? <Action>(Replace)
+map <leader>b <Action>(GotoDeclaration)
+" Code Navigation - Files
+map <leader>e <Action>(RecentFiles)
+map gf <Action>(GotoFile)
+nmap gf <Action>(EditorSelectWord)<Action>(GotoFile)
 nmap <leader>T <Action>(SelectInProjectView)
-map <leader>R <Action>(ReplaceInPath)
+" Code Navigation - Selections
 vmap n <Action>(SelectNextOccurrence)
+vmap w <Action>(EditorSelectWord)
+vmap W <Action>(EditorUnSelectWord)
+" Code Navigation - Back and Forward
+map <leader>h <Action>(Back)
+nmap <leader>l <Action>(Forward)
+" Code Navigation - Find and replace
+map <leader>S <Action>(FileStructurePopup)
+nmap <leader>/ <Action>(Find)
+map <leader>? <Action>(Replace)
+map <leader>F <Action>(FindInPath)
+map <leader>R <Action>(ReplaceInPath)
 " Code Navigation - Next previews bindings
 map <leader>[ <Action>(EditorCodeBlockStart)
 map <leader>] <Action>(EditorCodeBlockEnd)
-nnoremap [[ <Action>(MethodUp)
-nnoremap ]] <Action>(MethodDown)
-nnoremap ]e <Action>(GotoNextError)
-nnoremap [e <Action>(GotoPreviousError)
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+nmap ]e <Action>(GotoNextError)
+nmap [e <Action>(GotoPreviousError)
 nmap ]b <Action>(GotoNextBookmark)
 nmap [b <Action>(GotoPreviousBookmark)
 map ]g <Action>(VcsShowNextChangeMarker)
