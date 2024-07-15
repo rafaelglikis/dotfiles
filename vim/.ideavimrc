@@ -38,7 +38,7 @@ sethandler <C-]> a:ide
 " Window Management - Splits
 nmap <leader>u <Action>(Unsplit)
 nmap <leader>U <Action>(UnsplitAll)
-nmap <leader>tt :tabo<CR>
+nmap <leader>f :tabo<CR>
 " Window Management - Splits - Navigation
 nnoremap <A-J> <C-W><C-J>
 nnoremap <A-K> <C-W><C-K>
@@ -87,17 +87,14 @@ map <leader>jg :action EditorToggleShowGutterIcons<CR>
 "map <leader>cd :action copilot.disableCopilot<CR>
 
 " Tools
-map <leader>jt :action ActivateTerminalToolWindow<CR>
-map <leader>jT :action Terminal.OpenInTerminal<CR>
-map <leader>jr :action HTTPClient.RunAll<CR>
-map <leader>jp :action ActivateProjectToolWindow<CR>
-map <leader>jb :action ActivateBookmarksToolWindow<CR>
-map <leader>jd :action NewScratchBuffer<CR>
-
-map <leader>jc :action CopyReferencePopupGroup<CR>
-vmap H :action HighlightUsagesInFile<CR>
-map <leader>js :action NewScratchFile<CR>
-map <leader>jS :action Scratch.ShowFilesPopup<CR>
+map <leader>jr <Action>(HTTPClient.RunAll)
+" Tools - Scratch
+map <leader>N <Action>(NewElement)
+map <leader>sn <Action>(NewScratchFile)
+map <leader>sl <Action>(Scratch.ShowFilesPopup)
+" Tools - Terminal
+map <leader>t <Action>(ActivateTerminalToolWindow)
+map <leader>T <Action>(Terminal.OpenInTerminal)
 
 " Code Navigation
 map <leader>b <Action>(GotoDeclaration)
@@ -105,7 +102,7 @@ map <leader>b <Action>(GotoDeclaration)
 map <leader>e <Action>(RecentFiles)
 map gf <Action>(GotoFile)
 nmap gf <Action>(EditorSelectWord)<Action>(GotoFile)
-nmap <leader>T <Action>(SelectInProjectView)
+nmap <leader>1 <Action>(SelectInProjectView)
 " Code Navigation - Selections
 vmap n <Action>(SelectNextOccurrence)
 vmap w <Action>(EditorSelectWord)
@@ -119,6 +116,7 @@ nmap <leader>/ <Action>(Find)
 map <leader>? <Action>(Replace)
 map <leader>F <Action>(FindInPath)
 map <leader>R <Action>(ReplaceInPath)
+vmap H <Action>(HighlightUsagesInFile)
 " Code Navigation - Next previews bindings
 map <leader>[ <Action>(EditorCodeBlockStart)
 map <leader>] <Action>(EditorCodeBlockEnd)
@@ -139,6 +137,7 @@ nmap <leader>mj :action GotoNextBookmark<CR>
 nmap <leader>mn :action GotoNextBookmark<CR>
 nmap <leader>mk :action GotoPreviousBookmark<CR>
 nmap <leader>mp :action GotoPreviousBookmark<CR>
+map <leader>C :action CopyAbsolutePath<CR>
 
 " Code Generation
 nmap <leader>G <Action>(Generate)
@@ -156,7 +155,7 @@ vmap <leader>m <Action>(ExtractMethod)
 " Refactorings - Normal mode
 nmap <leader>o <Action>(OptimizeImports)
 nmap <leader>i <Action>(Inline)
-nmap <leader>R <Action>(RenameElement)
+nmap <leader>r <Action>(RenameElement)
 nmap <leader>p <Action>(IntroduceParameter)
 nmap <leader>P <Action>(IntroduceField)
 
