@@ -35,8 +35,8 @@ sethandler <C-]> a:ide
 " nmap % <Action>(EditorMatchBrace)
 
 " Window sand panes
-nmap <leader>wu :action Unsplit<cr>
-nmap <leader>wU :action UnsplitAll<cr>
+nmap <leader>u :action Unsplit<cr>
+nmap <leader>U :action UnsplitAll<cr>
 
 " Change panes with alt keys
 nnoremap <A-J> <C-W><C-J>
@@ -110,7 +110,6 @@ vnoremap w :action EditorSelectWord<CR>
 vnoremap W :action EditorUnSelectWord<CR>
 map <leader>e :action RecentFiles<CR>
 map <leader>S :action FileStructurePopup<CR>
-map <leader>u :action GotoSuperMethod<CR>
 map gf :action GotoFile<CR>
 nmap <leader>/ :action Find<cr>
 " Search files contents everywhere
