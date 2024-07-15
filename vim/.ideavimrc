@@ -10,7 +10,7 @@ set surround
 set sneak
 set easymotion
 set quickscope
-set idearefactormode=keep
+set idearefactormode=visual
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's', 'S']
 "IdeaVim: Track Action IDs
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
@@ -96,8 +96,8 @@ map <leader>jf :action HideAllWindows<CR>
 map <leader>jF :action ToggleDistractionFreeMode<CR>
 map <leader>jd :action PhpListenDebugAction<CR>
 map <leader>jg :action EditorToggleShowGutterIcons<CR>
-map <leader>ce :action copilot.enableCopilot<CR>
-map <leader>cd :action copilot.disableCopilot<CR>
+"map <leader>ce :action copilot.enableCopilot<CR>
+"map <leader>cd :action copilot.disableCopilot<CR>
 
 " Tools
 map <leader>jt :action ActivateTerminalToolWindow<CR>
@@ -122,12 +122,11 @@ vnoremap W :action EditorUnSelectWord<CR>
 map <leader>e :action RecentFiles<CR>
 map <leader>S :action FileStructurePopup<CR>
 map <leader>u :action GotoSuperMethod<CR>
-map <leader>f :action Find<CR>
 map gf :action GotoFile<CR>
 nmap <leader>/ :action Find<cr>
 " Search files contents everywhere
 map <leader>F :action FindInPath<CR>
-map <leader>r :action Replace<CR>
+map <leader>? :action Replace<CR>
 " Replace files contents everywhere
 nmap <leader>T :action SelectInProjectView<CR>
 map <leader>R :action ReplaceInPath<CR>
@@ -141,30 +140,35 @@ nnoremap ]e :action GotoNextError<cr>
 nnoremap [e :action GotoPreviousError<cr>
 
 " Bookmarks
-map <leader>mm :action ToggleBookmark<CR>
-map <leader>mr :action EditBookmark<CR>
-map <leader>ml :action ShowBookmarks<CR>
-map <leader>mj :action GotoNextBookmark<CR>
-map <leader>mn :action GotoNextBookmark<CR>
-map ]b :action GotoNextBookmark<CR>
-map <leader>mk :action GotoPreviousBookmark<CR>
-map <leader>mp :action GotoPreviousBookmark<CR>
-map [b :action GotoPreviousBookmark<CR>
+nmap <leader>mm :action ToggleBookmark<CR>
+nmap <leader>mr :action EditBookmark<CR>
+nmap <leader>ml :action ShowBookmarks<CR>
+nmap <leader>mj :action GotoNextBookmark<CR>
+nmap <leader>mn :action GotoNextBookmark<CR>
+nmap <leader>mk :action GotoPreviousBookmark<CR>
+nmap <leader>mp :action GotoPreviousBookmark<CR>
+nmap ]b :action GotoNextBookmark<CR>
+nmap [b :action GotoPreviousBookmark<CR>
 
 " Code Generation
-map <leader>i :action ImplementMethods<CR>
-map <leader>o :action OverrideMethods<CR>
+nmap <leader>G <Action>(Generate)
+map <leader>I :action ImplementMethods<CR>
+map <leader>O :action OverrideMethods<CR>
+
 " Refactorings
-vmap T :action Refactorings.QuickListPopupAction<cr>
-nmap <leader>rr :action RenameElement<cr>
-nmap <leader>rp :action IntroduceParameter<cr>
-nmap <leader>rf :action IntroduceField<cr>
-vmap <leader>rv :action IntroduceVariable<cr>
-vmap <leader>rc :action IntroduceConstant<cr>
-vmap <leader>rm :action ExtractMethod<cr>
-nmap <leader>rg :action Generate<cr>
-nmap <leader>rI :action OptimizeImports<cr>
-nmap <leader>ri :action Inline<cr>
+vmap T <Action>(Refactorings.QuickListPopupAction)
+vmap C <Action>(IntroduceConstant)
+vmap V <Action>(IntroduceVariable)
+vmap M <Action>(ExtractMethod)
+vmap <leader>v <Action>(IntroduceVariable)
+vmap <leader>c <Action>(IntroduceConstant)
+vmap <leader>m <Action>(ExtractMethod)
+" Refactorings - Normal mode
+nmap <leader>o <Action>(OptimizeImports)
+nmap <leader>i <Action>(Inline)
+nmap <leader>R <Action>(RenameElement)
+nmap <leader>p <Action>(IntroduceParameter)
+nmap <leader>P <Action>(IntroduceField)
 
 " Run and Debug
 map <leader>B <Action>(ToggleLineBreakpoint)
@@ -182,6 +186,3 @@ map <leader>q :action QuickJavaDoc<CR>
 
 "if &ide =~? 'PhpStorm'
 "endif
-
-" Experimental
-nmap <leader>p <Action>($Paste)
