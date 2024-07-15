@@ -109,12 +109,12 @@ map <leader>e :action RecentFiles<CR>
 map <leader>S :action FileStructurePopup<CR>
 map gf :action GotoFile<CR>
 " Code Navigation - Find and replace
-nmap <leader>/ :action Find<cr>
-map <leader>F :action FindInPath<CR>
-map <leader>? :action Replace<CR>
-nmap <leader>T :action SelectInProjectView<CR>
-map <leader>R :action ReplaceInPath<CR>
-vmap n :action SelectNextOccurrence<CR>
+nmap <leader>/ <Action>(Find)
+map <leader>F <Action>(FindInPath)
+map <leader>? <Action>(Replace)
+nmap <leader>T <Action>(SelectInProjectView)
+map <leader>R <Action>(ReplaceInPath)
+vmap n <Action>(SelectNextOccurrence)
 " Code Navigation - Next previews bindings
 map <leader>[ <Action>(EditorCodeBlockStart)
 map <leader>] <Action>(EditorCodeBlockEnd)
