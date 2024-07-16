@@ -80,11 +80,12 @@ vmap <leader>gl <Action>(Vcs.ShowHistoryForBlock)
 map <leader>ga <Action>(Annotate)
 
 " Tools
-" Tools - Scratch
+" Tools - Files
 map <leader>N <Action>(NewElement)
-map <leader>sn <Action>(NewScratchFile)
-map <leader>sb <Action>(NewScratchBuffer)
-map <leader>sl <Action>(Scratch.ShowFilesPopup)
+" Tools - Files - Scratch
+nmap <leader>sn <Action>(NewScratchFile)
+nmap <leader>sb <Action>(NewScratchBuffer)
+nmap <leader>sl <Action>(Scratch.ShowFilesPopup)
 " Tools - Terminal
 map <leader>t <Action>(ActivateTerminalToolWindow)
 map <leader>T <Action>(Terminal.OpenInTerminal)
@@ -94,7 +95,7 @@ map <leader>D <Action>(ActivateDatabaseToolWindow)
 " Code Navigation
 map <leader>b <Action>(GotoDeclaration)
 " Code Navigation - Files
-map <leader>e <Action>(RecentFiles)
+nmap <leader>e <Action>(RecentFiles)
 map gf <Action>(GotoFile)
 nmap gf <Action>(EditorSelectWord)<Action>(GotoFile)
 nmap <leader>1 <Action>(SelectInProjectView)
@@ -145,6 +146,7 @@ map <leader>C <Action>(CopyReference)
 nmap <leader>G <Action>(Generate)
 map <leader>I <Action>(ImplementMethods)
 map <leader>O <Action>(OverrideMethods)
+vmap <leader>e <Action>(SurroundWith)
 
 " Refactorings
 vmap T <Action>(Refactorings.QuickListPopupAction)
