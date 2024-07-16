@@ -90,6 +90,7 @@ map <leader>jg :action EditorToggleShowGutterIcons<CR>
 " Tools - Scratch
 map <leader>N <Action>(NewElement)
 map <leader>sn <Action>(NewScratchFile)
+map <leader>sb <Action>(NewScratchBuffer)
 map <leader>sl <Action>(Scratch.ShowFilesPopup)
 " Tools - Terminal
 map <leader>t <Action>(ActivateTerminalToolWindow)
