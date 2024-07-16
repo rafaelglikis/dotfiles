@@ -6,6 +6,7 @@ export UPDATE_ZSH_DAYS=13
 eval $(thefuck --alias)
 plugins=(
   git
+  jira
   zsh-syntax-highlighting
   autojump
   zsh-autosuggestions
