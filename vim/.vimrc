@@ -101,8 +101,6 @@ set scrolloff=8
 let mapleader = " "
 
 " Add new lines without entering insert mode
-nmap oo o<Esc>k
-nmap OO O<Esc>j
 set timeout timeoutlen=700 ttimeoutlen=100
 imap jk <Esc>`^
 imap kj <Esc>`^
