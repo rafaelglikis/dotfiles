@@ -142,13 +142,15 @@ nmap <leader>mj <Action>(GotoNextBookmark)
 map <leader>c <Action>(CopyPathFromRepositoryRootProvider)
 map <leader>C <Action>(CopyReference)
 
-" Code Generation
+" Code
+nmap K <Action>(MoveStatementUp)
+nmap J <Action>(MoveStatementDown)
+" Code - Generation
 nmap <leader>G <Action>(Generate)
 map <leader>I <Action>(ImplementMethods)
 map <leader>O <Action>(OverrideMethods)
 vmap <leader>e <Action>(SurroundWith)
-
-" Refactorings
+" Code - Refactorings
 vmap T <Action>(Refactorings.QuickListPopupAction)
 vmap C <Action>(IntroduceConstant)
 vmap V <Action>(IntroduceVariable)
@@ -156,7 +158,7 @@ vmap M <Action>(ExtractMethod)
 vmap <leader>v <Action>(IntroduceVariable)
 vmap <leader>c <Action>(IntroduceConstant)
 vmap <leader>m <Action>(ExtractMethod)
-" Refactorings - Normal mode
+" Code - Refactorings - Normal mode
 nmap <leader>o <Action>(OptimizeImports)
 nmap <leader>i <Action>(Inline)
 nmap <leader>r <Action>(RenameElement)
