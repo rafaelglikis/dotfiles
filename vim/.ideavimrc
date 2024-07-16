@@ -87,7 +87,6 @@ map <leader>jg :action EditorToggleShowGutterIcons<CR>
 "map <leader>cd :action copilot.disableCopilot<CR>
 
 " Tools
-map <leader>jr <Action>(HTTPClient.RunAll)
 " Tools - Scratch
 map <leader>N <Action>(NewElement)
 map <leader>sn <Action>(NewScratchFile)
@@ -144,8 +143,8 @@ map <leader>C <Action>(CopyReference)
 
 " Code Generation
 nmap <leader>G <Action>(Generate)
-map <leader>I :action ImplementMethods<CR>
-map <leader>O :action OverrideMethods<CR>
+map <leader>I <Action>(ImplementMethods)
+map <leader>O <Action>(OverrideMethods)
 
 " Refactorings
 vmap T <Action>(Refactorings.QuickListPopupAction)
@@ -162,19 +161,21 @@ nmap <leader>r <Action>(RenameElement)
 nmap <leader>p <Action>(IntroduceParameter)
 nmap <leader>P <Action>(IntroduceField)
 
-" Run and Debug
+" Debug
 map <leader>B <Action>(ToggleLineBreakpoint)
-nmap <leader>db <Action>(ToggleLineBreakpoint)
-vmap <leader>de <Action>(EvaluateExpression)
-nmap <leader>dR <Action>(Resume)
-nmap <leader>dr <Action>(RunToCursor)
-nmap <leader>dw <Action>(Debugger.AddToWatch)
+vmap <leader>r <Action>(EvaluateExpression)
+nmap <leader>w <Action>(Debugger.AddToWatch)
+nmap <leader>. <Action>(Resume)
+nmap <leader>> <Action>(RunToCursor)
 nmap <leader>do <Action>(StepOver)
 nmap <leader>dO <Action>(StepOut)
 nmap <leader>di <Action>(StepInto)
 
+" Run
+map <leader>jr <Action>(HTTPClient.RunAll)
+
 " Code info
-map <leader>q :action QuickJavaDoc<CR>
+map <leader>q <Action>(QuickJavaDoc)
 
 "if &ide =~? 'PhpStorm'
 "endif
