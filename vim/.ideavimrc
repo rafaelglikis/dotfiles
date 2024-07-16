@@ -124,7 +124,6 @@ map ]g <Action>(VcsShowNextChangeMarker)
 map [g <Action>(VcsShowPrevChangeMarker)
 map ]c <Action>(NextDiff)
 map [c <Action>(PreviousDiff)
-
 " Code Navigation - Next previews bindings - Bookmarks
 nmap ]b <Action>(GotoNextBookmark)
 nmap [b <Action>(GotoPreviousBookmark)
