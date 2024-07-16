@@ -1,14 +1,13 @@
 session_name: Sandbox
+start_directory: ~/Downloads
 windows:
-  - window_name: ZSH
-  - window_name: Downloads
-    start_directory: ~/Downloads
-  - window_name: PHP Interactive
+  - window_name: zsh
+  - window_name: IPython
+    panes:
+      - shell_command: python3
+  - window_name: IPHP
     panes:
       - shell_command: psysh
-  - window_name: Node Interactive
+  - window_name: INode
     panes:
       - shell_command: node
-  - window_name: Python Interactive
-    panes:
-      - shell_command: python

@@ -1,175 +1,182 @@
 source .vimrc
+
+" Setup
 let $PATH=$PATH.":/home/rafael/bin"
-"" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-Plug 'tpope/vim-surround' " https://github.com/tpope/vim-surround
+Plug 'tpope/vim-surround'
 set scrolloff=8
 set ideajoin
 set surround
 set sneak
 set easymotion
 set quickscope
-set idearefactormode=keep
+set idearefactormode=visual
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's', 'S']
-"IdeaVim: Track Action IDs
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
 
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
-
-" Find more examples here: https://jb.gg/share-ideavimrc
-
-" Reimport sources bindings
+" IDE
+sethandler <C-C> n-v:ide i:vim
+sethandler <C-V> n-v:vim i:ide
+sethandler <C-[> a:ide
+sethandler <C-]> a:ide
+" IDE - Reimport sources bindings
 nnoremap <leader><CR> :source ~/.ideavimrc<CR>
 map <leader>jj :e ~/.ideavimrc<CR>
 
-" IDE Shortcuts
-" Use ctrl-c as an ide shortcut in normal and visual modes
-sethandler <C-C> n-v:ide i:vim
-sethandler <C-V> n-v:ide i:vim
-
-" Window sand panes
-nmap <leader>wo :action NextSplitter<cr>
-nmap <leader>wl :action NextSplitter<cr>
-nmap <leader>wp :action PrevSplitter<cr>
-nmap <leader>ws :action SplitHorizontally<cr>
-nmap <leader>wh :action PrevSplitter<cr>
-nmap <leader>ws :action SplitHorizontally<cr>
-nmap <leader>w" :action SplitHorizontally<cr>
-nmap <leader>wv :action SplitVertically<cr>
-nmap <leader>w% :action SplitVertically<cr>
-nmap <leader>wu :action Unsplit<cr>
-nmap <leader>wU :action UnsplitAll<cr>
-
-" Change panes with alt keys
+" Window Management
+map <leader>jw <Action>(EditorToggleUseSoftWraps)
+" Window Management - Editor
+map <leader>jf <Action>(HideAllWindows)
+map <leader>jF <Action>(ToggleDistractionFreeMode)
+map <leader>jg <Action>(EditorToggleShowGutterIcons)
+" Window Management - Tabs
+map <A-.> gt
+map <A-,> gT
+" Window Management - Splits
+nmap <leader>u <Action>(Unsplit)
+nmap <leader>U <Action>(UnsplitAll)
+nmap <leader>f :tabo<CR>
+" Window Management - Splits - Navigation
 nnoremap <A-J> <C-W><C-J>
 nnoremap <A-K> <C-W><C-K>
 nnoremap <A-L> <C-W><C-L>
-nnoremap <A-S-l> :action MoveTabRight<cr>
 nnoremap <A-H> <C-W><C-H>
-" resize panes
-map <C-A-m> <Action>(MaximizeEditorInSplit)
+" Window Management - Splits - Resize
 map <C-A-k> <Action>(StretchSplitToTop)
 map <C-A-j> <Action>(StretchSplitToBottom)
 map <C-A-h> <Action>(StretchSplitToLeft)
 map <C-A-l> <Action>(StretchSplitToRight)
+map <C-A-m> <Action>(MaximizeEditorInSplit)
+" Window Management - Splits - Move
+map <A-S-l> <Action>(MoveTabRight)
 map <A-S-m> <Action>(MoveEditorToOppositeTabGroup)
-nmap <leader>tt :tabo<CR>
 
-" VCS and Git Bindings
-" map <leader>gs :action Vcs.Show.Local.Changes<CR>
-map <leader>gu :action Vcs.UpdateProject<CR>
-map <leader>gj :action VcsShowNextChangeMarker<CR>
-map <leader>gk :action VcsShowPrevChangeMarker<CR>
-nmap <leader>gl :action Vcs.ShowTabbedFileHistory<CR>
-nmap <leader>gL :action Vcs.Show.Log<CR>
-nmap <leader>gg :action Vcs.Log.OpenAnotherTabInEditor<CR>
-vmap <leader>gl :action Vcs.ShowHistoryForBlock<CR>
-nmap <leader>gss :action Git.Show.Stash<CR>
-map <leader>ga :action Annotate<CR>
-map <leader>gb :action Git.Branches<CR>
-map <leader>gc :action CheckinProject<CR>
-map <leader>gf :action Git.Fetch<CR>
-map <leader>gP :action Vcs.Push<CR>
-map <leader>gr :action Vcs.RollbackChangedLines<CR>
-map <leader>gR :action ChangesView.Revert<CR>
-map <leader>gm :action Git.ResolveConflicts<CR>
-map <leader>gM :action Git.Menu<CR>
-map <leader>g :action Git.Menu<CR>
-map <leader>gd :action Diff.ShowDiff<CR>
-map <leader>gn :action NextDiff<CR>
-map <leader>gp :action PreviousDiff<CR>
-map ]c :action NextDiff<CR>
-map [c :action PreviousDiff<CR>
-
-" General Editor Bindings
-map <A-.> gt
-map <A-,> gT
-map <leader>jf :action HideAllWindows<CR>
-map <leader>jF :action ToggleDistractionFreeMode<CR>
-map <leader>jd :action PhpListenDebugAction<CR>
-map <leader>jg :action EditorToggleShowGutterIcons<CR>
+" Git
+map <leader>g <Action>(Git.Menu)
+" Git - Branch
+map <leader>gb <Action>(Git.Branches)
+map <leader>gB <Action>(Git.CreateNewBranch)
+map <leader>gT <Action>(Git.Tag)
+" Git - Update
+map <leader>gp <Action>(Vcs.UpdateProject)
+map <leader>gP <Action>(Vcs.Push)
+map <leader>gf <Action>(Git.Fetch)
+" Git - Update - Merge
+map <leader>gd <Action>(Diff.ShowDiff)
+map <leader>gm <Action>(Git.Merge)
+map <leader>gC <Action>(Git.ResolveConflicts)
+" Git - Commit
+map <leader>gc <Action>(CheckinProject)
+nmap <leader>gs <Action>(Git.Show.Stash)
+nmap <leader>gS <Action>(Git.Stash)
+" Git - Revert / Reset
+map <leader>gr <Action>(Vcs.RollbackChangedLines)
+map <leader>gR <Action>(ChangesView.Revert)
+map <leader>gH <Action>(Git.Reset)
+" Git - Log
+nmap <leader>gl <Action>(Vcs.ShowTabbedFileHistory)
+nmap <leader>gL <Action>(Vcs.Show.Log)
+nmap <leader>gg <Action>(Vcs.Log.OpenAnotherTabInEditor)
+vmap <leader>gl <Action>(Vcs.ShowHistoryForBlock)
+map <leader>ga <Action>(Annotate)
 
 " Tools
-map <leadersdf>jt :action ActivateTerminalToolWindow<CR>
-map <leader>jr :action HTTPClient.RunAll<CR>
-map <leader>jp :action ActivateProjectToolWindow<CR>
-map <leader>jb :action ActivateBookmarksToolWindow<CR>
-map <leader>jd :action ActivateDatabaseToolWindow<CR>
-map <leader>jc :action CopyReferencePopupGroup<CR>
-map <leader>jh :action HighlightUsagesInFile<CR>
-map <leader>js :action NewScratchFile<CR>
+" Tools - Scratch
+map <leader>N <Action>(NewElement)
+map <leader>sn <Action>(NewScratchFile)
+map <leader>sb <Action>(NewScratchBuffer)
+map <leader>sl <Action>(Scratch.ShowFilesPopup)
+" Tools - Terminal
+map <leader>t <Action>(ActivateTerminalToolWindow)
+map <leader>T <Action>(Terminal.OpenInTerminal)
+" Tools - Database
+map <leader>D <Action>(ActivateDatabaseToolWindow)
 
 " Code Navigation
-map <leader>h :action Back<cr>
-nmap <leader>l :action Forward<cr>
-map <leader>b :action GotoDeclaration<CR>
-map <leader>B <Action>(ToggleLineBreakpoint)
-map <leader>w :action EditorSelectWord<CR>
-vnoremap w :action EditorSelectWord<CR>
-vnoremap W :action EditorUnSelectWord<CR>
-map <leader>e :action RecentFiles<CR>
-map <leader>u :action GotoSuperMethod<CR>
-map <leader>f :action Find<CR>
-map gf :action GotoFile<CR>
-nmap <leader>/ :action Find<cr>
-" Search files contents everywhere
-map <leader>F :action FindInPath<CR>
-map <leader>r :action Replace<CR>
-" Replace files contents everywhere
-nmap <leader>T :action SelectInProjectView<CR>
-map <leader>R :action ReplaceInPath<CR>
-map <leader>[ :action EditorCodeBlockStart<CR>
-map <leader>] :action EditorCodeBlockEnd<CR>
-vmap <leader>n :action SelectNextOccurrence<CR>
-nnoremap [[ :action MethodUp<cr>
-nnoremap ]] :action MethodDown<cr>
-nnoremap ]e :action GotoNextError<cr>
-nnoremap [e :action GotoPreviousError<cr>
+map <leader>b <Action>(GotoDeclaration)
+" Code Navigation - Files
+map <leader>e <Action>(RecentFiles)
+map gf <Action>(GotoFile)
+nmap gf <Action>(EditorSelectWord)<Action>(GotoFile)
+nmap <leader>1 <Action>(SelectInProjectView)
+" Code Navigation - Selections
+vmap n <Action>(SelectNextOccurrence)
+vmap w <Action>(EditorSelectWord)
+vmap W <Action>(EditorUnSelectWord)
+" Code Navigation - Back and Forward
+map <leader>h <Action>(Back)
+nmap <leader>l <Action>(Forward)
+" Code Navigation - Find and replace
+map <leader>S <Action>(FileStructurePopup)
+nmap <leader>/ <Action>(Find)
+map <leader>? <Action>(Replace)
+map <leader>F <Action>(FindInPath)
+map <leader>R <Action>(ReplaceInPath)
+vmap H <Action>(HighlightUsagesInFile)
+" Code Navigation - Next previews bindings
+map <leader>[ <Action>(EditorCodeBlockStart)
+map <leader>] <Action>(EditorCodeBlockEnd)
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+" Code Navigation - Next previews bindings - Errors
+nmap ]e <Action>(GotoNextError)
+nmap [e <Action>(GotoPreviousError)
+" Code Navigation - Next previews bindings - Git
+map ]g <Action>(VcsShowNextChangeMarker)
+map [g <Action>(VcsShowPrevChangeMarker)
+map ]c <Action>(NextDiff)
+map [c <Action>(PreviousDiff)
+
+" Code Navigation - Next previews bindings - Bookmarks
+nmap ]b <Action>(GotoNextBookmark)
+nmap [b <Action>(GotoPreviousBookmark)
 
 " Bookmarks
-map <leader>mm :action ToggleBookmark<CR>
-map <leader>mr :action EditBookmark<CR>
-map <leader>ml :action ShowBookmarks<CR>
-map <leader>mj :action GotoNextBookmark<CR>
-map <leader>mn :action GotoNextBookmark<CR>
-map <leader>mk :action GotoPreviousBookmark<CR>
-map <leader>mp :action GotoPreviousBookmark<CR>
+nmap <leader>mm <Action>(ToggleBookmark)
+nmap <leader>mM <Action>(ToggleBookmarkWithMnemonic)
+" Bookmarks - Manage
+nmap <leader>mr <Action>(EditBookmark)
+nmap <leader>ml <Action>(ShowBookmarks)
+nmap <leader>mj <Action>(GotoNextBookmark)
+" Bookmarks - References
+map <leader>c <Action>(CopyPathFromRepositoryRootProvider)
+map <leader>C <Action>(CopyReference)
 
 " Code Generation
-map <leader>i :action ImplementMethods<CR>
-map <leader>o :action OverrideMethods<CR>
-" Refactorings
-vmap T :action Refactorings.QuickListPopupAction<cr>
-nmap <leader>rr :action RenameElement<cr>
-nmap <leader>rp :action IntroduceParameter<cr>
-nmap <leader>rf :action IntroduceField<cr>
-vmap <leader>rv :action IntroduceVariable<cr>
-vmap <leader>rc :action IntroduceConstant<cr>
-vmap <leader>rm :action ExtractMethod<cr>
-nmap <leader>rg :action Generate<cr>
-nmap <leader>rI :action OptimizeImports<cr>
-nmap <leader>ri :action Inline<cr>
+nmap <leader>G <Action>(Generate)
+map <leader>I <Action>(ImplementMethods)
+map <leader>O <Action>(OverrideMethods)
 
-" Run and Debug
-nmap <leader>db <Action>(ToggleLineBreakpoint)
-vmap <leader>de <Action>(EvaluateExpression)
-nmap <leader>dR <Action>(Resume)
-nmap <leader>dr <Action>(RunToCursor)
-nmap <leader>dw <Action>(Debugger.AddToWatch)
+" Refactorings
+vmap T <Action>(Refactorings.QuickListPopupAction)
+vmap C <Action>(IntroduceConstant)
+vmap V <Action>(IntroduceVariable)
+vmap M <Action>(ExtractMethod)
+vmap <leader>v <Action>(IntroduceVariable)
+vmap <leader>c <Action>(IntroduceConstant)
+vmap <leader>m <Action>(ExtractMethod)
+" Refactorings - Normal mode
+nmap <leader>o <Action>(OptimizeImports)
+nmap <leader>i <Action>(Inline)
+nmap <leader>r <Action>(RenameElement)
+nmap <leader>p <Action>(IntroduceParameter)
+nmap <leader>P <Action>(IntroduceField)
+
+" Debug
+map <leader>d :action PhpListenDebugAction<CR>
+map <leader>B <Action>(ToggleLineBreakpoint)
+vmap <leader>r <Action>(EvaluateExpression)
+nmap <leader>w <Action>(Debugger.AddToWatch)
+nmap <leader>. <Action>(Resume)
+nmap <leader>> <Action>(RunToCursor)
 nmap <leader>do <Action>(StepOver)
 nmap <leader>dO <Action>(StepOut)
 nmap <leader>di <Action>(StepInto)
 
+" Run
+map <leader>jr <Action>(HTTPClient.RunAll)
+
 " Code info
-map <leader>q :action QuickJavaDoc<CR>
+map <leader>q <Action>(QuickJavaDoc)
+map <leader>Q <Action>(QuickImplementations)
 
 "if &ide =~? 'PhpStorm'
 "endif
-
-" Experimental
-nmap <leader>p <Action>($Paste)
-nmap <leader>s :action SaveAll<CR>

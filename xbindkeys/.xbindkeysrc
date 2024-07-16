@@ -24,13 +24,13 @@
 "jumpapp -C -m -r -f obsidian || obsidian"
  Mod2+Mod4 + o
 
-"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || phpstorm"
+"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || /home/rafael/bin/phpstorm"
  Mod2+Mod4 + p
 
 "flameshot gui"
  Print
 
-"jumpapp -C -m -r -f jetbrains-datagrip || datagrip"
+"jumpapp -C -m -r -f jetbrains-datagrip || /home/rafael/bin/datagrip"
  Mod2+Mod4 + u
 
 "jumpapp -C -m -r -f spotify"

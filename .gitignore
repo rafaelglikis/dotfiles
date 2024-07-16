@@ -7,3 +7,5 @@
 /dataSources/
 /dataSources.local.xml
 kglobalshortcutsrc
+dolphin/.config/dolphinrc
+konsole/.config/konsolerc

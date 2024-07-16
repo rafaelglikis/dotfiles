@@ -32,6 +32,7 @@ alias bat=batcat
 alias r='ranger'
 alias copy='xclip -sel clip'
 alias copy-branch="git branch --show-current | xclip -sel clip"
+alias cb="git branch --show-current | xclip -sel clip"
 alias vf='vim `fzf`'
 
 if [ -x /usr/bin/dircolors ]; then

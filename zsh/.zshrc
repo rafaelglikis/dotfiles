@@ -71,6 +71,7 @@ alias whatsmyip3='curl ipinfo.io/ip'
 alias timestamp='date +%s'
 alias copy='xclip -sel clip'
 alias copy-branch="git branch --show-current | xclip -sel clip"
+alias cb="git branch --show-current | xclip -sel clip"
 alias vf='vim `fzf`'
 
 ## functions

@@ -11,21 +11,26 @@
 	# Log
     ll = log --oneline
     lol = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    last = log -1 HEAD --stat
+    last = !git --no-pager log -1 HEAD --stat
+    cp-last = !git --no-pager log -1 HEAD --stat | head -n1 | awk '{print $2}' | xclip -sel clip
 	# Commit
     append = commit -a --amend --no-edit
     undo = reset HEAD~
+	unpushed = log --branches --not --remotes
     # Branch
     fix = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 	hreset = reset --hard
     # Tagging
     retag = "!f() { git tag -f -a \"$1\" -m \"$1\" && git push origin \"$1\" -f; }; f"
 	deltag = "!f() { git tag -d \"$1\" && git push --delete origin \"$1\"; }; f"
+	# Diff
+	dv = difftool -t vimdiff -y
+	ds = diff --staged
     # Misc
-    st = status -s
+    st = status -sb
     pr = pull --rebase
 	fp = push --force
-	dv = difftool -t vimdiff -y
+	fap = fetch --all --prune
 
 [color]
   branch = always
