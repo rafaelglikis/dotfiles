@@ -62,7 +62,8 @@ map <leader>gf <Action>(Git.Fetch)
 " Git - Update - Merge
 map <leader>gd <Action>(Diff.ShowDiff)
 map <leader>gm <Action>(Git.Merge)
-map <leader>gC <Action>(Git.ResolveConflicts)
+nmap <leader>gC <Action>(Git.ResolveConflicts)
+vmap <leader>gC <Action>(CompareClipboardWithSelection)
 " Git - Commit
 map <leader>gc <Action>(CheckinProject)
 nmap <leader>gs <Action>(Git.Show.Stash)
@@ -97,6 +98,7 @@ map <leader>e <Action>(RecentFiles)
 map gf <Action>(GotoFile)
 nmap gf <Action>(EditorSelectWord)<Action>(GotoFile)
 nmap <leader>1 <Action>(SelectInProjectView)
+nmap <leader>2 <Action>(RevealIn)
 " Code Navigation - Selections
 vmap n <Action>(SelectNextOccurrence)
 vmap w <Action>(EditorSelectWord)
