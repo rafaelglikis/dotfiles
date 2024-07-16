@@ -122,22 +122,25 @@ map <leader>[ <Action>(EditorCodeBlockStart)
 map <leader>] <Action>(EditorCodeBlockEnd)
 nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
+" Code Navigation - Next previews bindings - Errors
 nmap ]e <Action>(GotoNextError)
 nmap [e <Action>(GotoPreviousError)
-nmap ]b <Action>(GotoNextBookmark)
-nmap [b <Action>(GotoPreviousBookmark)
+" Code Navigation - Next previews bindings - Git
 map ]g <Action>(VcsShowNextChangeMarker)
 map [g <Action>(VcsShowPrevChangeMarker)
+" Code Navigation - Next previews bindings - Bookmarks
+nmap ]b <Action>(GotoNextBookmark)
+nmap [b <Action>(GotoPreviousBookmark)
 
 " Bookmarks
-nmap <leader>mm :action ToggleBookmark<CR>
-nmap <leader>mr :action EditBookmark<CR>
-nmap <leader>ml :action ShowBookmarks<CR>
-nmap <leader>mj :action GotoNextBookmark<CR>
-nmap <leader>mn :action GotoNextBookmark<CR>
-nmap <leader>mk :action GotoPreviousBookmark<CR>
-nmap <leader>mp :action GotoPreviousBookmark<CR>
-map <leader>C :action CopyAbsolutePath<CR>
+nmap <leader>mm <Action>(ToggleBookmark)
+" Bookmarks - Manage
+nmap <leader>mr <Action>(EditBookmark)
+nmap <leader>ml <Action>(ShowBookmarks)
+nmap <leader>mj <Action>(GotoNextBookmark)
+" Bookmarks - References
+map <leader>c <Action>(CopyPathFromRepositoryRootProvider)
+map <leader>C <Action>(CopyReference)
 
 " Code Generation
 nmap <leader>G <Action>(Generate)
