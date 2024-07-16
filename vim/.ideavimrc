@@ -35,6 +35,7 @@ sethandler <C-]> a:ide
 " nmap % <Action>(EditorMatchBrace)
 
 " Window Management
+map <leader>jw <Action>(EditorToggleUseSoftWraps)
 " Window Management - Editor
 map <leader>jf <Action>(HideAllWindows)
 map <leader>jF <Action>(ToggleDistractionFreeMode)
@@ -63,20 +64,27 @@ map <A-S-m> <Action>(MoveEditorToOppositeTabGroup)
 
 " Git
 map <leader>g <Action>(Git.Menu)
+" Git - Branch
 map <leader>gb <Action>(Git.Branches)
-" Git Update
+map <leader>gB <Action>(Git.CreateNewBranch)
+map <leader>gT <Action>(Git.Tag)
+" Git - Update
 map <leader>gp <Action>(Vcs.UpdateProject)
 map <leader>gP <Action>(Vcs.Push)
 map <leader>gf <Action>(Git.Fetch)
-map <leader>gm <Action>(Git.ResolveConflicts)
+" Git - Update - Merge
 map <leader>gd <Action>(Diff.ShowDiff)
-" Git Commit
+map <leader>gm <Action>(Git.Merge)
+map <leader>gC <Action>(Git.ResolveConflicts)
+" Git - Commit
 map <leader>gc <Action>(CheckinProject)
 nmap <leader>gs <Action>(Git.Show.Stash)
-" Git Revert
+nmap <leader>gS <Action>(Git.Stash)
+" Git - Revert / Reset
 map <leader>gr <Action>(Vcs.RollbackChangedLines)
 map <leader>gR <Action>(ChangesView.Revert)
-" Git Log
+map <leader>gH <Action>(Git.Reset)
+" Git - Log
 nmap <leader>gl <Action>(Vcs.ShowTabbedFileHistory)
 nmap <leader>gL <Action>(Vcs.Show.Log)
 nmap <leader>gg <Action>(Vcs.Log.OpenAnotherTabInEditor)
