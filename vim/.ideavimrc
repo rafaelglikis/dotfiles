@@ -9,7 +9,7 @@ set surround
 set sneak
 set easymotion
 set quickscope
-set idearefactormode=visual
+set idearefactormode=keep
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's', 'S']
 
 " IDE
@@ -64,6 +64,7 @@ map <leader>gd <Action>(Diff.ShowDiff)
 map <leader>gm <Action>(Git.Merge)
 nmap <leader>gC <Action>(Git.ResolveConflicts)
 vmap <leader>gC <Action>(CompareClipboardWithSelection)
+map <leader>gA <Action>(Diff.ApplyNonConflicts)
 " Git - Commit
 map <leader>gc <Action>(CheckinProject)
 nmap <leader>gs <Action>(Git.Show.Stash)
