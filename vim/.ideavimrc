@@ -95,6 +95,7 @@ map <leader>D <Action>(ActivateDatabaseToolWindow)
 
 " Code Navigation
 map <leader>b <Action>(GotoDeclaration)
+nmap <C-S-i> <Action>(GotoImplementation)
 " Code Navigation - Files
 nmap <leader>e <Action>(RecentFiles)
 map gf <Action>(GotoFile)
