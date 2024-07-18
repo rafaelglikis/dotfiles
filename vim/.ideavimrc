@@ -30,6 +30,7 @@ map <leader>jg <Action>(EditorToggleShowGutterIcons)
 " Window Management - Tabs
 map <A-.> gt
 map <A-,> gT
+map <C-W> <Action>(EditSourceInNewWindow)
 " Window Management - Splits
 nmap <leader>u <Action>(Unsplit)
 nmap <leader>U <Action>(UnsplitAll)
