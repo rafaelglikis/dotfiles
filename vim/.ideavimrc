@@ -184,6 +184,7 @@ map <leader>jr <Action>(HTTPClient.RunAll)
 " Code info
 map <leader>q <Action>(QuickJavaDoc)
 map <leader>Q <Action>(QuickImplementations)
+map <C-A-u> <Action>(ShowUmlDiagramPopup)
 
 "if &ide =~? 'PhpStorm'
 "endif
