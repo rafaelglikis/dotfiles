@@ -123,7 +123,7 @@ nmap ]] <Action>(MethodDown)
 " Code Navigation - Next previews bindings - Errors
 nmap ]e <Action>(GotoNextError)
 nmap [e <Action>(GotoPreviousError)
-" Code Navigation - Next previews bindings - Git
+" Code Navigation - Next previews bindings - Changes
 map ]c <Action>(VcsShowNextChangeMarker)
 map [c <Action>(VcsShowPrevChangeMarker)
 "map ]c <Action>(NextDiff)
