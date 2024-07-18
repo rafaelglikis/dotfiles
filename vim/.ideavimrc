@@ -144,8 +144,8 @@ map <leader>c <Action>(CopyPathFromRepositoryRootProvider)
 map <leader>C <Action>(CopyReference)
 
 " Code
-nmap K <Action>(MoveStatementUp)
-nmap J <Action>(MoveStatementDown)
+nmap <C-S-K> <Action>(MoveStatementUp)
+nmap <C-S-J> <Action>(MoveStatementDown)
 " Code - Generation
 nmap <leader>G <Action>(Generate)
 map <leader>I <Action>(ImplementMethods)
