@@ -135,12 +135,9 @@ nmap ]b <Action>(GotoNextBookmark)
 nmap [b <Action>(GotoPreviousBookmark)
 
 " Bookmarks
-nmap <leader>mm <Action>(ToggleBookmark)
-nmap <leader>mM <Action>(ToggleBookmarkWithMnemonic)
-" Bookmarks - Manage
-nmap <leader>mr <Action>(EditBookmark)
-nmap <leader>ml <Action>(ShowBookmarks)
-nmap <leader>mj <Action>(GotoNextBookmark)
+nmap m <Action>(ToggleBookmark)
+nmap M <Action>(ToggleBookmark)<Action>(EditBookmark)
+nmap <leader>m <Action>(ShowBookmarks)
 " Bookmarks - References
 map <leader>c <Action>(CopyPathFromRepositoryRootProvider)
 map <leader>C <Action>(CopyReference)
@@ -180,6 +177,7 @@ nmap <leader>dO <Action>(StepOut)
 nmap <leader>di <Action>(StepInto)
 
 " Run
+map gr <Action>(RunAnything)
 map <leader>jr <Action>(HTTPClient.RunAll)
 
 " Code info
@@ -189,7 +187,7 @@ map <C-A-u> <Action>(ShowUmlDiagramPopup)
 
 "if &ide =~? 'PhpStorm'
 "endif
-
+ideamarks
 if &ide =~? 'Datagrip'
     map <leader>n <Action>(Console.TableResult.SetNull)
 endif
