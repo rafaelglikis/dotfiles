@@ -47,7 +47,7 @@ map <C-A-h> <Action>(StretchSplitToLeft)
 map <C-A-l> <Action>(StretchSplitToRight)
 map <C-A-m> <Action>(MaximizeEditorInSplit)
 " Window Management - Splits - Move
-map <A-S-l> <Action>(MoveTabRight)
+" map <A-S-l> <Action>(MoveTabRight)
 map <A-S-m> <Action>(MoveEditorToOppositeTabGroup)
 
 " Git
@@ -189,3 +189,7 @@ map <C-A-u> <Action>(ShowUmlDiagramPopup)
 
 "if &ide =~? 'PhpStorm'
 "endif
+
+if &ide =~? 'Datagrip'
+    map <leader>n <Action>(Console.TableResult.SetNull)
+endif
