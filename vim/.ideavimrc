@@ -177,7 +177,9 @@ nmap <leader>dO <Action>(StepOut)
 nmap <leader>di <Action>(StepInto)
 
 " Run
-map gr <Action>(RunAnything)
+map gR <Action>(RunAnything)
+map gr <Action>(RunClass)
+map gF <Action>(RerunFailedTests)
 map <leader>jr <Action>(HTTPClient.RunAll)
 
 " Code info
