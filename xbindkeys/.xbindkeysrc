@@ -19,15 +19,15 @@
 
 # Code
 # Code - IDEs
-"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || phpstorm"
+"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || /home/rafael/bin/phpstorm || phpstorm"
      Mod2+Mod4 + i
-"jumpapp -C -m -r -f jetbrains-phpstorm || phpstorm"
+"jumpapp -C -m -r -f jetbrains-phpstorm || /home/rafael/bin/phpstorm || phpstorm"
      Mod2+Mod4 + p
-"jumpapp -C -m -r -f jetbrains-pycharm || pycharm"
+"jumpapp -C -m -r -f jetbrains-pycharm || /home/rafael/bin/pycharm || pycharm"
      Mod2+Mod4+Shift + p
-"jumpapp -C -m -r -f jetbrains-goland || goland"
+"jumpapp -C -m -r -f jetbrains-goland || /home/rafael/bin/goland || goland"
      Control+Mod2+Mod4 + p
-"jumpapp -C -m -r -f jetbrains-datagrip || datagrip"
+"jumpapp -C -m -r -f jetbrains-datagrip || /home/rafael/bin/datagrip || datagrip"
      Mod2+Mod4 + apostrophe
 # Code - Terminals
 "jumpapp -C -m -r -f konsole"
