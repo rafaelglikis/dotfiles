@@ -1,41 +1,59 @@
 # To specify a key, you can use 'xbindkeys --key' or
 # 'xbindkeys --multikey' and put one of the two lines in this file.
-# Debug xbindkeys -n 
-# Reload config killall -HUP xbindkeys
+# Debug xbindkeys -n
 
-"jumpapp -C -m -r -f google-chrome"
- Mod2+Mod4 + b
+# Reload config
+"killall -HUP xbindkeys && xbindkeys"
+     Mod2+Mod4 + r
 
-"jumpapp -C -m -r -f firefox"
- Mod2+Mod4 + n
-
-"jumpapp -C -m -r slack || slack"
- Mod2+Mod4 + m
-
-"jumpapp -C -m -r -f zoom"
- Mod2+Mod4 + z
-
-"jumpapp -C -m -r -f dolphin"
- Alt+Mod2+Mod4 + f
-
-"jumpapp -C -m -r -f konsole"
- Mod2+Mod4 + i
-
+# Files
+# Files - Note Manager
 "jumpapp -C -m -r -f obsidian || obsidian"
- Mod2+Mod4 + o
+     Mod2+Mod4 + o
+# Files - File Manager
+"jumpapp -C -m -r -f dolphin"
+     Mod2+Mod4+Shift + o
+# Files - Media
+"jumpapp -C -m -r -f spotify"
+     Mod2+Mod4 + y
 
-"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || /home/rafael/bin/phpstorm"
- Mod2+Mod4 + p
+# Code
+# Code - IDEs
+"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || phpstorm"
+     Mod2+Mod4 + i
+"jumpapp -C -m -r -f jetbrains-phpstorm || phpstorm"
+     Mod2+Mod4 + p
+"jumpapp -C -m -r -f jetbrains-pycharm || pycharm"
+     Mod2+Mod4+Shift + p
+"jumpapp -C -m -r -f jetbrains-goland || goland"
+     Control+Mod2+Mod4 + p
+"jumpapp -C -m -r -f jetbrains-datagrip || datagrip"
+     Mod2+Mod4 + apostrophe
+# Code - Terminals
+"jumpapp -C -m -r -f konsole"
+     Mod2+Mod4 + semicolon
+"yakuake"
+     Mod2+Mod4 + slash
+
+# Browsers
+"jumpapp -C -m -r -f google-chrome"
+     Mod2+Mod4 + n
+"jumpapp -C -m -r -f firefox"
+     Mod2+Mod4 + b
+"jumpapp -C -m -r -f google-chrome"
+     Mod2+Mod4+Shift + b
+
+# Messaging
+# Messaging - Slack
+"jumpapp -C -m -r slack || slack"
+     Mod2+Mod4 + m
+# Messaging - Zoom
+"jumpapp -C -m -r -f zoom"
+     Mod2+Mod4+Shift + m
 
 "flameshot gui"
- Print
-
-"jumpapp -C -m -r -f jetbrains-datagrip || /home/rafael/bin/datagrip"
- Mod2+Mod4 + u
-
-"jumpapp -C -m -r -f spotify"
- Mod2+Mod4 + y
+     Print
 
 # Skip youtube ads
 "playerctl position +500"
- Alt+Mod2+Mod4 + 1
+    Alt+Mod2+Mod4 + 1
