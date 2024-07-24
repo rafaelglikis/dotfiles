@@ -27,7 +27,22 @@
 	# Diff
 	dv = difftool -t vimdiff -y
 	ds = diff --staged
-    diff-gitlab = "!f() { commit=$1; repo=$(git config --get remote.origin.url | sed 's/\\.git$//'|sed 's/lw\\.gitlab\\.com//'); if [ \"${repo#git@}\" != \"$repo\" ]; then repo=https://$(echo $repo | sed 's/:/\\//g' | sed 's/git@/gitlab.com\\//'); fi; xdg-open \"$repo/commit/$commit\"; }; f"
+    diff-web = "!diffweb() { \
+        commit=${1:-$(git last-hash)}; \
+        repo=$(git config --get remote.origin.url | sed 's/\\.git$//'); \
+        if [ \"${repo#git@lw.gitlab.com}\" != \"$repo\" ]; then \
+            repo=https://$(echo $repo | sed 's/:/\\//g' | sed 's/git@lw./\\//'); \
+        fi; \
+        if [ \"${repo#git@gitlab.com}\" != \"$repo\" ]; then \
+            repo=https://$(echo $repo | sed 's/:/\\//g' | sed 's/git@/\\//'); \
+        fi; \
+        if [ \"${repo#git@github.com}\" != \"$repo\" ]; then \
+            repo=https://$(echo $repo | sed 's/:/\\//g' | sed 's/git@/\\//'); \
+        fi; \
+        url=\"$repo/commit/$commit\"; \
+        echo \"Opening $url\"; \
+        xdg-open \"$url\"; \
+    }; diffweb"
     # Misc
     st = status -sb
     pr = pull --rebase
