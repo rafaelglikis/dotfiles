@@ -9,11 +9,13 @@
 	git = !exec git
     econf = config --global --edit
 	# Log
-    ll = log --oneline
+    l = log --oneline
     lol = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     last = !git --no-pager log -1 HEAD --stat
-    last-hash = !git --no-pager log -1 HEAD --stat | head -n1 | awk '{print $2}'
-    cp-last-hash = !git --no-pager log -1 HEAD --stat | head -n1 | awk '{print $2}' | tee /dev/tty | xclip -sel clip
+    last-hash = !git last | head -n1 | awk '{print $2}'
+    lh = !git last-hash
+    cp-last-hash = !git last-hash | tee /dev/tty | xclip -sel clip
+    clh = !git cp-last-hash
 	# Commit
     append = commit -a --amend --no-edit
     undo = reset HEAD~
@@ -21,6 +23,8 @@
     # Branch
     fix = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 	hreset = reset --hard
+	checkout-recent = !git checkout $(git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short)' --count 10 | fzf)
+	cr = !git checkout-recent
     # Tagging
     retag = "!f() { git tag -f -a \"$1\" -m \"$1\" && git push origin \"$1\" -f; }; f"
 	deltag = "!f() { git tag -d \"$1\" && git push --delete origin \"$1\"; }; f"
