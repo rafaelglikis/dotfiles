@@ -12,7 +12,8 @@
     ll = log --oneline
     lol = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     last = !git --no-pager log -1 HEAD --stat
-    cp-last = !git --no-pager log -1 HEAD --stat | head -n1 | awk '{print $2}' | xclip -sel clip
+    last-hash = !git --no-pager log -1 HEAD --stat | head -n1 | awk '{print $2}'
+    cp-last-hash = !git --no-pager log -1 HEAD --stat | head -n1 | awk '{print $2}' | tee /dev/tty | xclip -sel clip
 	# Commit
     append = commit -a --amend --no-edit
     undo = reset HEAD~
