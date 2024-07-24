@@ -192,4 +192,7 @@ map <C-A-u> <Action>(ShowUmlDiagramPopup)
 ideamarks
 if &ide =~? 'Datagrip'
     map <leader>n <Action>(Console.TableResult.SetNull)
+    map <leader>V <Action>(Console.Toggle.Notebook.Mode)
+    map <leader>V <Action>(Console.Toggle.Notebook.Mode)
+    map gr <Action>(Console.Jdbc.Execute)
 endif
