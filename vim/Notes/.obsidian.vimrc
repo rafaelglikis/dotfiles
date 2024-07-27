@@ -94,6 +94,14 @@ exmap close obcommand workspace:close
 nmap ZZ :close
 nmap ZO :close
 
+" Bookmarks
+exmap bookmark obcommand bookmarks:bookmark-current-view
+nmap M :bookmark
+exmap unbookmark obcommand bookmarks:unbookmark-current-view
+nmap <Space>M :unbookmark
+exmap openbookmarks obcommand bookmarks:unbookmark-current-view
+nmap <Space>m :openbookmarks
+
 " Editing
 exmap togglecheck obcommand editor:toggle-checklist-status
 nmap <Space>c :togglecheck
