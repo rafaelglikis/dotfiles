@@ -31,7 +31,7 @@
 	# Diff
 	dv = difftool -t vimdiff -y
 	ds = diff --staged
-    browse = "!f() { \
+    browse = "!browse() { \
         branch=$(git symbolic-ref --short HEAD); \
         repo=$(git config --get remote.origin.url | sed 's/\\.git$//'); \
         if [ \"${repo#git@lw.}\" != \"$repo\" ];  then \
@@ -44,7 +44,7 @@
         echo "Opening $url"; \
         echo $url | xclip -sel clip; \
         xdg-open \"$url\"; \
-     }; f"
+     }; browse"
     diff-web = "!diffweb() { \
         commit=${1:-$(git last-hash)}; \
         repo=$(git config --get remote.origin.url | sed 's/\\.git$//'); \
