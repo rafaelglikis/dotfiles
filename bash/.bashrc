@@ -34,6 +34,8 @@ alias copy='xclip -sel clip'
 alias copy-branch="git branch --show-current | xclip -sel clip"
 alias cb="git branch --show-current | xclip -sel clip"
 alias vf='vim `fzf`'
+alias a='ai chat --system=cli'
+alias ac='ai chat --system=cli -c'
 
 if [ -x /usr/bin/dircolors ]; then
     test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
