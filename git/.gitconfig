@@ -27,11 +27,12 @@
 	cr = !git checkout-recent
     # Tagging
     retag = "!f() { git tag -f -a \"$1\" -m \"$1\" && git push origin \"$1\" -f; }; f"
-	deltag = "!f() { git tag -d \"$1\" && git push --delete origin \"$1\"; }; f"
+    deltag = "!f() { git tag -d \"$1\" && git push --delete origin \"$1\"; }; f"
+    next-tag = "!git tag --sort=-v:refname | head -n 1 | awk -F. -v OFS=. '{ sub(/^v/, \"\", $1); if ($NF == 9 && length($NF) == 1) $NF = \"10\"; else $NF += 1; print \"v\"$0 }'"
 	# Diff
 	dv = difftool -t vimdiff -y
 	ds = diff --staged
-    browse = "!f() { \
+    browse = "!browse() { \
         branch=$(git symbolic-ref --short HEAD); \
         repo=$(git config --get remote.origin.url | sed 's/\\.git$//'); \
         if [ \"${repo#git@lw.}\" != \"$repo\" ];  then \
@@ -44,7 +45,7 @@
         echo "Opening $url"; \
         echo $url | xclip -sel clip; \
         xdg-open \"$url\"; \
-     }; f"
+     }; browse"
     diff-web = "!diffweb() { \
         commit=${1:-$(git last-hash)}; \
         repo=$(git config --get remote.origin.url | sed 's/\\.git$//'); \
