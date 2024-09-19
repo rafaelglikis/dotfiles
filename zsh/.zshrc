@@ -73,8 +73,8 @@ alias copy='xclip -sel clip'
 alias copy-branch="git branch --show-current | xclip -sel clip"
 alias cb="git branch --show-current | xclip -sel clip"
 alias vf='vim `fzf`'
-alias a='ai chat --system=cli'
-alias ac='ai chat --system=cli -c'
+alias ]]='ai chat --system=cli'
+alias ]='ai chat --system=cli -c'
 
 ## functions
 function kwide {
