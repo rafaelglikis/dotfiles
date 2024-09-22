@@ -26,7 +26,7 @@
 "jumpapp -C -m -r -f jetbrains-pycharm || /home/rafael/bin/pycharm || pycharm"
      Mod2+Mod4+Shift + p
 "jumpapp -C -m -r -f jetbrains-goland || /home/rafael/bin/goland || goland"
-     Control+Mod2+Mod4 + p
+     Mod2+Mod4 + g
 "jumpapp -C -m -r -f jetbrains-datagrip || /home/rafael/bin/datagrip || datagrip"
      Mod2+Mod4 + apostrophe
 # Code - Terminals
