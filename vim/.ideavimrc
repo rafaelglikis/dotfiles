@@ -32,7 +32,6 @@ map <A-.> gt
 map <A-,> gT
 map <C-W> <Action>(EditSourceInNewWindow)
 " Window Management - Splits
-nmap <leader>u <Action>(Unsplit)
 nmap <leader>U <Action>(UnsplitAll)
 nmap <leader>f :tabo<CR>
 " Window Management - Splits - Navigation
@@ -96,6 +95,9 @@ map <leader>D <Action>(ActivateDatabaseToolWindow)
 
 " Code Navigation
 map <leader>b <Action>(GotoDeclaration)
+map <leader>u <Action>(FindUsages)
+map <leader>I <Action>(GotoImplementation)
+
 nmap <C-S-i> <Action>(GotoImplementation)
 " Code Navigation - Files
 nmap <leader>e <Action>(RecentFiles)
@@ -147,7 +149,6 @@ nmap <C-S-K> <Action>(MoveStatementUp)
 nmap <C-S-J> <Action>(MoveStatementDown)
 " Code - Generation
 nmap <leader>G <Action>(Generate)
-map <leader>I <Action>(ImplementMethods)
 map <leader>O <Action>(OverrideMethods)
 vmap <leader>e <Action>(SurroundWith)
 " Code - Refactorings
@@ -166,7 +167,7 @@ nmap <leader>p <Action>(IntroduceParameter)
 nmap <leader>P <Action>(IntroduceField)
 
 " Debug
-map <leader>d :action PhpListenDebugAction<CR>
+map <leader>d <Action>(PhpListenDebugAction)
 map <leader>B <Action>(ToggleLineBreakpoint)
 vmap <leader>r <Action>(EvaluateExpression)
 nmap <leader>w <Action>(Debugger.AddToWatch)
@@ -175,6 +176,9 @@ nmap <leader>> <Action>(RunToCursor)
 nmap <leader>do <Action>(StepOver)
 nmap <leader>dO <Action>(StepOut)
 nmap <leader>di <Action>(StepInto)
+nmap <Down> <Action>(StepOver)
+nmap <Left> <Action>(StepInto)
+nmap <Right> <Action>(StepOut)
 
 " Run
 map gR <Action>(RunAnything)
