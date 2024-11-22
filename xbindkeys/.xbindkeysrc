@@ -26,12 +26,14 @@
 "jumpapp -C -m -r -f jetbrains-pycharm || /home/rafael/bin/pycharm || pycharm"
      Mod2+Mod4+Shift + p
 "jumpapp -C -m -r -f jetbrains-goland || /home/rafael/bin/goland || goland"
-     Mod2+Mod4 + g
+     Control+Mod2+Mod4 + p
 "jumpapp -C -m -r -f jetbrains-datagrip || /home/rafael/bin/datagrip || datagrip"
      Mod2+Mod4 + apostrophe
 # Code - Terminals
 "jumpapp -C -m -r -f konsole"
      Mod2+Mod4 + semicolon
+"jumpapp -C -m -r -f st"
+     Mod2+Mod4+Shift + semicolon
 "yakuake"
      Mod2+Mod4 + slash
 
