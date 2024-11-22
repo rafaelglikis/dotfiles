@@ -92,6 +92,7 @@ map <leader>t <Action>(ActivateTerminalToolWindow)
 map <leader>T <Action>(Terminal.OpenInTerminal)
 " Tools - Database
 map <leader>D <Action>(ActivateDatabaseToolWindow)
+map <leader>jc <Action>(copilot.chat.show)
 
 " Code Navigation
 map <leader>b <Action>(GotoDeclaration)
@@ -176,9 +177,9 @@ nmap <leader>> <Action>(RunToCursor)
 nmap <leader>do <Action>(StepOver)
 nmap <leader>dO <Action>(StepOut)
 nmap <leader>di <Action>(StepInto)
-nmap <Down> <Action>(StepOver)
-nmap <Left> <Action>(StepInto)
-nmap <Right> <Action>(StepOut)
+" nmap <Down> <Action>(StepOver)
+" nmap <Left> <Action>(StepInto)
+" nmap <Right> <Action>(StepOut)
 
 " Run
 map gR <Action>(RunAnything)
