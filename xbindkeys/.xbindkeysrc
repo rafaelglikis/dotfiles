@@ -19,8 +19,10 @@
 
 # Code
 # Code - IDEs
-"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || /home/rafael/bin/phpstorm || phpstorm"
+"jumpapp -C -r -f firefox; sleep 0.3; xdotool keydown Alt key 4 keyup Alt"
      Mod2+Mod4 + i
+"jumpapp -C -r -f firefox; sleep 0.3; xdotool keydown Alt key 5 keyup Alt"
+     Mod2+Mod4+Shift + i
 "jumpapp -C -m -r -f jetbrains-phpstorm || (cd /home/rafael && /home/rafael/bin/phpstorm) || (cd /home/rafael && phpstorm)"
      Mod2+Mod4 + p
 "jumpapp -C -m -r -f jetbrains-pycharm || (cd /home/rafael && /home/rafael/bin/pycharm) || (cd /home/rafael && pycharm)"
