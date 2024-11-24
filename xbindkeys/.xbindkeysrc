@@ -21,13 +21,13 @@
 # Code - IDEs
 "jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || /home/rafael/bin/phpstorm || phpstorm"
      Mod2+Mod4 + i
-"jumpapp -C -m -r -f jetbrains-phpstorm || /home/rafael/bin/phpstorm || phpstorm"
+"jumpapp -C -m -r -f jetbrains-phpstorm || (cd /home/rafael && /home/rafael/bin/phpstorm) || (cd /home/rafael && phpstorm)"
      Mod2+Mod4 + p
-"jumpapp -C -m -r -f jetbrains-pycharm || /home/rafael/bin/pycharm || pycharm"
+"jumpapp -C -m -r -f jetbrains-pycharm || (cd /home/rafael && /home/rafael/bin/pycharm) || (cd /home/rafael && pycharm)"
      Mod2+Mod4+Shift + p
-"jumpapp -C -m -r -f jetbrains-goland || /home/rafael/bin/goland || goland"
+"jumpapp -C -m -r -f jetbrains-goland || (cd /home/rafael && /home/rafael/bin/goland) || (cd /home/rafael && goland)"
      Control+Mod2+Mod4 + p
-"jumpapp -C -m -r -f jetbrains-datagrip || /home/rafael/bin/datagrip || datagrip"
+"jumpapp -C -m -r -f jetbrains-datagrip || (cd /home/rafael && /home/rafael/bin/datagrip) || (cd /home/rafael && datagrip)"
      Mod2+Mod4 + apostrophe
 # Code - Terminals
 "jumpapp -C -m -r -f konsole"
@@ -49,9 +49,12 @@
 # Messaging - Slack
 "jumpapp -C -m -r slack || slack"
      Mod2+Mod4 + m
+# Messaging - Mattermost
+"jumpapp -C -m -r -f mattermost-desktop"
+     Mod2+Mod4+Shift + m
 # Messaging - Zoom
 "jumpapp -C -m -r -f zoom"
-     Mod2+Mod4+Shift + m
+     Control+Mod2+Mod4 + m
 
 "flameshot gui"
      Print
