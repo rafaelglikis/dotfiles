@@ -151,7 +151,7 @@ nmap <C-S-J> <Action>(MoveStatementDown)
 " Code - Generation
 nmap <leader>G <Action>(Generate)
 map <leader>O <Action>(OverrideMethods)
-vmap <leader>e <Action>(SurroundWith)
+vmap <leader>S <Action>(SurroundWith)
 " Code - Reformatting
 nmap <leader>= <Action>(ReformatCode)
 nmap <leader>+ <Action>(ShowReformatFileDialog)
