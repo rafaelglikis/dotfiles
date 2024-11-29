@@ -152,8 +152,11 @@ nmap <C-S-J> <Action>(MoveStatementDown)
 nmap <leader>G <Action>(Generate)
 map <leader>O <Action>(OverrideMethods)
 vmap <leader>e <Action>(SurroundWith)
+" Code - Reformatting
+nmap <leader>= <Action>(ReformatCode)
+nmap <leader>+ <Action>(ShowReformatFileDialog)
+vmap = <Action>(ReformatCode)
 " Code - Refactorings
-map <leader>= <Action>(ShowReformatFileDialog)
 vmap T <Action>(Refactorings.QuickListPopupAction)
 vmap C <Action>(IntroduceConstant)
 vmap V <Action>(IntroduceVariable)
