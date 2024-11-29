@@ -162,6 +162,7 @@ vmap <leader>c <Action>(IntroduceConstant)
 vmap <leader>m <Action>(ExtractMethod)
 " Code - Refactorings - Normal mode
 nmap <leader>o <Action>(OptimizeImports)
+vmap <leader>= <Action>(ShowReformatFileDialog)
 nmap <leader>i <Action>(Inline)
 nmap <leader>r <Action>(RenameElement)
 nmap <leader>p <Action>(IntroduceParameter)
