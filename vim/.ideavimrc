@@ -114,7 +114,7 @@ vmap W <Action>(EditorUnSelectWord)
 map <leader>h <Action>(Back)
 nmap <leader>l <Action>(Forward)
 " Code Navigation - Find and replace
-map <leader>S <Action>(FileStructurePopup)
+nmap <leader>S <Action>(FileStructurePopup)
 nmap <leader>/ <Action>(Find)
 map <leader>? <Action>(Replace)
 map <leader>F <Action>(FindInPath)
@@ -151,7 +151,7 @@ nmap <C-S-J> <Action>(MoveStatementDown)
 " Code - Generation
 nmap <leader>G <Action>(Generate)
 map <leader>O <Action>(OverrideMethods)
-vmap <leader>e <Action>(SurroundWith)
+vmap <leader>S <Action>(SurroundWith)
 " Code - Refactorings
 map <leader>= <Action>(ShowReformatFileDialog)
 vmap T <Action>(Refactorings.QuickListPopupAction)

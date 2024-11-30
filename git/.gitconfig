@@ -71,6 +71,7 @@
 	fp = push --force
     fap = fetch --all --prune
 	parent = "!git checkout $(git rev-parse --abbrev-ref HEAD | awk -F\"--\" 'NF{NF--; print $0}' OFS=\"--\")"
+	back = "!f() { git checkout HEAD~${1:-1}; }; f"
 [color]
   branch = always
   diff = auto
