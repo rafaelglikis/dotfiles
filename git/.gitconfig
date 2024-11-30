@@ -72,6 +72,7 @@
     fap = fetch --all --prune
 	parent = "!git checkout $(git rev-parse --abbrev-ref HEAD | awk -F\"--\" 'NF{NF--; print $0}' OFS=\"--\")"
 	back = "!f() { git checkout HEAD~${1:-1}; }; f"
+    ls-tags = "!git tag --list -n1 | sort -Vr | less"
 [color]
   branch = always
   diff = auto
