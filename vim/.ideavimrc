@@ -70,7 +70,8 @@ map <leader>gc <Action>(CheckinProject)
 nmap <leader>gs <Action>(Git.Show.Stash)
 nmap <leader>gS <Action>(Git.Stash)
 " Git - Revert / Reset
-map <leader>gr <Action>(Vcs.RollbackChangedLines)
+nmap <leader>gr <Action>(Vcs.RollbackChangedLines)
+vmap <leader>gr <Action>(Vcs.RollbackChangedLines)<Esc>
 map <leader>gR <Action>(ChangesView.Revert)
 map <leader>gH <Action>(Git.Reset)
 " Git - Log
