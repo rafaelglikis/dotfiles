@@ -98,7 +98,6 @@ map <leader>jc <Action>(copilot.chat.show)
 map <leader>b <Action>(GotoDeclaration)
 map <leader>u <Action>(FindUsages)
 map <leader>I <Action>(GotoImplementation)
-
 nmap <C-S-i> <Action>(GotoImplementation)
 " Code Navigation - Files
 nmap <leader>e <Action>(RecentFiles)
