@@ -84,9 +84,9 @@ map <leader>ga <Action>(Annotate)
 " Tools - Files
 map <leader>N <Action>(NewElement)
 " Tools - Files - Scratch
-nmap <leader>sn <Action>(NewScratchFile)
-nmap <leader>sb <Action>(NewScratchBuffer)
-nmap <leader>sl <Action>(Scratch.ShowFilesPopup)
+nmap <leader>Sn <Action>(NewScratchFile)
+nmap <leader>Sb <Action>(NewScratchBuffer)
+nmap <leader>Sl <Action>(Scratch.ShowFilesPopup)
 " Tools - Terminal
 map <leader>t <Action>(ActivateTerminalToolWindow)
 map <leader>T <Action>(Terminal.OpenInTerminal)
@@ -113,7 +113,7 @@ vmap W <Action>(EditorUnSelectWord)
 map <leader>h <Action>(Back)
 nmap <leader>l <Action>(Forward)
 " Code Navigation - Find and replace
-nmap <leader>S <Action>(FileStructurePopup)
+nmap <leader>s <Action>(FileStructurePopup)
 nmap <leader>/ <Action>(Find)
 map <leader>? <Action>(Replace)
 map <leader>F <Action>(FindInPath)
@@ -150,7 +150,7 @@ nmap <C-S-J> <Action>(MoveStatementDown)
 " Code - Generation
 nmap <leader>G <Action>(Generate)
 map <leader>O <Action>(OverrideMethods)
-vmap <leader>S <Action>(SurroundWith)
+vmap <leader>s <Action>(SurroundWith)
 " Code - Reformatting
 nmap <leader>= <Action>(ReformatCode)
 nmap <leader>+ <Action>(ShowReformatFileDialog)

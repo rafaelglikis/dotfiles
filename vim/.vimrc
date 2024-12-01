@@ -127,7 +127,7 @@ set laststatus=1
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-map <leader>sr :set relativenumber!<CR>
+map <leader><leader>r :set relativenumber!<CR>
 " Fuzzy finder
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>F :Rg<CRke>
