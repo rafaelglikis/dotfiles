@@ -91,6 +91,9 @@ nmap <leader>Sl <Action>(Scratch.ShowFilesPopup)
 " Tools - Terminal
 map <leader>t <Action>(ActivateTerminalToolWindow)
 map <leader>T <Action>(Terminal.OpenInTerminal)
+map <leader>; <Action>(GotoAction)
+map <leader>: <Action>(RunAnything)
+
 " Tools - Database
 map <leader>D <Action>(ActivateDatabaseToolWindow)
 map <leader>jc <Action>(copilot.chat.show)
