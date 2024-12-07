@@ -105,6 +105,7 @@ map <leader>I <Action>(GotoImplementation)
 nmap <C-S-i> <Action>(GotoImplementation)
 " Code Navigation - Files
 nmap <leader>e <Action>(RecentFiles)
+nmap <leader>E <Action>(RecentLocations)
 map gf <Action>(GotoFile)
 nmap gf <Action>(EditorSelectWord)<Action>(GotoFile)
 nmap <leader>1 <Action>(SelectInProjectView)
@@ -137,6 +138,8 @@ map [c <Action>(VcsShowPrevChangeMarker)
 map ]d <Action>(NextDiff)
 map [d <Action>(PreviousDiff)
 " Code Navigation - Next previews bindings - Bookmarks
+nmap ]m <Action>(GotoNextBookmark)
+nmap [m <Action>(GotoPreviousBookmark)
 nmap ]b <Action>(GotoNextBookmark)
 nmap [b <Action>(GotoPreviousBookmark)
 
@@ -208,3 +211,6 @@ if &ide =~? 'Datagrip'
     map <leader>V <Action>(Console.Toggle.Notebook.Mode)
     map gr <Action>(Console.Jdbc.Execute)
 endif
+
+" Experimental
+nmap <C-v> $Paste
