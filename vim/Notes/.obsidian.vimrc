@@ -114,3 +114,6 @@ exmap reload obcommand app:reload
 nmap <Space>R :reload<CR>
 exmap history obcommand sync:view-version-history
 nmap <Space>gl :history<CR>
+
+" pasteinto
+vmap <A-p> :pasteinto<CR>
