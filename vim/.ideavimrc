@@ -160,6 +160,7 @@ map <leader>O <Action>(OverrideMethods)
 vmap <leader>s <Action>(SurroundWith)
 " Code - Reformatting
 nmap <leader>= <Action>(ReformatCode)
+" nmap <leader>= <Action>(Javascript.Linters.EsLint.Fix)
 nmap <leader>+ <Action>(ShowReformatFileDialog)
 vmap = <Action>(ReformatCode)
 " Code - Refactorings
