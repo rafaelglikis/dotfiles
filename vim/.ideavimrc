@@ -151,6 +151,12 @@ map <leader>C <Action>(CopyReference)
 " Code
 nmap <C-S-K> <Action>(MoveStatementUp)
 nmap <C-S-J> <Action>(MoveStatementDown)
+" Code - String Manipulation
+map gk <Action>(StringManipulation.ToHyphenCaseAction)<Esc>
+map gc <Action>(StringManipulation.ToCamelCase)<Esc>
+map gC <Action>(osmedile.intellij.stringmanip.WordsCapitalizeAction)<Esc>
+map gs <Action>(StringManipulation.ToSnakeCase)<Esc>
+map gS <Action>(osmedile.intellij.stringmanip.WordsAndCamelToConstantStyleCaseAction)<Esc>
 " Code - Generation
 nmap <leader>G <Action>(Generate)
 map <leader>O <Action>(OverrideMethods)
