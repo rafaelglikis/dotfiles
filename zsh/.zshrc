@@ -43,7 +43,7 @@ setopt HIST_IGNORE_SPACE
 
 
 DOCKER_LW_ENV=$HOME/dev/lw/devsetup/
-alias lwdc="docker compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_ENV}docker-compose.override.yml -f ${DOCKER_LW_ENV}extra/account.yml -f ${DOCKER_LW_ENV}extra/adminer.yml"
+alias lwdc="docker compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_ENV}docker-compose.override.yml -f ${DOCKER_LW_ENV}extra/marketplace.yml -f ${DOCKER_LW_ENV}extra/account.yml -f ${DOCKER_LW_ENV}extra/adminer.yml"
 
 autoload -U bashcompinit
 bashcompinit
