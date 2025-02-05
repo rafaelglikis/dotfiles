@@ -35,6 +35,7 @@
 	# Diff
 	dv = difftool -t vimdiff -y
 	ds = diff --staged
+	watch-diff = !watch -n 1 'git diff --color | less -R'
     browse = "!browse() { \
         branch=$(git symbolic-ref --short HEAD); \
         repo=$(git config --get remote.origin.url | sed 's/\\.git$//'); \
