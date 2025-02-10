@@ -43,8 +43,19 @@ setopt HIST_IGNORE_SPACE
 
 
 DOCKER_LW_ENV=$HOME/dev/lw/devsetup/
-alias lwdc="docker compose -f ${DOCKER_LW_ENV}docker-compose.yml -f ${DOCKER_LW_ENV}docker-compose.override.yml -f ${DOCKER_LW_ENV}extra/marketplace.yml -f ${DOCKER_LW_ENV}extra/account.yml -f ${DOCKER_LW_ENV}extra/adminer.yml"
-
+alias lwdc="docker compose \
+    -f ${DOCKER_LW_ENV}docker-compose.yml \
+    -f ${DOCKER_LW_ENV}docker-compose.override.yml \
+    -f ${DOCKER_LW_ENV}extra/marketplace.yml \
+    -f ${DOCKER_LW_ENV}extra/account.yml \
+    -f ${DOCKER_LW_ENV}extra/adminer.yml \
+    -f ${DOCKER_LW_ENV}extra/pubsub-emulator.yml \
+    -f ${DOCKER_LW_ENV}extra/cloner.yml \
+    -f ${DOCKER_LW_ENV}extra/cameraman.yml"
+alias lwmp="lwdc exec marketplace apprun"
+alias lwapi="lwdc exec api apprun"
+alias lwclient="lwdc exec client apprun"
+alias lwaccount="lwdc exec account apprun"
 autoload -U bashcompinit
 bashcompinit
 
@@ -123,3 +134,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 [ -f ~/.zsh_completion ] && source ~/.zsh_completion
+alias lzd='lazydocker'
