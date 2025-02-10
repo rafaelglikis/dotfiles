@@ -12,6 +12,7 @@ dotfiles=(
   i3
   konsole
   xbindkeys
+  less
 )
 
 for dir in ${dotfiles[*]}; do
