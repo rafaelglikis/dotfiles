@@ -19,9 +19,9 @@
 
 # Code
 # Code - IDEs
-"jumpapp -C -r -f firefox; sleep 0.3; xdotool keydown Alt key 4 keyup Alt"
+"bt activate $(bt list | grep chatgpt.com | head -n 1 | awk '{print $1}') && jumpapp firefox"
      Mod2+Mod4 + i
-"jumpapp -C -r -f firefox; sleep 0.3; xdotool keydown Alt key 5 keyup Alt"
+"bt activate $(bt list | grep perplexity.ai | head -n 1 | awk '{print $1}') && jumpapp firefox"
      Mod2+Mod4+Shift + i
 "jumpapp -C -m -r -f jetbrains-phpstorm || (cd /home/rafael && /home/rafael/bin/phpstorm) || (cd /home/rafael && phpstorm)"
      Mod2+Mod4 + p
