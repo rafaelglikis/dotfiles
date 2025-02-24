@@ -66,8 +66,6 @@ vmap <S-Tab> <gv
 vmap > >gv
 vmap < <gv
 
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
 " Don't wrap lines
 set nowrap
 " Wrap lines at convenient points
