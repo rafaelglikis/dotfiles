@@ -106,6 +106,8 @@ nmap <Space>m :openbookmarks<CR>
 exmap togglecheck obcommand editor:toggle-checklist-status
 nmap <Space>c :togglecheck<CR>
 nmap <Space><Space> :togglecheck<CR>
+exmap edittask obcommand obsidian-tasks-plugin:edit-task
+nmap <Space>/ :edittask<CR>
 " Editing - Remove extra braces
 nmap <Space>x $F[xf]x<CR>
 
