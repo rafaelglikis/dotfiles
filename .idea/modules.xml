@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/dotfiles.iml" filepath="$PROJECT_DIR$/.idea/dotfiles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dotfiles-private/.idea/dotfiles-private.iml" filepath="$PROJECT_DIR$/../dotfiles-private/.idea/dotfiles-private.iml" />
     </modules>
   </component>
 </project>
