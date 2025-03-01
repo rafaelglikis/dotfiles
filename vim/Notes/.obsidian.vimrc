@@ -82,6 +82,11 @@ nmap <Space>b :ftab<CR>
 nmap <Space>B :fsplit<CR>
 nmap <Space>f :follow<CR>
 nmap <Space>W :fwin<CR>
+" Navigation - Editor
+exmap nextheading obcommand quick-snippets-and-navigation:goToNextHeading
+nmap ]h :nextheading<CR>
+exmap prevheading obcommand quick-snippets-and-navigation:goToPrevHeading
+nmap [h :prevheading<CR>
 
 " Notes
 exmap new obcommand file-explorer:new-file
@@ -105,7 +110,8 @@ nmap <Space>m :openbookmarks<CR>
 " Editing
 exmap togglecheck obcommand editor:toggle-checklist-status
 nmap <Space>c :togglecheck<CR>
-nmap <Space><Space> :togglecheck<CR>
+exmap tasknextstatus obcommand obsidian-tasks-plugin:toggle-done
+nmap <Space><Space> :tasknextstatus<CR>
 exmap edittask obcommand obsidian-tasks-plugin:edit-task
 nmap <Space>/ :edittask<CR>
 " Editing - Remove extra braces
@@ -119,3 +125,36 @@ nmap <Space>gl :history<CR>
 
 " pasteinto
 vmap <A-p> :pasteinto<CR>
+
+" Useful commands
+" quick-snippets-and-navigation:copyCodeBlock
+" quick-snippets-and-navigation:copyNextCodeBlock
+" quick-snippets-and-navigation:increaseHeading
+" quick-snippets-and-navigation:decreaseHeading
+" quick-snippets-and-navigation:insertDefaultCallout
+" quick-snippets-and-navigation:insertCodeBlock
+
+" editor:toggle-fold-properties
+" editor:open-search
+" editor:open-search-replace
+" editor:insert-callout
+" editor:insert-codeblock
+
+" bookmarks:open
+" bookmarks:bookmark-current-view
+" bookmarks:unbookmark-current-view
+" bookmarks:bookmark-current-section
+" bookmarks:bookmark-current-heading
+
+" calendar:show-calendar-view
+" quickadd:runQuickAdd
+
+" obsidian-spaced-repetition:srs-note-review-open-note
+" obsidian-spaced-repetition:srs-note-review-easy
+" obsidian-spaced-repetition:srs-note-review-good
+" obsidian-spaced-repetition:srs-note-review-hard
+" obsidian-spaced-repetition:srs-review-flashcards
+" obsidian-spaced-repetition:srs-cram-flashcards
+" obsidian-spaced-repetition:srs-review-flashcards-in-note
+" obsidian-spaced-repetition:srs-cram-flashcards-in-note
+" obsidian-spaced-repetition:srs-open-review-queue-view
