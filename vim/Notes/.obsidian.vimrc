@@ -88,6 +88,10 @@ nmap ]h :nextheading<CR>
 exmap prevheading obcommand quick-snippets-and-navigation:goToPrevHeading
 nmap [h :prevheading<CR>
 
+" View
+exmap toggleproperties obcommand editor:toggle-fold-properties
+nmap <Space>p :toggleproperties<CR>
+
 " Notes
 exmap new obcommand file-explorer:new-file
 exmap move obcommand file-explorer:move-file
@@ -100,12 +104,12 @@ nmap ZZ :close<CR>
 nmap ZO :close<CR>
 
 " Bookmarks
-exmap bookmark obcommand bookmarks:bookmark-current-view
-nmap M :bookmark<CR>
-exmap unbookmark obcommand bookmarks:unbookmark-current-view
-nmap <Space>M :unbookmark<CR>
-exmap openbookmarks obcommand bookmarks:unbookmark-current-view
-nmap <Space>m :openbookmarks<CR>
+exmap bookmarks obcommand bookmarks-caller:search-bookmarks
+nmap <Space>m :bookmarks<CR>
+exmap mark obcommand bookmarks:bookmark-current-view
+nmap m :mark<CR>
+exmap umark obcommand bookmarks:unbookmark-current-view
+nmap M :Mark<CR>
 
 " Editing
 exmap togglecheck obcommand editor:toggle-checklist-status
@@ -116,6 +120,8 @@ exmap edittask obcommand obsidian-tasks-plugin:edit-task
 nmap <Space>/ :edittask<CR>
 " Editing - Remove extra braces
 nmap <Space>x $F[xf]x<CR>
+" Editing - Paste into
+vmap <A-p> :pasteinto<CR>
 
 " Obsidian
 exmap reload obcommand app:reload
@@ -123,8 +129,6 @@ nmap <Space>R :reload<CR>
 exmap history obcommand sync:view-version-history
 nmap <Space>gl :history<CR>
 
-" pasteinto
-vmap <A-p> :pasteinto<CR>
 
 " Useful commands
 " quick-snippets-and-navigation:copyCodeBlock
