@@ -112,10 +112,11 @@ exmap umark obcommand bookmarks:unbookmark-current-view
 nmap M :Mark<CR>
 
 " Editing
+" Editing - Tasks
 exmap togglecheck obcommand editor:toggle-checklist-status
-nmap <Space>c :togglecheck<CR>
+nmap <Space><Space> :togglecheck<CR>
 exmap tasknextstatus obcommand obsidian-tasks-plugin:toggle-done
-nmap <Space><Space> :tasknextstatus<CR>
+nmap <Space>. :tasknextstatus<CR>
 exmap edittask obcommand obsidian-tasks-plugin:edit-task
 nmap <Space>/ :edittask<CR>
 " Editing - Remove extra braces
