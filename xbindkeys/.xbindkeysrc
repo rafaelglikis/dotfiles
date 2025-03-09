@@ -20,47 +20,47 @@
 # Code
 # Code - IDEs
 "bt activate $(bt list | grep chatgpt.com | head -n 1 | awk '{print $1}') && jumpapp firefox"
-     Mod2+Mod4 + i
+     Mod4 + i
 "bt activate $(bt list | grep perplexity.ai | head -n 1 | awk '{print $1}') && jumpapp firefox"
-     Mod2+Mod4+Shift + i
+     Mod4+Shift + i
 "jumpapp -C -m -r -f jetbrains-phpstorm || (cd /home/rafael && /home/rafael/bin/phpstorm) || (cd /home/rafael && phpstorm)"
-     Mod2+Mod4 + p
+     Mod4 + p
 "jumpapp -C -m -r -f jetbrains-pycharm || (cd /home/rafael && /home/rafael/bin/pycharm) || (cd /home/rafael && pycharm)"
-     Mod2+Mod4+Shift + p
+     Mod4+Shift + p
 "jumpapp -C -m -r -f jetbrains-goland || (cd /home/rafael && /home/rafael/bin/goland) || (cd /home/rafael && goland)"
-     Control+Mod2+Mod4 + p
+     Control+Mod4 + p
 "jumpapp -C -m -r -f jetbrains-datagrip || (cd /home/rafael && /home/rafael/bin/datagrip) || (cd /home/rafael && datagrip)"
-     Mod2+Mod4 + apostrophe
+     Mod4 + apostrophe
 # Code - Terminals
 "jumpapp -C -m -r -f konsole"
-     Mod2+Mod4 + semicolon
+     Mod4 + semicolon
 "jumpapp -C -m -r -f st"
-     Mod2+Mod4+Shift + semicolon
+     Mod4+Shift + semicolon
 "yakuake"
-     Mod2+Mod4 + slash
+     Mod4 + slash
 
 # Browsers
 "jumpapp -C -m -r -f google-chrome"
-     Mod2+Mod4 + n
+     Mod4 + n
 "jumpapp -C -m -r -f firefox"
-     Mod2+Mod4 + b
+     Mod4 + b
 "jumpapp -C -m -r -f google-chrome"
-     Mod2+Mod4+Shift + b
+     Mod4+Shift + b
 
 # Messaging
 # Messaging - Slack
 "jumpapp -C -m -r slack || slack"
-     Mod2+Mod4 + m
+     Mod4 + m
 # Messaging - Mattermost
 "jumpapp -C -m -r -f mattermost-desktop"
-     Mod2+Mod4+Shift + m
+     Mod4+Shift + m
 # Messaging - Zoom
 "jumpapp -C -m -r -f zoom"
-     Control+Mod2+Mod4 + m
+     Control+Mod4 + m
 
 "flameshot gui"
      Print
 
 # Skip youtube ads
 "playerctl position +500"
-    Alt+Mod2+Mod4 + 1
+    Alt+Mod4 + 1
