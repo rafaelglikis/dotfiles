@@ -95,7 +95,8 @@ map <leader>a <Action>(GotoAction)
 
 " Tools - Database
 map <leader>D <Action>(ActivateDatabaseToolWindow)
-map <leader>jc <Action>(copilot.chat.show)
+map <leader>jc <Action>(OpenInlineChatAction)
+map <leader>jC <Action>(copilot.chat.show)
 
 " Code Navigation
 map <leader>b <Action>(GotoDeclaration)
