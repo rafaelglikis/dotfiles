@@ -13,6 +13,8 @@ dotfiles=(
   konsole
   xbindkeys
   less
+  lazydocker
+  lazygit
 )
 
 for dir in ${dotfiles[*]}; do

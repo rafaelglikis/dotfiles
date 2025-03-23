@@ -95,7 +95,8 @@ map <leader>a <Action>(GotoAction)
 
 " Tools - Database
 map <leader>D <Action>(ActivateDatabaseToolWindow)
-map <leader>jc <Action>(copilot.chat.show)
+map <leader>jc <Action>(OpenInlineChatAction)
+map <leader>jC <Action>(copilot.chat.show)
 
 " Code Navigation
 map <leader>b <Action>(GotoDeclaration)
@@ -136,6 +137,8 @@ map ]c <Action>(VcsShowNextChangeMarker)
 map [c <Action>(VcsShowPrevChangeMarker)
 map ]d <Action>(NextDiff)
 map [d <Action>(PreviousDiff)
+map ]f <Action>(Diff.NextChange)
+map [f <Action>(Diff.PrevChange)
 " Code Navigation - Next previews bindings - Bookmarks
 nmap ]m <Action>(GotoNextBookmark)
 nmap [m <Action>(GotoPreviousBookmark)

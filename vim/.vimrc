@@ -88,7 +88,7 @@ set splitbelow
 set splitright
 
 " Others
-set relativenumber
+" set relativenumber
 set nohlsearch
 set hidden
 set smartcase

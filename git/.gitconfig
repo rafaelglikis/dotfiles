@@ -74,7 +74,8 @@
 	parent = "!git checkout $(git rev-parse --abbrev-ref HEAD | awk -F\"--\" 'NF{NF--; print $0}' OFS=\"--\")"
 	back = "!f() { git checkout HEAD~${1:-1}; }; f"
     ls-tags = "!git tag --list -n1 | sort -Vr | less"
-	children = "!f() { git branch --list \"$1*\" --all | fzf --prompt=\"Select a branch: \" | xargs git checkout; }; f $(git rev-parse --abbrev-ref HEAD)"
+	children = "!f() { git branch --list --color=never \"$1*\" --all | fzf --prompt=\"Select a branch: \" | xargs git checkout; }; f $(git rev-parse --abbrev-ref HEAD)"
+	cleannup = !git add . && git stash save \"CLEANUP\"
 [color]
   branch = always
   diff = auto
