@@ -15,8 +15,6 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's', 'S']
 " IDE
 sethandler <C-C> n-v:ide i:vim
 sethandler <C-V> n-v:vim i:ide
-sethandler <C-[> a:ide
-sethandler <C-]> a:ide
 " IDE - Reimport sources bindings
 nnoremap <leader><CR> :source ~/.ideavimrc<CR>
 map <leader>jj :e ~/.ideavimrc<CR>
@@ -102,6 +100,7 @@ map <leader>jc <Action>(AIAssistant.Editor.AskAiAssistantInEditor)
 " map <leader>jc <Action>(OpenInlineChatAction)
 map <leader>jC <Action>(ActivateAIAssistantToolWindow)
 " map <leader>jC <Action>(copilot.chat.show)
+" AIAssistant.ToolWindow.NewChatActionAlt
 
 " Code Navigation
 map <leader>b <Action>(GotoDeclaration)

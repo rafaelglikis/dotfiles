@@ -98,10 +98,7 @@ set scrolloff=8
 
 let mapleader = " "
 
-" Add new lines without entering insert mode
 set timeout timeoutlen=700 ttimeoutlen=100
-imap jk <Esc>`^
-imap kj <Esc>`^
 
 " paste last thing yanked, not deleted
 nmap <leader>p "0p
