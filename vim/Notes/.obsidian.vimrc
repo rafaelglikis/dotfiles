@@ -1,8 +1,5 @@
 unmap <Space>
 
-imap jk <Esc>`^
-imap kj <Esc>`^
-
 set clipboard=unnamed
 " Vim
 " Vim - Folding
