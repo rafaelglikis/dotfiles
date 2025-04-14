@@ -84,6 +84,9 @@ exmap nextheading obcommand quick-snippets-and-navigation:goToNextHeading
 nmap ]h :nextheading<CR>
 exmap prevheading obcommand quick-snippets-and-navigation:goToPrevHeading
 nmap [h :prevheading<CR>
+" Navigation - popups
+exmap popup obcommand obsidian-hover-editor:open-link-in-new-popover
+nmap <Space>Q :popup<CR>
 
 " View
 exmap toggleproperties obcommand editor:toggle-fold-properties
