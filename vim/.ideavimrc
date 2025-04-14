@@ -60,11 +60,9 @@ map <leader>gf <Action>(Git.Fetch)
 " Git - Update - Merge
 map <leader>gd <Action>(Diff.ShowDiff)
 map <leader>gm <Action>(Git.Merge)
-nmap <leader>gC <Action>(Git.ResolveConflicts)
 vmap <leader>gC <Action>(CompareClipboardWithSelection)
-map <leader>gM <Action>(Vcs.LLMCommitMessageAction)
-"map <leader>gM <Action>(copilot.git.commit.button)
-
+" map <leader>gM <Action>(Vcs.LLMCommitMessageAction)
+map <leader>gM <Action>(copilot.git.commit.button)
 map <leader>gA <Action>(Diff.ApplyNonConflicts)
 " Git - Commit
 map <leader>gc <Action>(CheckinProject)
@@ -73,7 +71,8 @@ nmap <leader>gS <Action>(Git.Stash)
 " Git - Revert / Reset
 nmap <leader>gr <Action>(Vcs.RollbackChangedLines)
 vmap <leader>gr <Action>(Vcs.RollbackChangedLines)<Esc>
-map <leader>gR <Action>(ChangesView.Revert)
+" map <leader>gR <Action>(ChangesView.Revert)
+map <leader>gR <Action>(Git.ResolveConflicts)
 map <leader>gH <Action>(Git.Reset)
 " Git - Log
 nmap <leader>gl <Action>(Vcs.ShowTabbedFileHistory)
@@ -81,6 +80,7 @@ nmap <leader>gL <Action>(Vcs.Show.Log)
 nmap <leader>gg <Action>(Vcs.Log.OpenAnotherTabInEditor)
 vmap <leader>gl <Action>(Vcs.ShowHistoryForBlock)
 map <leader>ga <Action>(Annotate)
+
 
 " Tools
 " Tools - Files
@@ -96,10 +96,10 @@ map <leader>a <Action>(GotoAction)
 
 " Tools - Database
 map <leader>D <Action>(ActivateDatabaseToolWindow)
-map <leader>jc <Action>(AIAssistant.Editor.AskAiAssistantInEditor)
-" map <leader>jc <Action>(OpenInlineChatAction)
-map <leader>jC <Action>(ActivateAIAssistantToolWindow)
-" map <leader>jC <Action>(copilot.chat.show)
+" map <leader>jc <Action>(AIAssistant.Editor.AskAiAssistantInEditor)
+map <leader>jc <Action>(OpenInlineChatAction)
+" map <leader>jC <Action>(ActivateAIAssistantToolWindow)
+map <leader>jC <Action>(copilot.chat.show)
 " AIAssistant.ToolWindow.NewChatActionAlt
 
 " Code Navigation
