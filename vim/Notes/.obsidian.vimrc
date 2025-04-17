@@ -1,8 +1,5 @@
 unmap <Space>
 
-imap jk <Esc>`^
-imap kj <Esc>`^
-
 set clipboard=unnamed
 " Vim
 " Vim - Folding
@@ -87,6 +84,9 @@ exmap nextheading obcommand quick-snippets-and-navigation:goToNextHeading
 nmap ]h :nextheading<CR>
 exmap prevheading obcommand quick-snippets-and-navigation:goToPrevHeading
 nmap [h :prevheading<CR>
+" Navigation - popups
+exmap popup obcommand obsidian-hover-editor:open-link-in-new-popover
+nmap <Space>Q :popup<CR>
 
 " View
 exmap toggleproperties obcommand editor:toggle-fold-properties
@@ -114,7 +114,8 @@ nmap M :Mark<CR>
 " Editing
 " Editing - Tasks
 exmap togglecheck obcommand editor:toggle-checklist-status
-nmap <Space><Space> :togglecheck<CR>
+" nmap <Space><Space> :togglecheck<CR>
+nmap <Space><Space> :tasknextstatus<CR>
 exmap tasknextstatus obcommand obsidian-tasks-plugin:toggle-done
 nmap <Space>. :tasknextstatus<CR>
 exmap edittask obcommand obsidian-tasks-plugin:edit-task

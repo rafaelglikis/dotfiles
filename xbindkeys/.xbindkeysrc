@@ -23,7 +23,7 @@
      Mod4 + i
 "jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 5 keyup Alt"
      Mod4+Shift + i
-"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || (cd /home/rafael && /home/rafael/bin/phpstorm) || (cd /home/rafael && phpstorm)"
+"jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || jumpapp -C -m -r -f jetbrains-idea || (cd /home/rafael && /home/rafael/bin/phpstorm) || (cd /home/rafael && phpstorm)"
      Mod4 + p
 "jumpapp -C -m -r -f jetbrains-pycharm || (cd /home/rafael && /home/rafael/bin/pycharm) || (cd /home/rafael && pycharm)"
      Mod4+Shift + p
