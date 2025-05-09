@@ -19,6 +19,8 @@
 
 # Code
 # Code - IDEs
+"jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 2 keyup Alt"
+     Control+Mod4+Shift + i
 "jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 3 keyup Alt"
      Mod4 + i
 "jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 4 keyup Alt"
