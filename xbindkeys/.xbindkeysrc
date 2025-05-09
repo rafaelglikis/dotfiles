@@ -40,15 +40,15 @@
      Mod4+Shift + n
 "jumpapp -C -m -r -f firefox"
      Mod4 + b
-"jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 1 keyup Alt"
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 1 keyup Alt"
      Mod4+Shift + 1
-"jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 2 keyup Alt"
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 2 keyup Alt"
      Mod4+Shift + 2
-"jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 3 keyup Alt"
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 3 keyup Alt"
      Mod4+Shift + 3
-"jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 4 keyup Alt"
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 4 keyup Alt"
      Mod4+Shift + 4
-"jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 5 keyup Alt"
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 5 keyup Alt"
      Mod4+Shift + 5
 
 "jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 2 keyup Alt"
