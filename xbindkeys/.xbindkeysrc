@@ -19,10 +19,6 @@
 
 # Code
 # Code - IDEs
-"jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 4 keyup Alt"
-     Mod4 + i
-"jumpapp -C -r -f firefox; sleep 0.5; xdotool keydown Alt key 5 keyup Alt"
-     Mod4+Shift + i
 "jumpapp -C -m -r -f jetbrains-phpstorm || jumpapp -C -m -r -f jetbrains-pycharm || jumpapp -C -m -r -f jetbrains-goland || jumpapp -C -m -r -f jetbrains-idea || (cd /home/rafael && /home/rafael/bin/phpstorm) || (cd /home/rafael && phpstorm)"
      Mod4 + p
 "jumpapp -C -m -r -f jetbrains-pycharm || (cd /home/rafael && /home/rafael/bin/pycharm) || (cd /home/rafael && pycharm)"
@@ -40,12 +36,30 @@
      Mod4 + slash
 
 # Browsers
-"jumpapp -C -m -r -f google-chrome"
-     Mod4 + n
 "jumpapp -C -m -r -f firefox"
      Mod4+Shift + n
 "jumpapp -C -m -r -f firefox"
      Mod4 + b
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 1 keyup Alt"
+     Mod4+Shift + 1
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 2 keyup Alt"
+     Mod4+Shift + 2
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 3 keyup Alt"
+     Mod4+Shift + 3
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 4 keyup Alt"
+     Mod4+Shift + 4
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 5 keyup Alt"
+     Mod4+Shift + 5
+
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 2 keyup Alt"
+     Control+Mod4+Shift + i
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 3 keyup Alt"
+     Mod4 + i
+"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 4 keyup Alt"
+     Mod4+Shift + i
+
+"jumpapp -C -m -r -f google-chrome"
+     Mod4 + n
 "jumpapp -C -m -r -f google-chrome"
      Mod4+Shift + b
 
