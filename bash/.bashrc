@@ -27,8 +27,10 @@ alias du="du -hsc";
 alias whatsmyip="dig -4 +short myip.opendns.com @resolver1.opendns.com";
 alias whatsmyip2="curl -4 -s https://ifconfig.co";
 alias whatsmyip3='curl ipinfo.io/ip'
-alias cat="batcat -p"
-alias bat=batcat
+if command -v batcat &> /dev/null; then
+    alias cat="batcat -p"
+    alias bat=batcat
+fi
 alias r='ranger'
 alias copy='xclip -sel clip'
 alias copy-branch="git branch --show-current | xclip -sel clip"

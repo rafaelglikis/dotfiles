@@ -72,8 +72,10 @@ alias kdi='kubectl describe ingress'
 alias kns='kubens'
 alias kctx='kubectx'
 alias tetris=tint
-alias cat="batcat -p"
-alias bat="batcat"
+if command -v batcat &> /dev/null; then
+    alias cat="batcat -p"
+    alias bat="batcat"
+fi
 alias r='ranger'
 alias du="du -hsc"
 alias whatsmyip="dig -4 +short myip.opendns.com @resolver1.opendns.com"
