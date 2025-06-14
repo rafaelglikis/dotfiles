@@ -112,7 +112,9 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+if [ -d /usr/share/doc/fzf/examples/key-bindings.zsh ] ; then
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
