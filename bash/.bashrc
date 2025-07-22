@@ -199,4 +199,8 @@ if [ -f "HOME/.cargo/env" ] ; then
     source "$HOME/.cargo/env"
 fi
 
+if [ -d "$HOME/.cargo/bin/" ] ; then
+    PATH="$HOME/.cargo/bin/:$PATH"
+fi
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

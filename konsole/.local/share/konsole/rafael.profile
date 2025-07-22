@@ -7,5 +7,5 @@ Name=rafael
 Parent=FALLBACK/
 
 [Scrolling]
-HistoryMode=1
+HistoryMode=2
 ScrollBarPosition=2

@@ -24,6 +24,7 @@ plugins=(
   golang
   tmux
 )
+eval "$(zoxide init zsh)"
 
 [[ -s /home/rafael/.autojump/etc/profile.d/autojump.sh ]] && source /home/rafael/.autojump/etc/profile.d/autojump.sh
 
@@ -141,6 +142,9 @@ if [ -d "$HOME/go/bin/" ] ; then
     PATH="$HOME/go/bin/:$PATH"
 fi
 
+if [ -d "$HOME/.cargo/bin/" ] ; then
+    PATH="$HOME/.cargo/bin/:$PATH"
+fi
 
 [ -f ~/.zsh_completion ] && source ~/.zsh_completion
 alias lzd='lazydocker'

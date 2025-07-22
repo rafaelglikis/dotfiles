@@ -14,11 +14,12 @@ dotfiles=(
   less
   lazydocker
   lazygit
+  hypr
 )
 
 for dir in ${dotfiles[*]}; do
     # shellcheck disable=SC2044
-    for path in $(find "$dir" -type f); do
+    find "$dir" -type f -print0 | while IFS= read -r -d '' path; do
         src=$(pwd)/$path
         dest=~/${path#"$dir/"}
         path_without_filename=$(dirname "$dest")
