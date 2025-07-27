@@ -154,8 +154,8 @@ nmap m <Action>(ToggleBookmark)
 nmap M <Action>(ToggleBookmark)<Action>(EditBookmark)
 nmap <leader>m <Action>(ShowBookmarks)
 " Bookmarks - References
-map <leader>c <Action>(CopyPathFromRepositoryRootProvider)
-map <leader>C <Action>(CopyReference)
+nmap <leader>c <Action>(CopyPathFromRepositoryRootProvider)
+nmap <leader>C <Action>(CopyReference)
 
 " Code
 nmap <C-S-K> <Action>(MoveStatementUp)
@@ -214,6 +214,9 @@ map <leader>jr <Action>(HTTPClient.RunAll)
 map <leader>q <Action>(QuickJavaDoc)
 map <leader>Q <Action>(QuickImplementations)
 map <C-A-u> <Action>(ShowUmlDiagramPopup)
+
+" Claude code Integration
+vmap <leader>c <Action>(com.anthropic.code.plugin.actions.SendToClaudeAction)
 
 "if &ide =~? 'PhpStorm'
 "endif

@@ -15,6 +15,7 @@ dotfiles=(
   lazydocker
   lazygit
   hypr
+  claude
 )
 
 for dir in ${dotfiles[*]}; do
