@@ -16,6 +16,7 @@ dotfiles=(
   lazygit
   hypr
   claude
+  assets
 )
 
 for dir in ${dotfiles[*]}; do
