@@ -2,6 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(go build:*)",
+      "Bash(go mod:*)",
       "Bash(mkdir:*)",
       "Bash(cp:*)"
     ],
