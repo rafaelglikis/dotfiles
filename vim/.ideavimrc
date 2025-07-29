@@ -86,6 +86,7 @@ map <leader>ga <Action>(Annotate)
 " Tools - Files
 map <leader>N <Action>(NewElement)
 " Tools - Files - Scratch
+nmap <leader>n <Action>(RenameFile)
 nmap <leader>Sn <Action>(NewScratchFile)
 nmap <leader>Sb <Action>(NewScratchBuffer)
 nmap <leader>Sl <Action>(Scratch.ShowFilesPopup)
