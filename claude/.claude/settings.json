@@ -1,6 +1,7 @@
 {
   "permissions": {
     "allow": [
+      "WebFetch(domain:docs.anthropic.com)",
       "Bash(make)",
       "Bash(mkdir:*)",
       "Bash(cp:*)",
@@ -13,6 +14,26 @@
     "deny": []
   },
   "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "paplay ~/.assets/percussion.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send 'Claude Code' 'Awaiting your input'"
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "matcher": "",
@@ -20,6 +41,15 @@
           {
             "type": "command",
             "command": "paplay ~/.assets/percussion.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send 'Claude Code' 'Finished processing'"
           }
         ]
       }

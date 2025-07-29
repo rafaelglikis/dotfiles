@@ -204,3 +204,5 @@ if [ -d "$HOME/.cargo/bin/" ] ; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+[ -f ~/.claude/local/claude ] && alias claude="~/.claude/local/claude"

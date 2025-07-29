@@ -148,3 +148,5 @@ fi
 
 [ -f ~/.zsh_completion ] && source ~/.zsh_completion
 alias lzd='lazydocker'
+
+[ -f ~/.claude/local/claude ] && alias claude="~/.claude/local/claude"
