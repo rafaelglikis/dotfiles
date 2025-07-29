@@ -54,5 +54,7 @@
         ]
       }
     ]
-  }
+  },
+  "cleanupPeriodDays": 365,
+  "includeCoAuthoredBy": false
 }
