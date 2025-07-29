@@ -1,11 +1,13 @@
 {
   "permissions": {
     "allow": [
+      "Bash(make)",
       "Bash(mkdir:*)",
       "Bash(cp:*)",
       "Bash(go build:*)",
       "Bash(go mod:*)",
-      "Bash(go get:*)"
+      "Bash(go get:*)",
+      "Bash(find:*)"
     ],
     "deny": []
   },
