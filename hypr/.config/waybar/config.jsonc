@@ -27,7 +27,7 @@
         "format": "{icon}",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "all-outputs": true,
+        "all-outputs": false,
         "show-special": true,
         "format-icons": {
             "1": "1:Home",
