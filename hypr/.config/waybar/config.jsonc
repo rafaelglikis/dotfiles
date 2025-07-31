@@ -35,7 +35,8 @@
             "3": "3:Dev",
             "4": "4:Cmd",
             "5": "5:Db",
-            "6": "6:Chat"
+            "6": "6:Chat",
+            "7": "7:Notes"
         },
         "persistent_workspaces": {
             "*": 1
