@@ -9,7 +9,8 @@
       "Bash(go mod:*)",
       "Bash(go get:*)",
       "Bash(find:*)",
-      "Bash(php -l:*)"
+      "Bash(php -l:*)",
+      "Bash(python -m py_compile:*)"
     ],
     "deny": []
   },
