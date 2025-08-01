@@ -1,3 +1,5 @@
+/* https://man.archlinux.org/man/wofi.7.en */
+
 window {
     margin: 0;
     border: 2px solid rgba(51, 204, 255, 0.93);
@@ -37,4 +39,12 @@ window {
 
 #entry:selected {
     background-color: #3b4252;
+}
+
+#expander-box {
+    margin-left: 30px;
+}
+
+expander > list > #entry {
+    background-color: #2e3440;
 }
