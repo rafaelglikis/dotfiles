@@ -4,7 +4,7 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 50,
+    "height": 20,
     "modules-left": [
         "hyprland/workspaces"
     ],

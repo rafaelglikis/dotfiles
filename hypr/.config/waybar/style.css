@@ -3,7 +3,7 @@
     border-radius: 0;
     font-family: "JetBrains Mono", sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -113,9 +113,8 @@ tooltip {
 
 #clock {
     color: #fab387;
-    border-radius: 10px 0 0 10px;
-    margin-left: 10px;
-    border-right: 0;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 #network {
