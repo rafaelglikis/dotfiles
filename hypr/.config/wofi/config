@@ -1,1 +1,7 @@
 allow_images=true
+image_size=16
+key_up=Ctrl-k
+key_down=Ctrl-j
+key_left=Ctrl-h
+key_right=Ctrl-l
+close_on_focus_loss=true
