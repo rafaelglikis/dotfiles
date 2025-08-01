@@ -21,8 +21,14 @@
         "pulseaudio",
         "pulseaudio#microphone",
         "tray",
+        "hyprland/language",
         "clock"
     ],
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "\uD83C\uDDFA\uD83C\uDDF8",
+        "format-gr": "\uD83C\uDDEC\uD83C\uDDF7"
+    },
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
