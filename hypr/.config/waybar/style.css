@@ -13,7 +13,7 @@ window#waybar {
 }
 
 tooltip {
-    background: #1e1e2e;
+    background: #3b4252;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
@@ -63,7 +63,7 @@ tooltip {
 #workspaces,
 #tray,
 #backlight {
-    background-color: #1e1e2e;
+    background-color: #3b4252;
     opacity: 0.8;
     padding: 0 10px;
     margin: 10px 0 0;
@@ -92,7 +92,7 @@ tooltip {
 }
 
 #workspaces {
-    background: #1e1e2e;
+    background: #3b4252;
     border-radius: 10px;
     margin-left: 10px;
     padding-right: 0;
@@ -151,6 +151,7 @@ tooltip {
     margin-right: 10px;
     border-left: 0;
 }
+
 #battery.warning {
     color: #FFA500;
 }
