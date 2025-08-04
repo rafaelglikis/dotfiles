@@ -17,6 +17,7 @@ dotfiles=(
   hypr
   claude
   assets
+  alacritty
 )
 
 for dir in ${dotfiles[*]}; do

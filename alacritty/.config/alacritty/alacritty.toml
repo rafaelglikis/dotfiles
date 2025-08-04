@@ -1,0 +1,9 @@
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
+
+[window]
+opacity = 0.9
+padding.x = 10
+padding.y = 10
+
+decorations = "Full"
+decorations_theme_variant = "Dark"
