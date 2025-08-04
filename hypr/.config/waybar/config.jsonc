@@ -37,12 +37,15 @@
         "show-special": true,
         "format-icons": {
             "1": "1:Home",
-            "2": "2:Web",
+            "2": "2:Term",
             "3": "3:Dev",
-            "4": "4:Cmd",
-            "5": "5:Db",
+            "4": "4:Test",
+            "5": "5:DBs",
             "6": "6:Chat",
-            "7": "7:Notes"
+            "7": "7:Notes",
+            "8": "8:Misc",
+            "9": "9:Misc",
+            "10": "10:Misc"
         },
         "persistent_workspaces": {
             "*": 1
