@@ -9,29 +9,27 @@
 }
 
 window#waybar {
-    color: #cdd6f4;
+    color: #d8dee9;
 }
 
-#workspaces button {
-    color: #cdd6f4;
+#workspaces button plugin{
+    color: #d8dee9;
 }
 
 #workspaces button.active {
-    color: white;
+    color: #d8dee9;
 }
 
 #workspaces button.focused {
-    color: #a6adc8;
-    background: #eba0ac;
+    color: #eceff4;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    background: #e8ad95;
+    color: #bf616a;
 }
 
 #workspaces button:hover {
-    color: white;
+    color: #88c0d0;
 }
 
 #custom-power_profile,
@@ -54,7 +52,7 @@ window#waybar {
 }
 
 #custom-temperature.critical {
-    color: #f00;
+    color: #bf616a;
 }
 
 #workspaces {
@@ -64,7 +62,7 @@ window#waybar {
 }
 
 #custom-power_profile {
-    color: #a6e3a1;
+    color: #a3be8c;
     border-left: 0;
     border-right: 0;
 }
@@ -80,14 +78,9 @@ window#waybar {
 }
 
 #battery.warning {
-    color: #FFA500;
+    color: #d08770;
 }
 
 #battery.critical {
-    color: #F00;
-}
-
-#custom-moon {
-    border-right: 0;
-    margin-left: 0;
+    color: #bf616a;
 }
