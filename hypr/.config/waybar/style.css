@@ -17,11 +17,11 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #d8dee9;
+    color: #8fbcbb;
 }
 
 #workspaces button.focused {
-    color: #eceff4;
+    color: #81a1c1;
 }
 
 #workspaces button.urgent {
