@@ -3,7 +3,7 @@
     border-radius: 0;
     font-family: "JetBrains Mono", sans-serif;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     min-height: 0;
     background: #2e3440;
 }
@@ -12,7 +12,7 @@ window#waybar {
     color: #d8dee9;
 }
 
-#workspaces button plugin{
+#workspaces button plugin {
     color: #d8dee9;
 }
 
@@ -32,23 +32,22 @@ window#waybar {
     color: #88c0d0;
 }
 
-#custom-power_profile,
-#custom-weather,
-#custom-moon,
-#custom-wallpaper,
 #window,
 #clock,
 #battery,
-#pulseaudio,
 #network,
 #bluetooth,
-#custom-temperature,
+#temperature,
 #custom-memory,
 #workspaces,
 #language,
 #tray,
 #backlight {
     padding: 0 5px;
+}
+
+#pulseaudio{
+    padding: 0 10px;
 }
 
 #custom-temperature.critical {
@@ -63,16 +62,6 @@ window#waybar {
 
 #custom-power_profile {
     color: #a3be8c;
-    border-left: 0;
-    border-right: 0;
-}
-
-#pulseaudio {
-    border-left: 0;
-    border-right: 0;
-}
-
-#pulseaudio.microphone {
     border-left: 0;
     border-right: 0;
 }
