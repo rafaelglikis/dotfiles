@@ -82,6 +82,39 @@
 	    repo=$(basename \"$PWD\"); \
         xdg-open \"https://gitlab.com/learnworlds/$group/$repo/-/pipelines\"; \
     }; f"
+    mr = "!mr() { \
+          remote=${1:-origin}; \
+          repo=$(git config --get remote.$remote.url); \
+          if [ -z \"$repo\" ]; then \
+              echo \"Remote $remote not found\" >&2; \
+              return 1; \
+          fi; \
+          if [ \"${repo#git@gitlab.com:}\" != \"$repo\" ]; then \
+              repo_path=${repo#git@gitlab.com:}; \
+              repo_path=${repo_path%.git}; \
+              repo=https://gitlab.com/${repo_path}; \
+          elif [ \"${repo#https://gitlab.com/}\" != \"$repo\" ]; then \
+              repo_path=${repo#https://gitlab.com/}; \
+              repo_path=${repo_path%.git}; \
+              repo=https://gitlab.com/${repo_path}; \
+          elif [ \"${repo#http://gitlab.com/}\" != \"$repo\" ]; then \
+              repo_path=${repo#http://gitlab.com/}; \
+              repo_path=${repo_path%.git}; \
+              repo=https://gitlab.com/${repo_path}; \
+          else \
+              echo \"Remote $remote is not a GitLab URL\" >&2; \
+              return 1; \
+          fi; \
+          branch=$(git rev-parse --abbrev-ref HEAD); \
+          if [ \"$branch\" = \"HEAD\" ]; then \
+              echo \"Cannot determine branch\" >&2; \
+              return 1; \
+          fi; \
+          encoded_branch=$(python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=\"\"))' \"$branch\"); \
+          url=\"$repo/-/merge_requests/new?merge_request%5Bsource_branch%5D=$encoded_branch\"; \
+          echo \"Opening $url\"; \
+          xdg-open \"$url\" >/dev/null 2>&1 || echo \"$url\"; \
+    }; mr"
 [color]
   branch = always
   diff = auto
