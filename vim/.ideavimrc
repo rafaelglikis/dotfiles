@@ -59,10 +59,11 @@ map <leader>gP <Action>(Vcs.Push)
 map <leader>gf <Action>(Git.Fetch)
 " Git - Update - Merge
 map <leader>gd <Action>(Diff.ShowDiff)
+map <leader>go <Action>(Diff.OpenInEditor)
 map <leader>gm <Action>(Git.Merge)
 vmap <leader>gC <Action>(CompareClipboardWithSelection)
-" map <leader>gM <Action>(Vcs.LLMCommitMessageAction)
-map <leader>gM <Action>(copilot.git.commit.button)
+map <leader>gM <Action>(Vcs.LLMCommitMessageAction)
+" map <leader>gM <Action>(copilot.git.commit.button)
 map <leader>gA <Action>(Diff.ApplyNonConflicts)
 " Git - Commit
 map <leader>gc <Action>(CheckinProject)
