@@ -146,7 +146,15 @@ if [ -d "$HOME/.cargo/bin/" ] ; then
     PATH="$HOME/.cargo/bin/:$PATH"
 fi
 
+if [ -d "$HOME/.symfony5/bin/" ] ; then
+    PATH="$HOME/.symfony5/bin:$PATH"
+fi
+
 [ -f ~/.zsh_completion ] && source ~/.zsh_completion
 alias lzd='lazydocker'
 
 [ -f ~/.claude/local/claude ] && alias claude="~/.claude/local/claude"
+
+if [ -d "$HOME/.lmstudio/bin" ] ; then
+    export PATH="$PATH:$HOME/.lmstudio/bin"
+fi

@@ -206,3 +206,7 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 [ -f ~/.claude/local/claude ] && alias claude="~/.claude/local/claude"
+
+if [ -d "$HOME/.lmstudio/bin" ] ; then
+    export PATH="$PATH:$HOME/.lmstudio/bin"
+fi
