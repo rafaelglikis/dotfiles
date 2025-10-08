@@ -1,4 +1,6 @@
 {
+  "cleanupPeriodDays": 365,
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
       "WebFetch(domain:docs.anthropic.com)",
@@ -6,6 +8,8 @@
       "Bash(make)",
       "Bash(mkdir:*)",
       "Bash(cp:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
       "Bash(go build:*)",
       "Bash(go mod:*)",
       "Bash(go get:*)",
@@ -56,7 +60,5 @@
         ]
       }
     ]
-  },
-  "cleanupPeriodDays": 365,
-  "includeCoAuthoredBy": false
+  }
 }
