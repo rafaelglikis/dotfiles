@@ -1,64 +1,65 @@
 {
-  "cleanupPeriodDays": 365,
-  "includeCoAuthoredBy": false,
-  "permissions": {
-    "allow": [
-      "WebFetch(domain:docs.anthropic.com)",
-      "WebFetch(domain:symfony.com)",
-      "Bash(make)",
-      "Bash(mkdir:*)",
-      "Bash(cp:*)",
-      "Bash(grep:*)",
-      "Bash(rg:*)",
-      "Bash(go build:*)",
-      "Bash(go mod:*)",
-      "Bash(go get:*)",
-      "Bash(find:*)",
-      "Bash(php -l:*)",
-      "Bash(python -m py_compile:*)"
-    ],
-    "deny": []
-  },
-  "hooks": {
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "paplay ~/.assets/percussion.wav"
-          }
+    "cleanupPeriodDays": 365,
+    "includeCoAuthoredBy": false,
+    "permissions": {
+        "allow": [
+            "WebFetch(domain:docs.anthropic.com)",
+            "WebFetch(domain:symfony.com)",
+            "Bash(make)",
+            "Bash(mkdir:*)",
+            "Bash(cp:*)",
+            "Bash(grep:*)",
+            "Bash(rg:*)",
+            "Bash(go build:*)",
+            "Bash(go mod:*)",
+            "Bash(go get:*)",
+            "Bash(find:*)",
+            "Bash(php -l:*)",
+            "Bash(python -m py_compile:*)",
+            "Read(//tmp/**)"
+        ],
+        "deny": []
+    },
+    "hooks": {
+        "Notification": [
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "paplay ~/.assets/percussion.wav"
+                    }
+                ]
+            },
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "notify-send 'Claude Code' 'Awaiting your input'"
+                    }
+                ]
+            }
+        ],
+        "Stop": [
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "paplay ~/.assets/percussion.wav"
+                    }
+                ]
+            },
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "notify-send 'Claude Code' 'Finished processing'"
+                    }
+                ]
+            }
         ]
-      },
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "notify-send 'Claude Code' 'Awaiting your input'"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "paplay ~/.assets/percussion.wav"
-          }
-        ]
-      },
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "notify-send 'Claude Code' 'Finished processing'"
-          }
-        ]
-      }
-    ]
-  }
+    }
 }
