@@ -1,4 +1,6 @@
 {
+  "cleanupPeriodDays": 365,
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
       "WebFetch(domain:docs.anthropic.com)",
@@ -6,12 +8,24 @@
       "Bash(make)",
       "Bash(mkdir:*)",
       "Bash(cp:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
       "Bash(go build:*)",
       "Bash(go mod:*)",
       "Bash(go get:*)",
       "Bash(find:*)",
       "Bash(php -l:*)",
-      "Bash(python -m py_compile:*)"
+      "Bash(python -m py_compile:*)",
+      "Read(//tmp/**)",
+      "Bash(tree:*)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_type",
+      "mcp__playwright__browser_tabs",
+      "mcp__playwright__browser_select_option",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_close"
     ],
     "deny": []
   },
@@ -57,6 +71,8 @@
       }
     ]
   },
-  "cleanupPeriodDays": 365,
-  "includeCoAuthoredBy": false
+  "alwaysThinkingEnabled": true,
+  "enabledPlugins": {
+    "performance-optimizer@claude-code-templates": true
+  }
 }
