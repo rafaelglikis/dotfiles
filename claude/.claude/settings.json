@@ -71,8 +71,8 @@
       }
     ]
   },
-  "alwaysThinkingEnabled": true,
   "enabledPlugins": {
     "performance-optimizer@claude-code-templates": true
-  }
+  },
+  "alwaysThinkingEnabled": true
 }
