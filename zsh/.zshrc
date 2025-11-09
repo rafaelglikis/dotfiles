@@ -24,7 +24,10 @@ plugins=(
   golang
   tmux
 )
-eval "$(zoxide init zsh)"
+
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
 
 [[ -s /home/rafael/.autojump/etc/profile.d/autojump.sh ]] && source /home/rafael/.autojump/etc/profile.d/autojump.sh
 
@@ -76,6 +79,9 @@ alias tetris=tint
 if command -v batcat &> /dev/null; then
     alias cat="batcat -p"
     alias bat="batcat"
+fi
+if command -v gemini &> /dev/null; then 
+    alias ai-summarize='gemini -p "Summarize this meeting. Give me a summary section, action items section and a tldr section. No yapping." | tee summary.md'
 fi
 alias r='ranger'
 alias du="du -hsc"
@@ -154,6 +160,16 @@ fi
 alias lzd='lazydocker'
 
 [ -f ~/.claude/local/claude ] && alias claude="~/.claude/local/claude"
+
+# bun completions
+[ -s "/home/rafael/.bun/_bun" ] && source "/home/rafael/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# opencode
+export PATH=/home/rafael/.opencode/bin:$PATH
 
 if [ -d "$HOME/.lmstudio/bin" ] ; then
     export PATH="$PATH:$HOME/.lmstudio/bin"
