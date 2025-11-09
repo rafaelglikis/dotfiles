@@ -103,6 +103,7 @@ map <leader>jc <Action>(OpenInlineChatAction)
 " map <leader>jC <Action>(ActivateAIAssistantToolWindow)
 map <leader>jC <Action>(copilot.chat.show)
 " AIAssistant.ToolWindow.NewChatActionAlt
+map <leader>\ <Action>(AIAssistant.Editor.AskAiAssistantInEditor)
 
 " Code Navigation
 map <leader>b <Action>(GotoDeclaration)
