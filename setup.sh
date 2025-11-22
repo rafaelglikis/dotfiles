@@ -10,6 +10,7 @@ dotfiles=(
   zsh
   i3
   konsole
+  code
   xbindkeys
   less
   lazydocker

@@ -1,0 +1,851 @@
+{
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.surround": true,
+    "vim.scrollOff": 8,
+    "vim.handleKeys": {
+        "<C-c>": false,
+        "<C-v>": false
+    },
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "<CR>"
+            ],
+            "commands": [
+                "workbench.action.reloadWindow"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "j",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.openSettingsJson"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "j",
+                "w"
+            ],
+            "commands": [
+                "editor.action.toggleWordWrap"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "j",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.maximizeEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "j",
+                "F"
+            ],
+            "commands": [
+                "workbench.action.toggleZenMode"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "j",
+                "g"
+            ],
+            "commands": [
+                "editor.action.toggleFold"
+            ]
+        },
+        {
+            "before": [
+                "<A-.>"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": [
+                "<A-,>"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        {
+            "before": [
+                "<C-w>"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToNewWindow"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "U"
+            ],
+            "commands": [
+                "workbench.action.joinAllGroups"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.closeOtherEditors"
+            ]
+        },
+        {
+            "before": [
+                "<A-J>"
+            ],
+            "after": [
+                "<C-w>",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "<A-K>"
+            ],
+            "after": [
+                "<C-w>",
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "<A-L>"
+            ],
+            "after": [
+                "<C-w>",
+                "l"
+            ]
+        },
+        {
+            "before": [
+                "<A-H>"
+            ],
+            "after": [
+                "<C-w>",
+                "h"
+            ]
+        },
+        {
+            "before": [
+                "<C-A-k>"
+            ],
+            "commands": [
+                "workbench.action.increaseViewHeight"
+            ]
+        },
+        {
+            "before": [
+                "<C-A-j>"
+            ],
+            "commands": [
+                "workbench.action.decreaseViewHeight"
+            ]
+        },
+        {
+            "before": [
+                "<C-A-h>"
+            ],
+            "commands": [
+                "workbench.action.decreaseViewWidth"
+            ]
+        },
+        {
+            "before": [
+                "<C-A-l>"
+            ],
+            "commands": [
+                "workbench.action.increaseViewWidth"
+            ]
+        },
+        {
+            "before": [
+                "<A-S-m>"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToNextGroup"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g"
+            ],
+            "commands": [
+                "workbench.view.scm"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "b"
+            ],
+            "commands": [
+                "git.checkout"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "B"
+            ],
+            "commands": [
+                "git.branch"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "p"
+            ],
+            "commands": [
+                "git.pull"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "P"
+            ],
+            "commands": [
+                "git.push"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "f"
+            ],
+            "commands": [
+                "git.fetch"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "d"
+            ],
+            "commands": [
+                "git.openChange"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "o"
+            ],
+            "commands": [
+                "git.openChange"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "m"
+            ],
+            "commands": [
+                "git.merge"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "M"
+            ],
+            "commands": [
+                "github.copilot.git.generateCommitMessage"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "c"
+            ],
+            "commands": [
+                "git.commit"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "r"
+            ],
+            "commands": [
+                "git.revertChange"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "H"
+            ],
+            "commands": [
+                "git.clean"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "l"
+            ],
+            "commands": [
+                "git.viewFileHistory"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "N"
+            ],
+            "commands": [
+                "explorer.newFile"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "n"
+            ],
+            "commands": [
+                "renameFile"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                ";"
+            ],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                ":"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "a"
+            ],
+            "commands": [
+                "workbench.action.showCommands"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b"
+            ],
+            "commands": [
+                "editor.action.revealDefinition"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "u"
+            ],
+            "commands": [
+                "editor.action.referenceSearch.trigger"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "I"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        },
+        {
+            "before": [
+                "<C-S-i>"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.openRecent"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "f"
+            ],
+            "commands": [
+                "editor.action.revealDefinition"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "1"
+            ],
+            "commands": [
+                "workbench.files.action.showActiveFileInExplorer"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "2"
+            ],
+            "commands": [
+                "workbench.action.revealInExplorer"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.navigateBack"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.navigateForward"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "/"
+            ],
+            "commands": [
+                "actions.find"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "?"
+            ],
+            "commands": [
+                "editor.action.startFindReplaceAction"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "F"
+            ],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "R"
+            ],
+            "commands": [
+                "workbench.action.replaceInFiles"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "commands": [
+                "editor.action.wordHighlight.trigger"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "e"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "e"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.editor.nextChange"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.editor.previousChange"
+            ]
+        },
+        {
+            "before": [
+                "m"
+            ],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": [
+                "M"
+            ],
+            "commands": [
+                "bookmarks.toggle",
+                "bookmarks.list"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "m"
+            ],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "C"
+            ],
+            "commands": [
+                "copyRelativeFilePath"
+            ]
+        },
+        {
+            "before": [
+                "<C-S-K>"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        },
+        {
+            "before": [
+                "<C-S-J>"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "k"
+            ],
+            "commands": [
+                "editor.action.transformToKebabCase"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "c"
+            ],
+            "commands": [
+                "editor.action.transformToCamelCase"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "s"
+            ],
+            "commands": [
+                "editor.action.transformToSnakeCase"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "="
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "+"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "o"
+            ],
+            "commands": [
+                "editor.action.organizeImports"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "i"
+            ],
+            "commands": [
+                "editor.action.inline"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "commands": [
+                "workbench.action.debug.start"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "B"
+            ],
+            "commands": [
+                "editor.debug.action.toggleBreakpoint"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "."
+            ],
+            "commands": [
+                "editor.debug.action.runToCursor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                ","
+            ],
+            "commands": [
+                "workbench.action.debug.stepOver"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                ">"
+            ],
+            "commands": [
+                "workbench.action.debug.stepInto"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "<"
+            ],
+            "commands": [
+                "workbench.action.debug.stepOut"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "R"
+            ],
+            "commands": [
+                "workbench.action.debug.start"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "code-runner.run"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.chat.open"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "C"
+            ],
+            "commands": [
+                "workbench.action.compareEditor.clipboard"
+            ]
+        },
+        {
+            "before": [
+                "n"
+            ],
+            "commands": [
+                "editor.action.addSelectionToNextFindMatch"
+            ]
+        },
+        {
+            "before": [
+                "w"
+            ],
+            "commands": [
+                "editor.action.smartSelect.expand"
+            ]
+        },
+        {
+            "before": [
+                "W"
+            ],
+            "commands": [
+                "editor.action.smartSelect.shrink"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "commands": [
+                "editor.action.wordHighlight.trigger"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "after": [
+                "S"
+            ]
+        },
+        {
+            "before": [
+                "="
+            ],
+            "commands": [
+                "editor.action.formatSelection"
+            ]
+        },
+        {
+            "before": [
+                "T"
+            ],
+            "commands": [
+                "editor.action.refactor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v"
+            ],
+            "commands": [
+                "editor.action.refactor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "commands": [
+                "editor.action.refactor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "m"
+            ],
+            "commands": [
+                "editor.action.refactor"
+            ]
+        }
+    ]
+}
