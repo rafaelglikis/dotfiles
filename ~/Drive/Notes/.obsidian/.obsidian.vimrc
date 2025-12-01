@@ -1,0 +1,1 @@
+/home/rafael/dev/dotfiles/Drive/Notes/.obsidian/.obsidian.vimrc

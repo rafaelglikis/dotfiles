@@ -1,0 +1,1 @@
+/home/rafael/dev/dotfiles/vim/Insync/rafaelglikis@gmail.com/Google Drive/Notes/.obsidian/.obsidian.vimrc

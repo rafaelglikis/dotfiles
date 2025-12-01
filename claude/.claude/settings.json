@@ -29,6 +29,7 @@
     ],
     "deny": []
   },
+  "model": "sonnet",
   "hooks": {
     "Notification": [
       {
@@ -74,5 +75,5 @@
   "enabledPlugins": {
     "performance-optimizer@claude-code-templates": true
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": false
 }
