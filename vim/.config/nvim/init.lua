@@ -127,6 +127,7 @@ if vim.g.vscode then
     vim.keymap.set('n', '<leader>gb', code_action('git.checkout'))
     vim.keymap.set('n', '<leader>gd', code_action('git.openChange'))
     vim.keymap.set('n', '<leader>gp', code_action('git.pull'))
+    vim.keymap.set('n', '<leader>gc', code_action('git.commit'))
     vim.keymap.set('n', '<leader>gP', code_action('git.push'))
 
     -- Tools
