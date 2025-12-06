@@ -7,6 +7,7 @@
         "<C-c>": false,
         "<C-v>": false
     },
+    "vim.leader": "<space>",
     "vim.normalModeKeyBindings": [
         {
             "before": [
@@ -847,5 +848,12 @@
                 "editor.action.refactor"
             ]
         }
-    ]
+    ],
+    "git.autofetch": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "files.autoSave": "afterDelay",
+    "diffEditor.codeLens": true,
+    "editor.minimap.enabled": false
 }

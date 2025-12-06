@@ -75,5 +75,5 @@
   "enabledPlugins": {
     "performance-optimizer@claude-code-templates": true
   },
-  "alwaysThinkingEnabled": false
+  "alwaysThinkingEnabled": true
 }
