@@ -38,6 +38,9 @@ alias cb="git branch --show-current | xclip -sel clip"
 alias vf='vim `fzf`'
 alias ]]='ai chat --system=cli'
 alias ]='ai chat --system=cli -c'
+if command -v gemini &> /dev/null; then 
+    alias ai-summarize='gemini -p "Summarize this meeting. Give me a summary section, action items section and a tldr section. No yapping." | tee summary.md'
+fi
 
 if [ -x /usr/bin/dircolors ]; then
     test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
