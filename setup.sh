@@ -19,6 +19,7 @@ dotfiles=(
   claude
   assets
   alacritty
+  opencode
 )
 
 for dir in ${dotfiles[*]}; do
