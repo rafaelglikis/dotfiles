@@ -855,5 +855,6 @@
     },
     "files.autoSave": "afterDelay",
     "diffEditor.codeLens": true,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "json.schemaDownload.enable": true
 }

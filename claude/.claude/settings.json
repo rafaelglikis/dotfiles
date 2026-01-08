@@ -29,7 +29,7 @@
     ],
     "deny": []
   },
-  "model": "sonnet",
+  "model": "opus",
   "hooks": {
     "Notification": [
       {
