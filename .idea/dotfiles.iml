@@ -4,5 +4,8 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="scripts" />
+    <orderEntry type="module" module-name="ansible" />
+    <orderEntry type="module" module-name="home-lab" />
   </component>
 </module>
