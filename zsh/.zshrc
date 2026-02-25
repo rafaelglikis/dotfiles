@@ -96,6 +96,11 @@ alias vf='vim `fzf`'
 alias ]]='ai chat --system=cli'
 alias ]='ai chat --system=cli -c'
 
+
+r-codex() {
+  CODEX_HOME=~/.r-codex command codex "$@"
+}
+
 ## functions
 function kwide {
 	kubectl $@ -o wide
