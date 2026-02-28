@@ -20,6 +20,7 @@ dotfiles=(
   assets
   alacritty
   opencode
+  direnv
 )
 
 for dir in ${dotfiles[*]}; do

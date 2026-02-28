@@ -34,6 +34,12 @@
      Mod4+Shift + semicolon
 "yakuake"
      Mod4 + slash
+# Code - AI
+"jumpapp -C -m -r -f antigravity || jumpapp -C -m -r -f cursor"
+     Mod4 + i
+"jumpapp -C -r -f cursor;"
+     Mod4+Shift + i
+
 
 # Browsers
 # Browsers - Firefox
@@ -41,16 +47,6 @@
      Mod4+Shift + n
 "jumpapp -C -m -r -f firefox"
      Mod4 + b
-
-# Browsers - Firefox - Pinned tabs
-"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 1 keyup Alt"
-     Mod4 + c
-"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 2 keyup Alt"
-     Control+Mod4+Shift + m
-"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 3 keyup Alt"
-     Mod4 + i
-"jumpapp -C -r -f firefox; sleep 0.2; xdotool keydown Alt key 4 keyup Alt"
-     Mod4+Shift + i
 
 # Browsers - Chrome
 "jumpapp -C -m -r -f google-chrome"
