@@ -29,7 +29,6 @@
     ],
     "deny": []
   },
-  "model": "opus",
   "hooks": {
     "Notification": [
       {

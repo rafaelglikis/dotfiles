@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ansible/.idea/ansible.iml" filepath="$PROJECT_DIR$/../ansible/.idea/ansible.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dotfiles.iml" filepath="$PROJECT_DIR$/.idea/dotfiles.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dotfiles-private/.idea/dotfiles-private.iml" filepath="$PROJECT_DIR$/../dotfiles-private/.idea/dotfiles-private.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../home-lab/.idea/home-lab.iml" filepath="$PROJECT_DIR$/../home-lab/.idea/home-lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../scripts/.idea/scripts.iml" filepath="$PROJECT_DIR$/../scripts/.idea/scripts.iml" />
     </modules>
   </component>
 </project>

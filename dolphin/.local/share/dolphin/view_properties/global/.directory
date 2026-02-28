@@ -1,6 +1,9 @@
 [Dolphin]
-Timestamp=2025,3,10,21,55,8.318
+SortOrder=1
+SortRole=modificationtime
+Timestamp=2026,2,13,19,59,30.378
 Version=4
+ViewMode=1
 VisibleRoles=Icons_text
 
 [Settings]

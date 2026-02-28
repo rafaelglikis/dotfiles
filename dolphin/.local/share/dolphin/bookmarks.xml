@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xbel>
-<xbel xmlns:kdepriv="http://www.kde.org/kdepriv" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks" dbusName="dolphin">
+<xbel xmlns:kdepriv="http://www.kde.org/kdepriv" dbusName="dolphin" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks">
  <bookmark href="file:///home/rafael/MEGA">
   <title>MEGA</title>
   <info>
@@ -14,6 +14,14 @@
   <info>
    <metadata owner="http://freedesktop.org">
     <bookmark:icon name="folder-red-mega"/>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/rafael/bin">
+  <title>Search</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="inode-directory"/>
    </metadata>
   </info>
  </bookmark>

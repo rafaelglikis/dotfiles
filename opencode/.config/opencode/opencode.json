@@ -20,12 +20,20 @@
           "name": "Claude Opus 4.5 Thinking (Antigravity)",
           "limit": { "context": 200000, "output": 64000 },
           "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] }
+        },
+        "antigravity-claude-opus-4-6-thinking-medium": {
+          "name": "Claude Opus 4.6 Thinking (Antigravity)",
+          "limit": { "context": 200000, "output": 64000 },
+          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] }
         }
       }
     }
   },
   "watcher": {
     "ignore": [
+      ".idea/**",
+      ".git/**",
+      ".vscode/**",
       "node_modules/**",
       "dist/**",
       ".git/**",

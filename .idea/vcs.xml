@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ansible" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../dotfiles-private" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../home-lab" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../scripts" vcs="Git" />
   </component>
 </project>
