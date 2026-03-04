@@ -179,3 +179,5 @@ export PATH=/home/rafael/.opencode/bin:$PATH
 if [ -d "$HOME/.lmstudio/bin" ] ; then
     export PATH="$PATH:$HOME/.lmstudio/bin"
 fi
+
+eval "$(direnv hook zsh)"
