@@ -36,7 +36,9 @@
       ".vscode/**",
       "node_modules/**",
       "dist/**",
-      "vendor/**"
+      "vendor/**",
+      "venv/**",
+      ".venv/**"
     ]
   }
 }
