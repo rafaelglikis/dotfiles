@@ -101,7 +101,7 @@ map <leader>D <Action>(ActivateDatabaseToolWindow)
 " map <leader>jc <Action>(AIAssistant.Editor.AskAiAssistantInEditor)
 map <leader>jc <Action>(OpenInlineChatAction)
 " map <leader>jC <Action>(ActivateAIAssistantToolWindow)
-map <leader>jC <Action>(copilot.chat.show)
+map <leader>jC <Action>(ActivateAIAssistantToolWindow)
 " AIAssistant.ToolWindow.NewChatActionAlt
 map <leader>\ <Action>(AIAssistant.Editor.AskAiAssistantInEditor)
 

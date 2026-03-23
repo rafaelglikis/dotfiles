@@ -96,6 +96,11 @@ alias vf='vim `fzf`'
 alias ]]='ai chat --system=cli'
 alias ]='ai chat --system=cli -c'
 
+
+r-codex() {
+  CODEX_HOME=~/.r-codex command codex "$@"
+}
+
 ## functions
 function kwide {
 	kubectl $@ -o wide
@@ -174,3 +179,5 @@ export PATH=/home/rafael/.opencode/bin:$PATH
 if [ -d "$HOME/.lmstudio/bin" ] ; then
     export PATH="$PATH:$HOME/.lmstudio/bin"
 fi
+
+eval "$(direnv hook zsh)"
