@@ -25,6 +25,10 @@ map <leader>jw <Action>(EditorToggleUseSoftWraps)
 map <leader>jf <Action>(HideAllWindows)
 map <leader>jF <Action>(ToggleDistractionFreeMode)
 map <leader>jg <Action>(EditorToggleShowGutterIcons)
+map <leader>jo <Action>(OpenFile)
+map <leader>jp <Action>($LRU)
+map <leader>jr <Action>(SelectInProjectView)
+
 " Window Management - Tabs
 map <A-.> gt
 map <A-,> gT
