@@ -113,10 +113,8 @@ nmap M :Mark<CR>
 
 " Editing
 " Editing - Tasks
+nmap <Space><Space> :togglecheck<CR>
 exmap togglecheck obcommand editor:toggle-checklist-status
-" nmap <Space><Space> :togglecheck<CR>
-nmap <Space><Space> :tasknextstatus<CR>
-exmap tasknextstatus obcommand obsidian-tasks-plugin:toggle-done
 nmap <Space>. :tasknextstatus<CR>
 exmap edittask obcommand obsidian-tasks-plugin:edit-task
 nmap <Space>/ :edittask<CR>
