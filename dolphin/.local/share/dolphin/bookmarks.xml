@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xbel>
-<xbel xmlns:kdepriv="http://www.kde.org/kdepriv" dbusName="dolphin" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks">
+<xbel xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks" dbusName="dolphin" xmlns:kdepriv="http://www.kde.org/kdepriv">
  <bookmark href="file:///home/rafael/MEGA">
   <title>MEGA</title>
   <info>
@@ -22,6 +22,14 @@
   <info>
    <metadata owner="http://freedesktop.org">
     <bookmark:icon name="inode-directory"/>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/rafael/Insync/rafaelglikis@gmail.com/Google%20Drive">
+  <title>Google Drive</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="folder-yellow-google-drive"/>
    </metadata>
   </info>
  </bookmark>

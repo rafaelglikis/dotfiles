@@ -181,3 +181,6 @@ if [ -d "$HOME/.lmstudio/bin" ] ; then
 fi
 
 eval "$(direnv hook zsh)"
+
+# rime
+. "/home/rafael/.rime/env.sh"
