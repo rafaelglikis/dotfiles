@@ -854,5 +854,8 @@
     "diffEditor.codeLens": true,
     "editor.minimap.enabled": false,
     "json.schemaDownload.enable": true,
-    "workbench.auxiliaryActivityBar.location": "default"
+    "workbench.auxiliaryActivityBar.location": "default",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
 }
