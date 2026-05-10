@@ -213,4 +213,6 @@ fi
 if [ -d "$HOME/.lmstudio/bin" ] ; then
     export PATH="$PATH:$HOME/.lmstudio/bin"
 fi
+
+export PATH=$PATH:/usr/local/go/bin
 eval "$(direnv hook zsh)"

@@ -29,6 +29,7 @@
     ],
     "deny": []
   },
+  "model": "opus",
   "hooks": {
     "Notification": [
       {
@@ -75,5 +76,7 @@
     "performance-optimizer@claude-code-templates": true
   },
   "alwaysThinkingEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
+  "editorMode": "vim"
 }

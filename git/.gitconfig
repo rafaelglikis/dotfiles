@@ -150,3 +150,5 @@
     date = relative
 [coderabbit]
 	machineId = cli/0b6e73a041e84fd0bb053dca1bc41d54
+[init]
+	defaultBranch = main
