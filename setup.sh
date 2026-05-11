@@ -21,6 +21,7 @@ dotfiles=(
   alacritty
   opencode
   direnv
+  nvim
 )
 
 for dir in ${dotfiles[*]}; do
