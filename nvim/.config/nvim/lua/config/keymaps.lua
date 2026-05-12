@@ -27,3 +27,6 @@ vim.keymap.set("n", "<leader>gr", function() require("gitsigns").reset_hunk() en
 
 -- Reload config
 vim.keymap.set("n", "<leader><CR>", ":source $MYVIMRC<CR>", { desc = "Reload config" })
+
+-- Toggle file explorer
+vim.keymap.set("n", "<M-1>", function() Snacks.explorer() end, { desc = "Toggle file explorer" })
