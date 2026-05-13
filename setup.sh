@@ -57,4 +57,3 @@ for dir in ${dotfiles[*]}; do
         ls -la "$dest" --color
     done
 done
-

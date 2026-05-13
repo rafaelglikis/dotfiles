@@ -10,6 +10,12 @@ vim.keymap.set("n", "<leader>%", ":vsplit<CR>", { desc = "Split window right" })
 pcall(vim.keymap.del, "n", "<leader>-")
 pcall(vim.keymap.del, "n", "<leader>|")
 
+-- Remove LazyVim default Ctrl+hjkl split navigation (use Alt+hjkl via smart-splits instead)
+pcall(vim.keymap.del, "n", "<C-h>")
+pcall(vim.keymap.del, "n", "<C-j>")
+pcall(vim.keymap.del, "n", "<C-k>")
+pcall(vim.keymap.del, "n", "<C-l>")
+
 -- Diff (git hunk) navigation
 local function next_hunk() require("gitsigns").nav_hunk("next") end
 local function prev_hunk() require("gitsigns").nav_hunk("prev") end
