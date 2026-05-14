@@ -16,13 +16,5 @@ return {
     { "<C-A-j>", function() require("smart-splits").resize_down() end,     desc = "Resize split down" },
     { "<C-A-k>", function() require("smart-splits").resize_up() end,       desc = "Resize split up" },
     { "<C-A-l>", function() require("smart-splits").resize_right() end,    desc = "Resize split right" },
-    {
-      "<C-A-m>",
-      function()
-        vim.cmd("wincmd _")
-        vim.api.nvim_cmd({ cmd = "wincmd", args = { "|" } }, {})
-      end,
-      desc = "Maximize split",
-    },
   },
 }
