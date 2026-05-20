@@ -183,3 +183,6 @@ fi
 export PATH=$PATH:/usr/local/go/bin
 
 eval "$(direnv hook zsh)"
+
+# added by learnworlds onboard
+eval "$(/home/rafael/.local/bin/mise activate zsh)"
