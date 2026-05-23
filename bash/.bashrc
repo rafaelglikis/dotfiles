@@ -215,4 +215,7 @@ if [ -d "$HOME/.lmstudio/bin" ] ; then
 fi
 
 export PATH=$PATH:/usr/local/go/bin
-eval "$(direnv hook zsh)"
+eval "$(direnv hook bash)"
+
+# opencode
+export PATH=/home/rafael/.opencode/bin:$PATH
