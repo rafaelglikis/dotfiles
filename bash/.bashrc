@@ -35,7 +35,11 @@ alias r='ranger'
 alias copy='xclip -sel clip'
 alias copy-branch="git branch --show-current | xclip -sel clip"
 alias cb="git branch --show-current | xclip -sel clip"
-alias vf='vim `fzf`'
+vf() {
+    local file
+    file="$(fzf)" || return
+    [ -n "$file" ] && vim "$file"
+}
 alias ]]='ai chat --system=cli'
 alias ]='ai chat --system=cli -c'
 if command -v gemini &> /dev/null; then 
@@ -60,7 +64,7 @@ remove_colors() {
 
 # Copy w/ progress
 cpp () {
-  rsync -ah --progress $1 $2
+  rsync -ah --progress "$1" "$2"
 }
 
 # Extract everything with extract
@@ -71,7 +75,7 @@ function extract {
     	echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
     	return 1
  	else
-    	for n in $@
+    	for n in "$@"
     	do
       		if [ -f "$n" ] ; then
           		case "${n%,}" in
@@ -118,17 +122,17 @@ function extract {
 
 # run {times} {command}
 function run() {
-    number=$1
+    local number=$1
     shift
-    for n in $(seq $number); do
-        $@
+    for n in $(seq "$number"); do
+        "$@"
         sleep 1
     done
 }
 
 #run forever
 forever() {
-    while true; do $@; sleep 1; done
+    while true; do "$@"; sleep 1; done
 }
 
 phpserver() {
@@ -139,14 +143,16 @@ phpserver() {
 
 pythonserver() {
 	local port="${1:-8000}"
-    python3 -m http.server $port
+    python3 -m http.server "$port"
 }
 
 weather() {
     curl -s "https://wttr.in/${1:-Ponorogo}?m2" | sed -n "1,27p"
 }
 
-[[ -s /home/rafael/.autojump/etc/profile.d/autojump.sh ]] && source /home/rafael/.autojump/etc/profile.d/autojump.sh
+if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init bash)"
+fi
 
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
@@ -157,7 +163,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. ~/.bash_completion
+[ -r ~/.bash_completion ] && source ~/.bash_completion
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -174,11 +180,11 @@ alias timestamp='date +%s'
 
 ## functions
 function kwide {
-    kubectl $@ -o wide
+    kubectl "$@" -o wide
 }
 
 function ktail {
-    kubectl logs --prefix -f -l app=$1
+    kubectl logs --prefix -f -l "app=$1"
 }
 
 # Generated for envman. Do not edit.
@@ -194,26 +200,31 @@ path_prepend_dirs=(
     "/home/rafael/.opencode/bin"
 )
 
+path_prepend() {
+    local path_dir=$1
+    [ -d "$path_dir" ] || return
+    PATH=":$PATH:"
+    PATH="${PATH//:$path_dir:/:}"
+    PATH="${PATH#:}"
+    PATH="${PATH%:}"
+    PATH="$path_dir${PATH:+:$PATH}"
+}
+
 for path_dir in "${path_prepend_dirs[@]}"; do
-    if [ -d "$path_dir" ] ; then
-        PATH="$path_dir:$PATH"
-    fi
+    path_prepend "$path_dir"
 done
 export PATH
+unset -f path_prepend
 unset path_dir path_prepend_dirs
 
-if [ -f "HOME/.cargo/env" ] ; then
+if [ -f "$HOME/.cargo/env" ] ; then
     source "$HOME/.cargo/env"
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -r ~/.fzf.bash ] && source ~/.fzf.bash
 
 [ -f ~/.claude/local/claude ] && alias claude="~/.claude/local/claude"
 
-if [ -d "$HOME/.lmstudio/bin" ] ; then
-    export PATH="$PATH:$HOME/.lmstudio/bin"
+if command -v direnv >/dev/null 2>&1; then
+    eval "$(direnv hook bash)"
 fi
-
-export PATH=$PATH:/usr/local/go/bin
-eval "$(direnv hook bash)"
-

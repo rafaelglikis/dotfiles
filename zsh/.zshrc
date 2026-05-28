@@ -3,12 +3,13 @@ source ~/.profile
 ZSH_THEME="amuse"
 export DISABLE_AUTO_TITLE='true'
 export UPDATE_ZSH_DAYS=13
-eval $(thefuck --alias)
+if command -v thefuck >/dev/null 2>&1; then
+  eval "$(thefuck --alias)"
+fi
 plugins=(
   git
   jira
   zsh-syntax-highlighting
-  autojump
   zsh-autosuggestions
   extract
   colored-man-pages
@@ -29,11 +30,15 @@ if command -v zoxide >/dev/null 2>&1; then
   eval "$(zoxide init zsh)"
 fi
 
-[[ -s /home/rafael/.autojump/etc/profile.d/autojump.sh ]] && source /home/rafael/.autojump/etc/profile.d/autojump.sh
-
-source $ZSH/oh-my-zsh.sh
-bindkey '^`' autosuggest-clear
-bindkey '^ ' autosuggest-execute
+if [ -s "$ZSH/oh-my-zsh.sh" ]; then
+  source "$ZSH/oh-my-zsh.sh"
+fi
+if (( $+widgets[autosuggest-clear] )); then
+  bindkey '^`' autosuggest-clear
+fi
+if (( $+widgets[autosuggest-execute] )); then
+  bindkey '^ ' autosuggest-execute
+fi
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -103,15 +108,15 @@ r-codex() {
 
 ## functions
 function kwide {
-	kubectl $@ -o wide
+	kubectl "$@" -o wide
 }
 
 function ktail {
-	kubectl logs --prefix -f -l app=$1
+	kubectl logs --prefix -f -l "app=$1"
 }
 
 forever() {
-    while true; do $@; sleep 1; done
+    while true; do "$@"; sleep 1; done
 }
 
 remove_colors() {
@@ -121,13 +126,9 @@ remove_colors() {
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-if [ -d /usr/share/doc/fzf/examples/key-bindings.zsh ] ; then
+if [ -r /usr/share/doc/fzf/examples/key-bindings.zsh ] ; then
     source /usr/share/doc/fzf/examples/key-bindings.zsh
 fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export BUN_INSTALL="$HOME/.bun"
 
@@ -144,9 +145,10 @@ path_prepend_dirs=(
     "/usr/local/go/bin"
 )
 
+typeset -U path PATH
 for path_dir in "${path_prepend_dirs[@]}"; do
     if [ -d "$path_dir" ] ; then
-        PATH="$path_dir:$PATH"
+        path=("$path_dir" "$path[@]")
     fi
 done
 export PATH
@@ -160,7 +162,9 @@ alias lzd='lazydocker'
 # bun completions
 [ -s "/home/rafael/.bun/_bun" ] && source "/home/rafael/.bun/_bun"
 
-eval "$(direnv hook zsh)"
+if command -v direnv >/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
 
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
