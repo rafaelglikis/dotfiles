@@ -121,11 +121,6 @@ remove_colors() {
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
 if [ -d /usr/share/doc/fzf/examples/key-bindings.zsh ] ; then
     source /usr/share/doc/fzf/examples/key-bindings.zsh
 fi
@@ -134,32 +129,28 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export BUN_INSTALL="$HOME/.bun"
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+path_prepend_dirs=(
+    "$HOME/bin"
+    "$HOME/.local/bin"
+    "$HOME/.cargo/bin"
+    "$HOME/go/bin"
+    "$HOME/.symfony5/bin"
+    "$HOME/learnworlds/.uv/bin"
+    "$BUN_INSTALL/bin"
+    "$HOME/.opencode/bin"
+    "$HOME/.lmstudio/bin"
+    "/usr/local/go/bin"
+)
 
-if [ -d "$HOME/.cargo/bin" ] ; then
-    PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-if [ -d "$HOME/go/bin/" ] ; then
-    PATH="$HOME/go/bin/:$PATH"
-fi
-
-if [ -d "$HOME/.cargo/bin/" ] ; then
-    PATH="$HOME/.cargo/bin/:$PATH"
-fi
-
-if [ -d "$HOME/.symfony5/bin/" ] ; then
-    PATH="$HOME/.symfony5/bin:$PATH"
-fi
+for path_dir in "${path_prepend_dirs[@]}"; do
+    if [ -d "$path_dir" ] ; then
+        PATH="$path_dir:$PATH"
+    fi
+done
+export PATH
+unset path_dir path_prepend_dirs
 
 [ -f ~/.zsh_completion ] && source ~/.zsh_completion
 alias lzd='lazydocker'
@@ -168,19 +159,6 @@ alias lzd='lazydocker'
 
 # bun completions
 [ -s "/home/rafael/.bun/_bun" ] && source "/home/rafael/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# opencode
-export PATH=/home/rafael/.opencode/bin:$PATH
-
-if [ -d "$HOME/.lmstudio/bin" ] ; then
-    export PATH="$PATH:$HOME/.lmstudio/bin"
-fi
-
-export PATH=$PATH:/usr/local/go/bin
 
 eval "$(direnv hook zsh)"
 

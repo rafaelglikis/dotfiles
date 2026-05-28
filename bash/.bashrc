@@ -184,35 +184,28 @@ function ktail {
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+path_prepend_dirs=(
+    "$HOME/bin"
+    "$HOME/.local/bin"
+    "$HOME/.cargo/bin"
+    "$HOME/.lmstudio/bin"
+    "$HOME/learnworlds/.uv/bin"
+    "/usr/local/go/bin"
+)
 
-if [ -d "$HOME/.cargo/bin" ] ; then
-    PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+for path_dir in "${path_prepend_dirs[@]}"; do
+    if [ -d "$path_dir" ] ; then
+        PATH="$path_dir:$PATH"
+    fi
+done
+export PATH
+unset path_dir path_prepend_dirs
 
 if [ -f "HOME/.cargo/env" ] ; then
     source "$HOME/.cargo/env"
 fi
 
-if [ -d "$HOME/.cargo/bin/" ] ; then
-    PATH="$HOME/.cargo/bin/:$PATH"
-fi
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 [ -f ~/.claude/local/claude ] && alias claude="~/.claude/local/claude"
-
-if [ -d "$HOME/.lmstudio/bin" ] ; then
-    export PATH="$PATH:$HOME/.lmstudio/bin"
-fi
-
-export PATH=$PATH:/usr/local/go/bin
 eval "$(direnv hook zsh)"
