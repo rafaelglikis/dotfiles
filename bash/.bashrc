@@ -187,9 +187,6 @@ function ktail {
     kubectl logs --prefix -f -l "app=$1"
 }
 
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
 path_prepend_dirs=(
     "$HOME/bin"
     "$HOME/.local/bin"
@@ -227,4 +224,8 @@ fi
 
 if command -v direnv >/dev/null 2>&1; then
     eval "$(direnv hook bash)"
+fi
+
+if command -v mise >/dev/null 2>&1; then
+    eval "$(mise activate bash)"
 fi
