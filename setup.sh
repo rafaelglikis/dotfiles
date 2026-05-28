@@ -1,27 +1,12 @@
 #!/bin/bash
 
 dotfiles=(
-  bash
-  git
-  ranger
-  dolphin
-  tmux
-  vim
-  zsh
-  i3
-  konsole
+  cli
+  kde
   code
   xbindkeys
-  less
-  lazydocker
-  lazygit
-  hypr
-  claude
+  ai
   assets
-  alacritty
-  opencode
-  direnv
-  nvim
 )
 
 for dir in ${dotfiles[*]}; do
