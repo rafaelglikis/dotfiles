@@ -191,6 +191,7 @@ path_prepend_dirs=(
     "$HOME/.lmstudio/bin"
     "$HOME/learnworlds/.uv/bin"
     "/usr/local/go/bin"
+    "/home/rafael/.opencode/bin"
 )
 
 for path_dir in "${path_prepend_dirs[@]}"; do
@@ -208,4 +209,11 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 [ -f ~/.claude/local/claude ] && alias claude="~/.claude/local/claude"
-eval "$(direnv hook zsh)"
+
+if [ -d "$HOME/.lmstudio/bin" ] ; then
+    export PATH="$PATH:$HOME/.lmstudio/bin"
+fi
+
+export PATH=$PATH:/usr/local/go/bin
+eval "$(direnv hook bash)"
+

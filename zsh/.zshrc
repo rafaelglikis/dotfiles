@@ -162,5 +162,9 @@ alias lzd='lazydocker'
 
 eval "$(direnv hook zsh)"
 
+<<<<<<< HEAD
 # added by learnworlds onboard
 eval "$(/home/rafael/.local/bin/mise activate zsh)"
+=======
+eval "$(mise activate zsh)"
+>>>>>>> 958fc4e6a8fa61846b5c6d2730c788b9586ea218
