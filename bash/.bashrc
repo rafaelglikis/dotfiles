@@ -2,8 +2,8 @@
 # ~/.bashrc
 #
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# # If not running interactively, don't do anything
+# [[ $- != *i* ]] && return
 
 if [ -f /etc/bash_completion.d/git-prompt ]; then
 	source /etc/bash_completion.d/git-prompt
