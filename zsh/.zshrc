@@ -64,6 +64,7 @@ alias kdp='kubectl describe pod'
 alias kdi='kubectl describe ingress'
 alias kns='kubens'
 alias kctx='kubectx'
+alias gr='go run .'
 
 if command -v batcat &> /dev/null; then
     alias cat="batcat -p"
