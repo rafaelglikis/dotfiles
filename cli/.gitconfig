@@ -129,6 +129,7 @@
 [merge]
   tool = meld
 	renameLimit = 0
+	conflictStyle = diff3
 
 [mergetool "meld"]
 	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"

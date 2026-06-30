@@ -857,5 +857,7 @@
     "workbench.auxiliaryActivityBar.location": "default",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
-    }
+    },
+    "window.autoDetectColorScheme": false,
+    "editor.fontSize": 16
 }
