@@ -3,3 +3,4 @@ if [ -d "/home/$USER/.zsh_completion.d" ]; then
         [ -f "$ZSH_COMPLETION_FILE" ] && source $ZSH_COMPLETION_FILE
     done
 fi
+source ~/.zsh_completion.d/_lw

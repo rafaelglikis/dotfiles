@@ -6,12 +6,14 @@ Width 2560=1533
 [Desktop Entry]
 FullScreen=false
 
+[General]
+LockSidebar=true
+ShowSidebar=false
+
 [MainWindow]
 Height 1080=664
 Height 1440=1369
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAACgAAAAU3AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
-ToolBarsMovable=Disabled
 Width 1920=1280
 Width 2560=2560
 Window-Maximized 900x1600=true
@@ -20,23 +22,23 @@ Window-Maximized 900x1600=true
 IconSize=16
 
 [Recent Files]
-File1[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Accounting/IR/IR63 2020 RAPHAEL GLYKIS.pdf
-File10[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Documents/Travel/FLIX-Ticket-3002676768.pdf
-File2[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Accounting/Payslip/2021/payslip_2021-10.pdf
-File3[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Accounting/Payslip/2021/payslip_2021-11.pdf
-File4[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Accounting/Payslip/2021/payslip_2021-13.pdf
-File5[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Accounting/Payslip/2021/payslip_2021-12.pdf
-File6[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Accounting/Payslip/2022/2022-01 Payslip - Rafael Glykis.pdf
-File7[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Papers/cae-2021.pdf
-File8[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/2019-08-19 LW Employment Agreement - Rafael Glikis - Cypru.pdf
-File9[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Accounting/Payslip/2022/2022-02 Payslip Rafael Glikis.pdf
-Name1[$e]=IR63 2020 RAPHAEL GLYKIS.pdf
-Name10[$e]=FLIX-Ticket-3002676768.pdf
-Name2[$e]=payslip_2021-10.pdf
-Name3[$e]=payslip_2021-11.pdf
-Name4[$e]=payslip_2021-13.pdf
-Name5[$e]=payslip_2021-12.pdf
-Name6[$e]=2022-01 Payslip - Rafael Glykis.pdf
-Name7[$e]=cae-2021.pdf
-Name8[$e]=2019-08-19 LW Employment Agreement - Rafael Glikis - Cypru.pdf
-Name9[$e]=2022-02 Payslip Rafael Glikis.pdf
+File1[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Accounting/Payslip/2022/2022-01 Payslip - Rafael Glykis.pdf
+File10[$e]=$HOME/learnworlds-worktrees/main/examples/edit-exam-questions-prompt.md
+File2[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Papers/cae-2021.pdf
+File3[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/2019-08-19 LW Employment Agreement - Rafael Glikis - Cypru.pdf
+File4[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Work/LearnWorlds/Accounting/Payslip/2022/2022-02 Payslip Rafael Glikis.pdf
+File5[$e]=$HOME/Insync/rafaelglikis@gmail.com/Google Drive/Documents/Travel/FLIX-Ticket-3002676768.pdf
+File6[$e]=$HOME/learnworlds-worktrees/main/examples/structured-output-retry.md
+File7[$e]=$HOME/learnworlds-worktrees/main/examples/edit-pb-page-section.md
+File8[$e]=$HOME/learnworlds-worktrees/main/examples/generate-exam-with-settings-prompt.md
+File9[$e]=$HOME/learnworlds-worktrees/main/examples/generate-course-structure-prompt.md
+Name1[$e]=2022-01 Payslip - Rafael Glykis.pdf
+Name10[$e]=edit-exam-questions-prompt.md
+Name2[$e]=cae-2021.pdf
+Name3[$e]=2019-08-19 LW Employment Agreement - Rafael Glikis - Cypru.pdf
+Name4[$e]=2022-02 Payslip Rafael Glikis.pdf
+Name5[$e]=FLIX-Ticket-3002676768.pdf
+Name6[$e]=structured-output-retry.md
+Name7[$e]=edit-pb-page-section.md
+Name8[$e]=generate-exam-with-settings-prompt.md
+Name9[$e]=generate-course-structure-prompt.md

@@ -1,8 +1,9 @@
-<!DOCTYPE kpartgui>
-<kpartgui name="okular_part" version="42">
+<?xml version='1.0'?>
+<!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
+<gui name="okular_part" version="55">
  <MenuBar>
-  <Menu noMerge="1" name="file">
-   <text translationDomain="okular">&amp;File</text>
+  <Menu name="file">
+   <text>&amp;File</text>
    <Action group="file_open" name="get_new_stuff"/>
    <Action group="file_open" name="import_ps"/>
    <Action group="file_save" name="file_save"/>
@@ -16,8 +17,8 @@
    <Action group="file_print" name="file_export_as"/>
    <Action group="file_print" name="file_share"/>
   </Menu>
-  <Menu noMerge="1" name="edit">
-   <text translationDomain="okular">&amp;Edit</text>
+  <Menu name="edit">
+   <text>&amp;Edit</text>
    <Action name="edit_undo"/>
    <Action name="edit_redo"/>
    <Separator/>
@@ -30,33 +31,31 @@
    <Action name="edit_find_next"/>
    <Action name="edit_find_prev"/>
   </Menu>
-  <Menu noMerge="1" name="view">
-   <text translationDomain="okular">&amp;View</text>
+  <Menu name="view">
+   <text>&amp;View</text>
    <Action name="presentation"/>
    <Separator/>
-   <Action name="view_zoom_in"/>
    <Action name="view_zoom_out"/>
+   <Action name="view_zoom_in"/>
    <Action name="view_actual_size"/>
    <Action name="view_fit_to_width"/>
    <Action name="view_fit_to_page"/>
    <Action name="view_auto_fit"/>
    <Separator/>
-   <Action name="view_continuous"/>
    <Action name="view_render_mode"/>
    <Separator/>
-   <Menu noMerge="1" name="view_orientation">
-    <text translationDomain="okular">&amp;Orientation</text>
+   <Menu name="view_orientation">
+    <text>&amp;Orientation</text>
     <Action name="view_orientation_rotate_ccw"/>
     <Action name="view_orientation_rotate_cw"/>
     <Action name="view_orientation_original"/>
    </Menu>
-   <Action name="view_pagesizes"/>
    <Action name="view_trim_mode"/>
    <Separator/>
    <Action name="view_toggle_forms"/>
   </Menu>
-  <Menu noMerge="1" name="go">
-   <text translationDomain="okular">&amp;Go</text>
+  <Menu name="go">
+   <text>&amp;Go</text>
    <Action name="go_previous"/>
    <Action name="go_next"/>
    <Separator/>
@@ -68,8 +67,8 @@
    <Separator/>
    <Action name="go_goto_page"/>
   </Menu>
-  <Menu noMerge="1" name="bookmarks">
-   <text translationDomain="okular">&amp;Bookmarks</text>
+  <Menu name="bookmarks">
+   <text>&amp;Bookmarks</text>
    <Action name="bookmark_add"/>
    <Action name="rename_bookmark"/>
    <Action name="previous_bookmark"/>
@@ -77,8 +76,8 @@
    <Separator/>
    <ActionList name="bookmarks_currentdocument"/>
   </Menu>
-  <Menu noMerge="1" name="tools">
-   <text translationDomain="okular">&amp;Tools</text>
+  <Menu name="tools">
+   <text>&amp;Tools</text>
    <Action name="mouse_drag"/>
    <Action name="mouse_zoom"/>
    <Action name="mouse_select"/>
@@ -88,24 +87,28 @@
    <Separator/>
    <Action name="mouse_toggle_annotate"/>
    <Separator/>
+   <Action name="add_digital_signature"/>
+   <Separator/>
    <Action name="speak_document"/>
+   <Action name="speak_from_current_page"/>
    <Action name="speak_current_page"/>
    <Action name="speak_stop_all"/>
    <Action name="speak_pause_resume"/>
   </Menu>
-  <Menu noMerge="1" name="settings">
-   <text translationDomain="okular">&amp;Settings</text>
+  <Menu name="settings">
+   <text>&amp;Settings</text>
+   <Action group="show_merge" name="colorscheme_menu"/>
    <Action group="show_merge" name="show_leftpanel"/>
    <Action group="show_merge" name="show_bottombar"/>
    <Action group="configure_merge" name="options_configure_generators"/>
    <Action group="configure_merge" name="options_configure"/>
   </Menu>
-  <Menu noMerge="1" name="help">
-   <text translationDomain="okular">&amp;Help</text>
+  <Menu name="help">
+   <text>&amp;Help</text>
    <Action group="about_merge" name="help_about_backend"/>
   </Menu>
  </MenuBar>
- <ToolBar noMerge="1" name="mainToolBar">
+ <ToolBar name="mainToolBar" noMerge="1">
   <Action name="show_leftpanel"/>
   <Spacer name="spacer_0"/>
   <text translationDomain="okular">Main Toolbar</text>
@@ -130,18 +133,49 @@
   <Spacer name="spacer_1"/>
  </ToolBar>
  <ActionProperties scheme="Default">
-  <Action name="presentation_drawing_eraser" priority="0"/>
-  <Action name="presentation_drawing_Black" priority="0"/>
-  <Action name="presentation_drawing_White" priority="0"/>
-  <Action name="previous_bookmark" priority="0"/>
+  <Action name="view_zoom_out" priority="0"/>
+  <Action name="view_zoom_in" priority="0"/>
   <Action name="bookmark_add" priority="0"/>
-  <Action name="next_bookmark" priority="0"/>
-  <Action name="speak_current_page" priority="0"/>
-  <Action name="speak_pause_resume" priority="0"/>
   <Action name="mouse_drag" priority="0"/>
   <Action name="mouse_selecttools" priority="0"/>
-  <Action name="presentation_erase_drawings" priority="0"/>
+  <Action name="next_bookmark" priority="0"/>
   <Action name="open_containing_folder" priority="0"/>
+  <Action name="presentation_drawing_Black" priority="0"/>
+  <Action name="presentation_drawing_White" priority="0"/>
+  <Action name="presentation_drawing_eraser" priority="0"/>
+  <Action name="presentation_erase_drawings" priority="0"/>
+  <Action name="previous_bookmark" priority="0"/>
   <Action name="show_leftpanel" priority="0"/>
+  <Action name="speak_current_page" priority="0"/>
+  <Action name="speak_pause_resume" priority="0"/>
  </ActionProperties>
-</kpartgui>
+ <ToolBar hidden="true" iconText="icononly" name="annotationToolBar" newline="true">
+  <text>Annotation Toolbar</text>
+  <Action name="annotation_highlighter"/>
+  <Action name="annotation_underline"/>
+  <Action name="annotation_squiggle"/>
+  <Action name="annotation_strike_out"/>
+  <Action name="annotation_typewriter"/>
+  <Action name="annotation_inline_note"/>
+  <Action name="annotation_popup_note"/>
+  <Action name="annotation_freehand_line"/>
+  <Action name="annotation_geometrical_shape"/>
+  <Action name="annotation_stamp"/>
+  <Separator/>
+  <Action name="annotation_settings_width"/>
+  <Action name="annotation_settings_color"/>
+  <Action name="annotation_settings_inner_color"/>
+  <Action name="annotation_settings_opacity"/>
+  <Action name="annotation_settings_font"/>
+  <Action name="annotation_settings_advanced"/>
+  <Separator/>
+  <Action name="annotation_bookmark"/>
+  <Action name="annotation_settings_pin"/>
+  <Spacer/>
+  <Action name="hide_annotation_toolbar"/>
+ </ToolBar>
+ <ToolBar hidden="true" iconSize="32" iconText="icononly" name="quickAnnotationToolBar" newline="true" position="right">
+  <text>Quick Annotation Toolbar</text>
+  <Action name="quick_annotation_action_bar"/>
+ </ToolBar>
+</gui>
