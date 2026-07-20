@@ -1,4 +1,5 @@
 ---
+name: review-diff
 description: Review all local code changes
 ---
 Review all local changes in this repository as one combined code change.
