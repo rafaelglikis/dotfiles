@@ -55,19 +55,29 @@ link_file() {
     ls -la --color=auto "$dest"
 }
 
-link_root() {
-    local dir=$1
-    local src_root=$repo_root/$dir
+link_tree() {
+    local src_root=$1
+    local dest_root=$2
     local path rel_path
 
     [[ -d "$src_root" ]] || return
 
     while IFS= read -r -d '' path; do
         rel_path=${path#"$src_root/"}
-        link_file "$path" "$HOME/$rel_path"
+        link_file "$path" "$dest_root/$rel_path"
     done < <(find "$src_root" \( -type f -o -type l \) -print0)
+}
+
+link_root() {
+    local dir=$1
+
+    link_tree "$repo_root/$dir" "$HOME"
 }
 
 for dir in "${dotfiles[@]}"; do
     link_root "$dir"
 done
+
+if [[ -d "$HOME/.lw-claude" ]]; then
+    link_tree "$repo_root/ai/.claude" "$HOME/.lw-claude"
+fi
