@@ -34,6 +34,17 @@
     "defaultMode": "auto"
   },
   "model": "opus",
+  "fallbackModel": ["sonnet"],
+  "effortLevel": "high",
+  "showTurnDuration": true,
+  "showMessageTimestamps": true,
+  "fileCheckpointingEnabled": true,
+  "askUserQuestionTimeout": "10m",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
+  },
   "hooks": {
     "Notification": [
       {
