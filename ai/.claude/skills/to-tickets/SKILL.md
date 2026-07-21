@@ -75,7 +75,7 @@ Iterate until the user approves the breakdown.
 
 Infer a short, descriptive kebab-case feature slug from the conversation or existing `.scratch` artifacts. If it cannot be inferred confidently, ask the user for the feature slug and wait for their answer.
 
-Write one file per approved ticket under `.scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01` in dependency order (blockers first). Put the ticket's ID, title, status, and blocker IDs in YAML frontmatter. Quote IDs so YAML preserves leading zeroes, and use an empty list when there are no blockers. Assign `ready-for-agent` unless the ticket genuinely requires human implementation, in which case assign `ready-for-human`; use the mapped tracker string from the Statuses table. Use the per-ticket file template below - one ticket per file, never a single combined file.
+Write one file per approved ticket under `.scratch/<feature-slug>/tickets/<NN>-<slug>.md`, numbered from `01` in dependency order (blockers first). Put the ticket's ID, title, status, and blocker IDs in YAML frontmatter. Quote IDs so YAML preserves leading zeroes, and use an empty list when there are no blockers. Assign `ready-for-agent` unless the ticket genuinely requires human implementation, in which case assign `ready-for-human`; use the mapped tracker string from the Statuses table. Use the per-ticket file template below - one ticket per file, never a single combined file.
 
 Work the **frontier**: any ticket whose blockers are all done. For a purely linear chain that means top to bottom.
 
