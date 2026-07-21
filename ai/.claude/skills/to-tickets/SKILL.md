@@ -8,17 +8,18 @@ disable-model-invocation: true
 
 Break a plan, spec, or conversation into a set of **tickets** - tracer-bullet vertical slices, each declaring the tickets that **block** it.
 
-## Triage Labels
+## Statuses
 
-The skills speak in terms of five canonical triage roles. This table maps those roles to the actual label strings used in this repo's issue tracker.
+The skills speak in terms of six canonical statuses. This table maps those statuses to the actual label strings used in this repo's issue tracker.
 
-| Labels            | Label in our tracker | Meaning                                  |
-|-------------------|----------------------|------------------------------------------|
-| `needs-triage`    | `needs-triage`       | Maintainer needs to evaluate this issue  |
-| `needs-info`      | `needs-info`         | Waiting on reporter for more information |
-| `ready-for-agent` | `ready-for-agent`    | Fully specified, ready for an AFK agent  |
-| `ready-for-human` | `ready-for-human`    | Requires human implementation            |
-| `wontfix`         | `wontfix`            | Will not be actioned                     |
+| Status             | Tracker label        | Meaning                                  |
+|--------------------|----------------------|------------------------------------------|
+| `needs-review`     | `needs-review`       | Maintainer needs to evaluate this issue  |
+| `needs-info`       | `needs-info`         | Waiting on reporter for more information |
+| `ready-for-agent`  | `ready-for-agent`    | Fully specified, ready for an AFK agent  |
+| `ready-for-human`  | `ready-for-human`    | Requires human implementation            |
+| `wontfix`          | `wontfix`            | Will not be actioned                     |
+| `done`             | `done`               | Implementation is complete               |
 
 ## Process
 
@@ -60,7 +61,7 @@ Present the proposed breakdown as a numbered list. For each ticket, show:
 - **Title**: short descriptive name
 - **Blocked by**: which other tickets (if any) must complete first
 - **What it delivers**: the end-to-end behaviour this ticket makes work
-- **Triage label**: the tracker label mapped from the ticket's canonical triage role
+- **Status**: the tracker label mapped from the ticket's canonical status
 
 Ask the user:
 
@@ -74,19 +75,22 @@ Iterate until the user approves the breakdown.
 
 Infer a short, descriptive kebab-case feature slug from the conversation or existing `.scratch` artifacts. If it cannot be inferred confidently, ask the user for the feature slug and wait for their answer.
 
-Write one file per approved ticket under `.scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01` in dependency order (blockers first). Each file's "Blocked by" lists the numbers/titles it depends on. Assign `ready-for-agent` unless the ticket genuinely requires human implementation, in which case assign `ready-for-human`; use the mapped tracker string from the Triage Labels table. Use the per-ticket file template below - one ticket per file, never a single combined file.
+Write one file per approved ticket under `.scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01` in dependency order (blockers first). Put the ticket's ID, title, status, and blocker IDs in YAML frontmatter. Quote IDs so YAML preserves leading zeroes, and use an empty list when there are no blockers. Assign `ready-for-agent` unless the ticket genuinely requires human implementation, in which case assign `ready-for-human`; use the mapped tracker string from the Statuses table. Use the per-ticket file template below - one ticket per file, never a single combined file.
 
 Work the **frontier**: any ticket whose blockers are all done. For a purely linear chain that means top to bottom.
 
 <local-ticket-template>
 
-# <NN> - <Ticket title>
+---
+id: "<NN>"
+title: <Ticket title>
+status: <initial status>
+blocked-by: []
+---
+
+# <Ticket title>
 
 **What to build:** the end-to-end behaviour this ticket makes work, from the user's perspective - not a layer-by-layer implementation list.
-
-**Blocked by:** the numbers/titles of the tickets that gate this one, or "None - can start immediately".
-
-**Triage label:** <mapped `ready-for-agent` or `ready-for-human` label>
 
 - [ ] Acceptance criterion 1
 - [ ] Acceptance criterion 2
