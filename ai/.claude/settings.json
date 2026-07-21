@@ -33,18 +33,10 @@
     "deny": [],
     "defaultMode": "auto"
   },
-  "model": "opus",
-  "fallbackModel": ["sonnet"],
-  "effortLevel": "high",
-  "showTurnDuration": true,
-  "showMessageTimestamps": true,
-  "fileCheckpointingEnabled": true,
-  "askUserQuestionTimeout": "10m",
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline.sh",
-    "padding": 0
-  },
+  "model": "opus[1m]",
+  "fallbackModel": [
+    "sonnet"
+  ],
   "hooks": {
     "Notification": [
       {
@@ -87,12 +79,22 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
+  },
   "enabledPlugins": {
     "performance-optimizer@claude-code-templates": true
   },
   "alwaysThinkingEnabled": true,
+  "effortLevel": "xhigh",
+  "askUserQuestionTimeout": "10m",
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "editorMode": "vim",
-  "tui": "fullscreen"
+  "fileCheckpointingEnabled": true,
+  "showTurnDuration": true,
+  "showMessageTimestamps": true
 }
