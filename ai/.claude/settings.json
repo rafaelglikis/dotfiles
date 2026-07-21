@@ -1,6 +1,9 @@
 {
   "cleanupPeriodDays": 365,
-  "includeCoAuthoredBy": false,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
     "allow": [
       "WebFetch(domain:docs.anthropic.com)",
