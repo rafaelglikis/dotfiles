@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Claude Code status line (two lines).
-# L1 (model/session): model | reasoning | fast-mode | rate limits | context left
-# L2 (workspace):     repo/dir (clickable) | branch +staged ~modified | PR | cost
+# Claude Code status line (single line).
+# model/session: model | reasoning | fast-mode | rate limits | context left
+# workspace:     repo/dir (clickable) | branch +staged ~modified | PR | cost
 # Receives session JSON on stdin (see code.claude.com/docs/en/statusline).
 input=$(cat)
 
@@ -104,5 +104,4 @@ COST_SEG="${SEP}💰 ${COST_FMT}"
 
 LINE2="📁 ${LOC}${GIT_SEG}${PR_SEG}${COST_SEG}"
 
-printf '%b\n' "$LINE1"
-printf '%b\n' "$LINE2"
+printf '%b\n' "${LINE1}${SEP}${LINE2}"
