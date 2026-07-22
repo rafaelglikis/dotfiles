@@ -9,7 +9,6 @@ dotfiles=(
   kde
   code
   xbindkeys
-  ai
   assets
 )
 
@@ -77,7 +76,3 @@ link_root() {
 for dir in "${dotfiles[@]}"; do
     link_root "$dir"
 done
-
-if [[ -d "$HOME/.lw-claude" ]]; then
-    link_tree "$repo_root/ai/.claude" "$HOME/.lw-claude"
-fi

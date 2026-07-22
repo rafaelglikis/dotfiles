@@ -2,7 +2,7 @@
 
 ## Repo Shape
 - This is a personal dotfiles repo; `setup.sh` is the deployment source of truth, not GNU Stow.
-- Deployment maps `topdir/path` to `~/path` by stripping the first directory segment, e.g. `cli/.gitconfig` -> `~/.gitconfig` and `ai/.config/opencode/opencode.json` -> `~/.config/opencode/opencode.json`.
+- Deployment maps `topdir/path` to `~/path` by stripping the first directory segment, e.g. `cli/.gitconfig` -> `~/.gitconfig`.
 - Only directories listed in `setup.sh`'s `dotfiles` array are deployed. Add new top-level config directories there or they will be ignored.
 - `setup.sh` links every regular file or symlink under those directories, creates parent directories, and uses `ln -s --force`; do not run it as a harmless check against a user's live home directory.
 
@@ -20,5 +20,4 @@
 - For Neovim, edit `cli/.config/nvim` for the active LazyVim/lazy.nvim setup.
 - `cli/.config/nvim/init.lua` only bootstraps `lua/config/lazy.lua`; custom Lazy specs live under `cli/.config/nvim/lua/plugins`, with plugin pins in `lazy-lock.json`.
 - Shell aliases may depend on host tools such as `fzf`, `xclip`, `kubectl`, `kubens`, `kubectx`, `docker compose`, and `lazydocker`; verify availability before relying on them in scripts.
-- Repo-local OpenCode config is stored under `ai/.config/opencode` and deploys to `~/.config/opencode`; after changing OpenCode config, agents, or instructions, the running OpenCode session must be restarted.
 - Existing shared guidance in `CLAUDE.md` is broad prose; prefer the executable sources above when it conflicts with scripts or config.
